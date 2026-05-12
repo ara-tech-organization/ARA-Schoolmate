@@ -11,7 +11,7 @@ const modules = [
   {
     name: 'PRO', badge: 'Popular', featured: false,
     icon: Settings, tag: 'Administration Ready',
-    desc: 'Advanced Administration & ERP Management',
+    desc: 'Advanced Education Management ERP',
     features: ['Everything in Lite, plus:', 'Student & staff profile management', 'Online fee collection', 'Payroll and leave tracking', 'Inventory management', 'Approval workflows'],
   },
   {
@@ -40,7 +40,7 @@ export default function ModulesSection() {
           <div className="chip chip-red"><Layers size={12} /> Choose Your Plan</div>
           <h2 className="htitle">SchoolMate <em>Modules</em></h2>
           <p className="hsub">
-            From basic communication to complete operational intelligence — choose the module
+            From basic communication to complete education administration software — choose the module
             that fits your institution and scale up as you grow.
           </p>
         </div>

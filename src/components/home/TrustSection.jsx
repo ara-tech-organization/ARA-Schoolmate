@@ -67,10 +67,10 @@ export default function TrustSection() {
         <div ref={cntRef} className={`tv2-content sr-r${cntVis ? ' in' : ''}`}>
           <div className="chip chip-red"><TrendingUp size={12} /> Trusted by Institutions</div>
           <h2 className="htitle">
-            The Future of Digital School <em>Administration</em> Starts Here
+            The Future of Digital <em>Schooling Software</em> Starts Here
           </h2>
           <p className="hsub">
-            SchoolMate is modern student management software designed to help educational
+            SchoolMate is a modern student management system software and class attendance management system designed to help educational
             institutions streamline academic and administrative workflows — removing
             paperwork and manual tracking entirely.
           </p>

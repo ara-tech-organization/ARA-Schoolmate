@@ -11,11 +11,11 @@ const before = [
 ]
 
 const after = [
-  'Digital attendance with instant alerts',
+  'Online student attendance management software system',
   'Automated report generation',
   'Real-time homework & circular updates',
   'Smart fee reminders & payment tracking',
-  'Centralized dashboards for admins',
+  'Student monitoring software & centralized dashboards',
   'Faster communication workflows',
 ]
 
@@ -36,7 +36,7 @@ export default function WhyChoose() {
           </h2>
           <p className="hsub">
             SchoolMate brings all operations into one centralized dashboard — a trusted
-            smartschool management system that helps schools manage everything from
+            smartschool management system and student information management software that helps schools manage everything from
             academics to transportation.
           </p>
         </div>

@@ -74,10 +74,10 @@ export default function AllInOnePlatform() {
         <div ref={cl} className={`platform2-content sr-l${clv ? ' in' : ''}`}>
           <div className="chip chip-red"><Grid3x3 size={12} /> Integrated Ecosystem</div>
           <h2 className="htitle">
-            Everything Your School Needs in <em>One Platform</em>
+            The Ultimate <em>Smartschool Management System</em>
           </h2>
           <p className="hsub" style={{ marginBottom: 28 }}>
-            SchoolMate is an intelligent ecosystem connecting communication, administration,
+            SchoolMate is an intelligent student database management system software connecting communication, administration,
             attendance, finance, academics, and transport.
           </p>
 

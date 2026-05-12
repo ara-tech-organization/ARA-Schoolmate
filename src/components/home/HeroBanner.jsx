@@ -8,18 +8,18 @@ import heroBoyImg from '../../assets/h2.png'
 
 const pills = [
   { icon: MessageSquare, text: 'Parent Communication' },
-  { icon: BookOpen,      text: 'Attendance Tracking' },
+  { icon: BookOpen,      text: 'Student Attendance Management System' },
   { icon: Users,         text: 'Fee Management' },
   { icon: Clock,         text: 'Exam Scheduling' },
-  { icon: Shield,        text: 'Secure Platform' },
-  { icon: Smartphone,    text: 'Mobile App' },
+  { icon: Shield,        text: 'Smartschool ERP' },
+  { icon: Smartphone,    text: 'Eschool Software' },
 ]
 
 const features = [
-  { icon: Zap,        title: 'All-in-One Platform',      desc: 'Communication, academics, fees & transport in one place' },
-  { icon: BookOpen,   title: 'Paperless Workflows',      desc: 'Replace manual tracking with automated digital processes' },
-  { icon: Users,      title: 'Multi-Role Collaboration', desc: 'Admins, teachers, students & parents connected seamlessly' },
-  { icon: Shield,     title: 'Secure Cloud Access',      desc: 'Real-time updates on any device, 24/7 with enterprise security' },
+  { icon: Zap,        title: 'Best Campus Management Software',      desc: 'Communication, academics, fees & transport in one place' },
+  { icon: BookOpen,   title: 'Online Attendance System for Students & Teachers',      desc: 'Replace manual tracking with automated digital processes' },
+  { icon: Users,      title: 'Student Database Management System Software', desc: 'Admins, teachers, students & parents connected seamlessly' },
+  { icon: Shield,     title: 'Education Management System Software',      desc: 'Real-time updates on any device, 24/7 with enterprise security' },
 ]
 
 export default function HeroBanner() {
@@ -47,11 +47,11 @@ export default function HeroBanner() {
 
         <h1 className="hero-h1">
           <span className="hero-h1-brand">SchoolMate</span>
-          <span className="hero-h1-rest"> – Smart Digital Solution for Modern Schools</span>
+          <span className="hero-h1-rest"> – Smart School Management System</span>
         </h1>
 
         <h2 className="hero-h2">
-          Transform Your School with Smart Digital Management
+          The ultimate schooling software and student management system software for your education management ERP.
         </h2>
 
         <div className="hero-pills">
