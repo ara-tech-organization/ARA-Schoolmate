@@ -140,7 +140,7 @@ export default function HeroBanner() {
               {submitted ? (
                 <div className="form-success">
                   <div className="form-success-icon"><CheckCircle2 size={32} /></div>
-                  <h3 style={{ fontSize: 17, fontWeight: 800, marginBottom: 6 }}>Thank You!</h3>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, marginBottom: 6 }}>Thank You!</h3>
                   <p style={{ fontSize: 12.5, color: 'var(--text-4)' }}>Our team will reach you within 24 hours.</p>
                 </div>
               ) : (
