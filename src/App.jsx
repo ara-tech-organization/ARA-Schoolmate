@@ -6,6 +6,7 @@ import CTAFooter from './components/home/CTAFooter'
 import Home      from './pages/Home'
 import About     from './pages/About'
 import MobileApp from './pages/MobileApp'
+import Contact   from './pages/Contact'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -33,8 +34,6 @@ function ComingSoon({ page }) {
 }
 
 function Layout() {
-  const location = useLocation()
-  const noForm = location.pathname === '/smart-school-management-mobile-app'
   return (
     <>
       <ScrollToTop />
@@ -42,7 +41,7 @@ function Layout() {
       <main>
         <Outlet />
       </main>
-      <CTAFooter noForm={noForm} />
+      <CTAFooter />
     </>
   )
 }
@@ -55,6 +54,7 @@ function App() {
           <Route path="/"                                      element={<Home />} />
           <Route path="/about"                                 element={<About />} />
           <Route path="/smart-school-management-mobile-app"    element={<MobileApp />} />
+          <Route path="/contact"                               element={<Contact />} />
           <Route path="/faq"                                   element={<ComingSoon page="FAQ" />} />
         </Route>
       </Routes>

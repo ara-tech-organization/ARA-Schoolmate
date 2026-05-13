@@ -7,6 +7,7 @@ const links = [
   { label: 'Home',       to: '/' },
   { label: 'About',      to: '/about' },
   { label: 'Mobile App', to: '/smart-school-management-mobile-app' },
+  { label: 'Contact',    to: '/contact' },
 ]
 
 export default function Navbar() {
