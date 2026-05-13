@@ -88,14 +88,21 @@
 }
 .btn:hover::after { left: 150%; }
 
+.btn-outline-red {
+  background: transparent; color: var(--red);
+  border: 1.5px solid var(--red); box-shadow: none;
+}
+.btn-outline-red:hover {
+  background: var(--red-light); transform: translateY(-2px);
+}
 .btn-red {
   background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
   color: #fff; border-color: transparent;
-  box-shadow: 0 6px 20px rgba(217,28,39,.35), 0 2px 6px rgba(217,28,39,.2);
+  box-shadow: none;
 }
 .btn-red:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 14px 36px rgba(217,28,39,.5);
+  transform: translateY(-2px);
+  box-shadow: none;
 }
 .btn-white-solid {
   background: #fff; color: var(--red);
