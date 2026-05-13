@@ -1522,7 +1522,10 @@
 }
 .offer2-list li:last-child { border-bottom: none; }
 
-@media (max-width: 1024px) { .offer2-row { grid-template-columns: 1fr; gap: 36px; } .offer2-flip { direction: ltr; } }
+@media (max-width: 1024px) {
+  .offer2-row  { grid-template-columns: 1fr; gap: 28px; }
+  .offer2-flip { direction: ltr; }
+}
 
 /* ================================================================
    ALL-IN-ONE PLATFORM V2  — dashboard mockup
@@ -2128,30 +2131,22 @@
 
 /* ================================================================
    GLOBAL RESPONSIVE — 320 → 1440
-   (covers all pages: Home, About, Mobile App)
    ================================================================ */
 
-/* ── Navbar fine-tuning ──────────────────────────────────────── */
-/* 1024px: burger shows, nav-links hidden — already set above     */
-/* 600px:  action buttons hidden — already set above              */
+/* ── Navbar ──────────────────────────────────────────────────── */
 @media (max-width: 480px) {
-  .nav-bar        { padding: 0 16px; height: 64px; }
-  .nav-logo-img   { height: 34px; }
-  .nav-mobile     { padding: 12px 16px 18px; }
+  .nav-bar      { padding: 0 16px; height: 64px; }
+  .nav-logo-img { height: 34px; }
+  .nav-mobile   { padding: 12px 16px 18px; }
 }
 @media (max-width: 360px) {
-  .nav-bar        { padding: 0 12px; }
-  .nav-logo-img   { height: 30px; }
+  .nav-bar      { padding: 0 12px; }
+  .nav-logo-img { height: 30px; }
 }
 
-/* ── Hero (home page) ────────────────────────────────────────── */
-@media (max-width: 960px) {
-  .hero-body { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 680px) {
-  .hero-body { grid-template-columns: 1fr; }
-  .hero-bc, .hero-br { display: none; }
-}
+/* ── Hero ────────────────────────────────────────────────────── */
+@media (max-width: 960px) { .hero-body { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 680px) { .hero-body { grid-template-columns: 1fr; } .hero-bc,.hero-br { display: none; } }
 @media (max-width: 375px) {
   .hero-head  { padding: 84px 0 28px; }
   .hero-h1    { letter-spacing: -0.8px; }
@@ -2159,65 +2154,148 @@
   .hero-pill  { font-size: 11px; padding: 5px 10px; }
 }
 @media (max-width: 320px) {
-  .hero-head  { padding: 72px 0 20px; }
-  .hero-cta   { flex-direction: column; align-items: stretch; }
+  .hero-head { padding: 72px 0 20px; }
+  .hero-cta  { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { justify-content: center; }
 }
 
-/* ── Global section padding scale ───────────────────────────── */
+/* ── Section padding — correct class names ───────────────────── */
+@media (max-width: 768px) {
+  .trust-v2       { padding: 72px 0; }
+  .wsp-section    { padding: 72px 20px; }
+  .offer2-section { padding: 64px 0; }
+  .platform2-section { padding: 64px 0; }
+  .modules2-section  { padding: 64px 0; }
+  .feat2-section     { padding: 64px 0; }
+  .smart2-section    { padding: 64px 0; }
+  .testi2-section    { padding: 64px 0; }
+  .standout2-section { padding: 64px 0; }
+  .adv2-section      { padding: 64px 0; }
+  .faq-section       { padding: 64px 0; }
+  .tv2-section       { padding: 64px 0; }
+}
 @media (max-width: 480px) {
-  .trust-section, .why-section, .offer-section, .platform-section,
-  .modules-section, .feat-section, .smart-section, .testi-section,
-  .standout-section, .adv-section, .faq-section,
-  .tv2-section, .wsp-section, .offer2-section, .platform2-section,
-  .modules2-section, .feat2-section, .testi2-section { padding: 60px 0; }
+  .trust-v2, .wsp-section, .offer2-section, .platform2-section,
+  .modules2-section, .feat2-section, .smart2-section, .testi2-section,
+  .standout2-section, .adv2-section, .faq-section, .tv2-section { padding: 52px 0; }
+  .wsp-section { padding: 52px 0; }
+}
+@media (max-width: 375px) {
+  .trust-v2, .wsp-section, .offer2-section, .platform2-section,
+  .modules2-section, .feat2-section, .smart2-section, .testi2-section,
+  .standout2-section, .adv2-section, .faq-section, .tv2-section { padding: 44px 0; }
 }
 
-/* ── Typography helpers at small sizes ───────────────────────── */
-@media (max-width: 375px) {
-  .htitle { letter-spacing: -0.4px; }
+/* ── Typography ──────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .htitle { font-size: clamp(20px, 5vw, 32px); letter-spacing: -0.4px; }
   .hsub   { font-size: 14.5px; }
-  .chip   { font-size: 9.5px; padding: 5px 12px; }
+  .chip   { font-size: 10px; padding: 5px 12px; }
+}
+@media (max-width: 375px) {
+  .htitle { letter-spacing: -0.3px; }
+  .hsub   { font-size: 14px; line-height: 1.75; }
   .btn    { font-size: 12px; padding: 8px 16px; }
 }
 @media (max-width: 320px) {
-  .htitle { font-size: 20px; }
-  .hsub   { font-size: 13.5px; }
+  .htitle { font-size: 19px; }
+  .hsub   { font-size: 13px; }
+  .chip   { font-size: 9px; padding: 4px 10px; }
 }
 
-/* ── Trust / stats strip ─────────────────────────────────────── */
-@media (max-width: 375px) {
-  .stats-strip { grid-template-columns: 1fr 1fr; padding: 20px 12px; }
-}
+/* ── Trust V2 stats strip ────────────────────────────────────── */
+@media (max-width: 640px)  { .tv2-stats-bar { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 375px)  { .stats-strip   { grid-template-columns: 1fr 1fr; padding: 20px 12px; } }
 
-/* ── Why compare ─────────────────────────────────────────────── */
+/* ── WhyChoose ───────────────────────────────────────────────── */
+@media (max-width: 480px) { .why-cta-row { flex-direction: column; gap: 12px; } }
+@media (max-width: 375px) { .wsp-card { padding: 20px 16px; } }
+
+/* ── WhatWeOffer ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .offer2-rows { gap: 56px; }
+  /* content-first on mobile for all rows */
+  .offer2-img-side    { order: 2; }
+  .offer2-content-side { order: 1; }
+}
+@media (max-width: 768px) {
+  .offer2-rows { gap: 48px; }
+  .offer2-list { margin-bottom: 16px; }
+}
 @media (max-width: 480px) {
-  .why-cta-row { flex-direction: column; gap: 12px; }
-}
-
-/* ── CTA footer form ─────────────────────────────────────────── */
-@media (max-width: 480px) {
-  .cta2-heading { font-size: clamp(20px, 5.5vw, 28px); }
-  .cta2-perks   { gap: 8px; }
+  .offer2-rows  { gap: 40px; }
+  .offer2-title { font-size: 20px; }
+  .offer2-desc  { font-size: 14px; }
+  .offer2-icon-wrap { width: 48px; height: 48px; }
+  .offer2-list  { margin-bottom: 12px; }
 }
 @media (max-width: 375px) {
+  .offer2-rows  { gap: 32px; }
+  .offer2-title  { font-size: 18px; }
+  .offer2-list li { font-size: 13px; }
+}
+
+/* ── AllInOnePlatform ────────────────────────────────────────── */
+@media (max-width: 640px)  { .platform2-modules { grid-template-columns: repeat(4,1fr); } }
+@media (max-width: 480px)  { .platform2-modules { grid-template-columns: repeat(3,1fr); gap: 8px; } .p2m-item { padding: 10px 8px; font-size: 11px; } }
+@media (max-width: 375px)  { .platform2-modules { grid-template-columns: repeat(2,1fr); } }
+
+/* ── ModulesSection ──────────────────────────────────────────── */
+@media (max-width: 480px)  { .m2c-grid { grid-template-columns: 1fr; } }
+@media (max-width: 375px)  { .modules2-section .htitle { font-size: 18px; } }
+
+/* ── SmartFeatures bento ─────────────────────────────────────── */
+@media (max-width: 480px) {
+  .s2b-cell { padding: 22px 18px; }
+  .s2b-num  { font-size: 32px; }
+}
+@media (max-width: 375px) { .s2b-cell { padding: 18px 14px; } }
+
+/* ── Testimonials ────────────────────────────────────────────── */
+@media (max-width: 480px) { .testi2-hero-content { padding: 24px 20px; } .testi2-hero-text { font-size: 14px; } }
+
+/* ── WhyStandOut ─────────────────────────────────────────────── */
+@media (max-width: 375px)  { .s2r-section { padding: 20px 14px; } .s2r-card { padding: 18px 14px; } }
+@media (max-width: 320px)  { .standout2-metrics { grid-template-columns: 1fr 1fr; } }
+
+/* ── FAQ ─────────────────────────────────────────────────────── */
+@media (max-width: 480px) { .faq-item { padding: 18px 16px; } }
+@media (max-width: 375px) { .faq-q    { font-size: 13.5px; } .faq-a { font-size: 13px; } }
+
+/* ── CTA form ────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .cta2-section  { padding: 64px 0; }
+  .cta2-heading  { font-size: clamp(20px, 5.5vw, 28px); }
+  .cta2-perks    { gap: 8px; }
+  .cta2-trust    { flex-wrap: wrap; gap: 12px; }
+}
+@media (max-width: 375px) {
+  .cta2-section  { padding: 48px 0; }
   .cta2-form .cta2-fg label { font-size: 12px; }
-  .cta2-submit { font-size: 13px; }
+  .cta2-submit   { font-size: 13px; padding: 10px 16px; }
+  .cta2-heading  { font-size: 22px; }
+}
+@media (max-width: 320px) {
+  .cta2-card     { padding: 22px 16px; }
+  .cta2-heading  { font-size: 20px; }
 }
 
 /* ── Footer ──────────────────────────────────────────────────── */
 @media (max-width: 480px) {
-  .f-bot-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
-  .f-copy      { font-size: 11.5px; }
+  .footer-top    { padding-bottom: 36px; margin-bottom: 24px; }
+  .f-bot-links   { gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .f-copy        { font-size: 11.5px; }
 }
 @media (max-width: 375px) {
-  .footer-logo-img { height: 38px; }
+  .footer-logo-img { height: 36px; }
   .f-brand-desc    { font-size: 13px; }
-  .f-col-title     { font-size: 12px; }
-  .f-links a       { font-size: 13px; }
+  .f-col-title     { font-size: 11px; }
+  .f-links a, .f-links a[href] { font-size: 13px; }
 }
 @media (max-width: 320px) {
-  .footer-bottom   { flex-direction: column; gap: 10px; text-align: center; }
-  .f-bot-links     { justify-content: center; }
+  .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+  .f-bot-links   { justify-content: center; }
+  .f-socials     { gap: 8px; }
+  .f-soc         { width: 32px; height: 32px; }
 }
 
