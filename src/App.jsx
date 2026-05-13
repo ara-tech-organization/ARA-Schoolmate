@@ -12,11 +12,12 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation()
   useEffect(() => {
     if (hash) {
-      // let the DOM render first, then scroll to the anchor
-      setTimeout(() => {
+      const tryScroll = (attempts = 0) => {
         const el = document.querySelector(hash)
-        if (el) el.scrollIntoView({ behavior: 'smooth' })
-      }, 80)
+        if (el) { el.scrollIntoView({ behavior: 'smooth' }); return }
+        if (attempts < 10) setTimeout(() => tryScroll(attempts + 1), 80)
+      }
+      setTimeout(() => tryScroll(), 80)
     } else {
       window.scrollTo({ top: 0, behavior: 'instant' })
     }
