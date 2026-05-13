@@ -605,6 +605,7 @@
 .mob-control { background: #fff; padding: 90px 0; }
 
 .mob-ctrl-head { text-align: center; max-width: 640px; margin: 0 auto 52px; position: relative; }
+.mob-ctrl-head .hsub { margin: 0 auto; text-align: center; }
 .mob-ctrl-h2   { margin-top: 12px; }
 .mob-ctrl-intro { margin-top: 12px; }
 

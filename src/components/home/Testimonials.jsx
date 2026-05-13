@@ -2,17 +2,17 @@ import { Star, Quote } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const testimonials = [
-  { text: 'Communication with parents was faster and more structured. SchoolMate transformed how we interact with our school community — it is simply outstanding.', name: 'Divya Nair', role: 'Principal', init: 'D' },
-  { text: 'Tracking attendance is now flawless. Real-time data for every student and staff member in our institution.', name: 'Karthik Srinivasan', role: 'Academic Coordinator', init: 'K' },
-  { text: 'The real-time alerts and reporting tools enhanced transparency throughout our institution. Parents love the instant updates.', name: 'Pooja Menon', role: 'Director', init: 'P' },
-  { text: 'SchoolMate made our management so easy, from fees to academics and transport. One platform for everything we need.', name: 'Harish Kumar', role: 'Administrator', init: 'H' },
-  { text: 'Many institutions prefer SchoolMate as their preferred choice of schooling software because it is reliable, flexible, and easy to use.', name: 'Arjun Kumar', role: 'School Manager', init: 'A' },
+  { text: 'Communication with parents was faster and more structured. SchoolMate transformed how we interact with our school community — it is simply outstanding.', name: 'Divya Nair',        role: 'Principal',           init: 'D' },
+  { text: 'Tracking attendance is now flawless. Real-time data for every student and staff member in our institution.',                                              name: 'Karthik Srinivasan', role: 'Academic Coordinator', init: 'K' },
+  { text: 'The real-time alerts and reporting tools enhanced transparency throughout our institution. Parents love the instant updates.',                             name: 'Pooja Menon',        role: 'Director',            init: 'P' },
+  { text: 'SchoolMate made our management so easy, from fees to academics and transport. One platform for everything we need.',                                      name: 'Harish Kumar',       role: 'Administrator',       init: 'H' },
+  { text: 'Many institutions prefer SchoolMate because it is reliable, flexible, and easy to use. The best school management platform we have used.',               name: 'Arjun Kumar',        role: 'School Manager',      init: 'A' },
 ]
 
 export default function Testimonials() {
-  const [h, hv]     = useScrollAnimation()
+  const [h, hv]      = useScrollAnimation()
   const [hero, hVis] = useScrollAnimation()
-  const [g, gv]     = useScrollAnimation(0.06)
+  const [g, gv]      = useScrollAnimation(0.06)
 
   const featured = testimonials[0]
   const rest     = testimonials.slice(1)
@@ -27,6 +27,7 @@ export default function Testimonials() {
           <p className="hsub">Many institutions prefer SchoolMate as their schooling software because it is reliable, flexible, and easy to use.</p>
         </div>
 
+        {/* Featured hero image card */}
         <div ref={hero} className={`testi2-hero sr${hVis ? ' in' : ''}`}>
           <div className="testi2-hero-img-wrap">
             <img
@@ -52,14 +53,15 @@ export default function Testimonials() {
           </div>
         </div>
 
+        {/* 4 equal cards below */}
         <div ref={g} className={`testi2-grid sr${gv ? ' in' : ''}`}>
           {rest.map((t, i) => (
-            <div className="t2c" key={t.name} style={{ transitionDelay: `${i * 0.12}s` }}>
+            <div className="t2c" key={t.name} style={{ transitionDelay: `${i * 0.1}s` }}>
               <div className="t2c-top">
                 <div className="t2c-stars">
                   {[...Array(5)].map((_, j) => <Star key={j} size={13} fill="var(--red)" color="var(--red)" />)}
                 </div>
-                <div className="t2c-quote-mark">"</div>
+                <span className="t2c-quote-mark">"</span>
               </div>
               <p className="t2c-text">"{t.text}"</p>
               <div className="t2c-author">
