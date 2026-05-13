@@ -6,8 +6,7 @@ import logo from '../../assets/Logo.png'
 const links = [
   { label: 'Home',       to: '/' },
   { label: 'About',      to: '/about' },
-  { label: 'Mobile App', to: '/mobile-app' },
-  { label: 'FAQ',        to: '/faq' },
+  { label: 'Mobile App', to: '/smart-school-management-mobile-app' },
 ]
 
 export default function Navbar() {
@@ -41,12 +40,12 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-actions">
-          <a href="#login" className="btn btn-outline-red" style={{ padding: '7px 18px', fontSize: '12.5px' }}>
+          <a href="https://uat.araschoolmate.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline-red" style={{ padding: '7px 18px', fontSize: '12.5px' }}>
             Login
           </a>
-          <a href="#contact" className="btn btn-red" style={{ padding: '7px 18px', fontSize: '12.5px' }}>
+          <NavLink to="/#contact" className="btn btn-red" style={{ padding: '7px 18px', fontSize: '12.5px' }}>
             Get Free Demo
-          </a>
+          </NavLink>
           <button className="nav-burger" onClick={() => setOpen(o => !o)} aria-label="menu">
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -65,9 +64,9 @@ export default function Navbar() {
             {l.label}
           </NavLink>
         ))}
-        <a href="#get-started" className="btn btn-red" onClick={() => setOpen(false)}>
+        <NavLink to="/#contact" className="btn btn-red" onClick={() => setOpen(false)}>
           Get Free Demo
-        </a>
+        </NavLink>
       </nav>
     </header>
   )

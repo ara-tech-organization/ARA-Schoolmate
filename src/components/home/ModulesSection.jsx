@@ -75,7 +75,7 @@ export default function ModulesSection() {
                     </li>
                   ))}
                 </ul>
-                <a href="#get-started" className={`m2c-btn${m.featured ? ' m2c-btn-featured' : ''}`}>
+                <a href="#contact" className={`m2c-btn${m.featured ? ' m2c-btn-featured' : ''}`}>
                   Get Started <ArrowRight size={14} />
                 </a>
               </div>
@@ -84,7 +84,7 @@ export default function ModulesSection() {
         </div>
 
         <div className="modules2-cta">
-          <a href="#demo" className="btn btn-red btn-lg">
+          <a href="#contact" className="btn btn-red btn-lg">
             Get a Free Demo <ArrowRight size={18} />
           </a>
           <p className="modules2-note">No credit card required. Setup in minutes.</p>

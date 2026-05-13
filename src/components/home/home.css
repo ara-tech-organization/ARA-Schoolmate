@@ -1251,9 +1251,10 @@
   width: 38px; height: 38px; border-radius: 50%;
   background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25);
   display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 13px; font-weight: 700; transition: all .25s;
+  color: #fff; transition: all .25s;
 }
 .f-soc:hover { background: #fff; color: var(--red); border-color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+.f-soc svg { display: block; }
 .f-col-title { font-size: 11.5px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 20px; }
 .f-links { display: flex; flex-direction: column; gap: 10px; }
 .f-links a { font-size: 13.5px; color: rgba(255,255,255,.68); transition: all .2s var(--ease); }
@@ -1520,12 +1521,6 @@
   border-bottom: 1px solid var(--border);
 }
 .offer2-list li:last-child { border-bottom: none; }
-.offer2-link {
-  display: inline-flex; align-items: center; gap: 7px;
-  font-size: 14px; font-weight: 700; color: var(--red);
-  transition: gap .25s var(--ease);
-}
-.offer2-link:hover { gap: 12px; }
 
 @media (max-width: 1024px) { .offer2-row { grid-template-columns: 1fr; gap: 36px; } .offer2-flip { direction: ltr; } }
 
@@ -2130,4 +2125,99 @@
 
 @media (max-width: 1024px) { .adv2-grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 640px)  { .adv2-grid { grid-template-columns: 1fr; } .adv2-section { padding: 72px 20px; } }
+
+/* ================================================================
+   GLOBAL RESPONSIVE — 320 → 1440
+   (covers all pages: Home, About, Mobile App)
+   ================================================================ */
+
+/* ── Navbar fine-tuning ──────────────────────────────────────── */
+/* 1024px: burger shows, nav-links hidden — already set above     */
+/* 600px:  action buttons hidden — already set above              */
+@media (max-width: 480px) {
+  .nav-bar        { padding: 0 16px; height: 64px; }
+  .nav-logo-img   { height: 34px; }
+  .nav-mobile     { padding: 12px 16px 18px; }
+}
+@media (max-width: 360px) {
+  .nav-bar        { padding: 0 12px; }
+  .nav-logo-img   { height: 30px; }
+}
+
+/* ── Hero (home page) ────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .hero-body { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .hero-body { grid-template-columns: 1fr; }
+  .hero-bc, .hero-br { display: none; }
+}
+@media (max-width: 375px) {
+  .hero-head  { padding: 84px 0 28px; }
+  .hero-h1    { letter-spacing: -0.8px; }
+  .hero-pills { gap: 6px; }
+  .hero-pill  { font-size: 11px; padding: 5px 10px; }
+}
+@media (max-width: 320px) {
+  .hero-head  { padding: 72px 0 20px; }
+  .hero-cta   { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn { justify-content: center; }
+}
+
+/* ── Global section padding scale ───────────────────────────── */
+@media (max-width: 480px) {
+  .trust-section, .why-section, .offer-section, .platform-section,
+  .modules-section, .feat-section, .smart-section, .testi-section,
+  .standout-section, .adv-section, .faq-section,
+  .tv2-section, .wsp-section, .offer2-section, .platform2-section,
+  .modules2-section, .feat2-section, .testi2-section { padding: 60px 0; }
+}
+
+/* ── Typography helpers at small sizes ───────────────────────── */
+@media (max-width: 375px) {
+  .htitle { letter-spacing: -0.4px; }
+  .hsub   { font-size: 14.5px; }
+  .chip   { font-size: 9.5px; padding: 5px 12px; }
+  .btn    { font-size: 12px; padding: 8px 16px; }
+}
+@media (max-width: 320px) {
+  .htitle { font-size: 20px; }
+  .hsub   { font-size: 13.5px; }
+}
+
+/* ── Trust / stats strip ─────────────────────────────────────── */
+@media (max-width: 375px) {
+  .stats-strip { grid-template-columns: 1fr 1fr; padding: 20px 12px; }
+}
+
+/* ── Why compare ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .why-cta-row { flex-direction: column; gap: 12px; }
+}
+
+/* ── CTA footer form ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .cta2-heading { font-size: clamp(20px, 5.5vw, 28px); }
+  .cta2-perks   { gap: 8px; }
+}
+@media (max-width: 375px) {
+  .cta2-form .cta2-fg label { font-size: 12px; }
+  .cta2-submit { font-size: 13px; }
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .f-bot-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .f-copy      { font-size: 11.5px; }
+}
+@media (max-width: 375px) {
+  .footer-logo-img { height: 38px; }
+  .f-brand-desc    { font-size: 13px; }
+  .f-col-title     { font-size: 12px; }
+  .f-links a       { font-size: 13px; }
+}
+@media (max-width: 320px) {
+  .footer-bottom   { flex-direction: column; gap: 10px; text-align: center; }
+  .f-bot-links     { justify-content: center; }
+}
 

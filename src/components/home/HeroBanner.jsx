@@ -64,7 +64,7 @@ export default function HeroBanner() {
         </div>
 
         <div className="hero-cta">
-          <a href="#get-started" className="btn btn-red hero-btn-primary">
+          <a href="#contact" className="btn btn-red hero-btn-primary">
             Get Started Today <ArrowRight size={15} />
           </a>
           <a href="#features" className="btn btn-ghost-red">

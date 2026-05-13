@@ -2,10 +2,11 @@ import { Star, Quote } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const testimonials = [
-  { text: 'Communication with parents was faster and more structured. SchoolMate transformed how we interact with our school community — it is simply outstanding.', name: 'Rajesh Kumar', role: 'Principal, Delhi Public School', init: 'R' },
-  { text: 'Tracking attendance is now flawless. Real-time data for every student and staff member in our institution.', name: 'Priya Sharma', role: 'Academic Coordinator, Sunrise Academy', init: 'P' },
-  { text: 'The real-time alerts and reporting tools enhanced transparency throughout our institution. Parents love the instant updates.', name: 'Mohammed Iqbal', role: 'Director, Al-Ameen School', init: 'M' },
-  { text: 'SchoolMate made our management so easy — from fees to academics and transport. One platform for everything we need.', name: 'Anjali Nair', role: 'Administrator, Greenwood Public School', init: 'A' },
+  { text: 'Communication with parents was faster and more structured. SchoolMate transformed how we interact with our school community — it is simply outstanding.', name: 'Divya Nair', role: 'Principal', init: 'D' },
+  { text: 'Tracking attendance is now flawless. Real-time data for every student and staff member in our institution.', name: 'Karthik Srinivasan', role: 'Academic Coordinator', init: 'K' },
+  { text: 'The real-time alerts and reporting tools enhanced transparency throughout our institution. Parents love the instant updates.', name: 'Pooja Menon', role: 'Director', init: 'P' },
+  { text: 'SchoolMate made our management so easy, from fees to academics and transport. One platform for everything we need.', name: 'Harish Kumar', role: 'Administrator', init: 'H' },
+  { text: 'Many institutions prefer SchoolMate as their preferred choice of schooling software because it is reliable, flexible, and easy to use.', name: 'Arjun Kumar', role: 'School Manager', init: 'A' },
 ]
 
 export default function Testimonials() {

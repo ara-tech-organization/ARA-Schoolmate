@@ -14,6 +14,7 @@
   letter-spacing: -6px;
   user-select: none;
   z-index: 0;
+  display: none !important;
 }
 .ab-section-num-right { left: auto; right: -20px; }
 
@@ -540,4 +541,80 @@
 @media (max-width: 480px) {
   .ab-mission-strip    { grid-template-columns: 1fr; }
   .ab-mission-feature  { border-right: none; }
+}
+
+/* ================================================================
+   ABOUT — FULL RESPONSIVE 320 → 1440
+   ================================================================ */
+
+/* 1024px */
+@media (max-width: 1024px) {
+  .abh-center    { padding: 52px 0 36px; max-width: 600px; }
+  .abh-visual    { padding: 0 60px; }
+}
+
+/* 900px */
+@media (max-width: 900px) {
+  .abh-visual    { padding: 0 40px; }
+  .abh-img-frame { height: 420px; }
+  .abh-checks    { grid-template-columns: 1fr; }
+}
+
+/* 768px — already defined above; add extras */
+@media (max-width: 768px) {
+  .abh-center    { padding: 40px 0 28px; }
+  .abh-h1        { letter-spacing: -0.8px; }
+  .abh-visual    { padding: 0 20px; }
+  .abh-img-frame { height: 340px; border-radius: 16px; }
+  .abh-stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .abh-stat:nth-child(2) { border-right: none; }
+  .abh-stat:nth-child(3) { border-top: 1px solid rgba(0,0,0,.07); }
+  .abh-stat:nth-child(4) { border-top: 1px solid rgba(0,0,0,.07); border-right: none; }
+  .abst-section  { padding: 72px 0; }
+  .abs-section   { padding: 72px 0; }
+  .ab-mission    { padding: 52px 0 64px; }
+  .abv-section   { padding: 72px 0; }
+}
+
+/* 640px */
+@media (max-width: 640px) {
+  .abh-img-frame { height: 280px; }
+  .abh-pill-badges { gap: 8px; }
+  .abh-actions   { gap: 10px; }
+  .abst-layout   { gap: 32px; }
+  .abv-qualities { grid-template-columns: 1fr 1fr; }
+}
+
+/* 480px — already defined above; add extras */
+@media (max-width: 480px) {
+  .abh-h1        { letter-spacing: -0.6px; }
+  .abh-actions   { flex-direction: column; align-items: center; }
+  .abh-visual    { padding: 0 12px; }
+  .abh-img-frame { height: 240px; border-radius: 14px; }
+  .abh-award     { display: none; }
+  .abst-section  { padding: 56px 0; }
+  .abs-section   { padding: 56px 0; }
+  .ab-mission    { padding: 44px 0 56px; }
+  .abv-section   { padding: 56px 0; }
+  .abv-qualities { grid-template-columns: 1fr; }
+}
+
+/* 375px */
+@media (max-width: 375px) {
+  .abh-center    { padding: 32px 0 24px; }
+  .abh-lead      { font-size: 13.5px; }
+  .abh-pill-badge { font-size: 11px; padding: 5px 10px; }
+  .abh-stats-bar { padding: 14px 12px; gap: 0; }
+  .abh-stat-num  { font-size: 20px; }
+  .abh-stat-lbl  { font-size: 10px; }
+  .ab-pq-text    { font-size: 16px; }
+}
+
+/* 320px */
+@media (max-width: 320px) {
+  .abh-visual    { padding: 0 8px; }
+  .abh-img-frame { height: 200px; border-radius: 12px; }
+  .abh-stats-bar { grid-template-columns: 1fr 1fr; }
+  .abst-layout   { gap: 24px; }
+  .ab-mission-feature { padding: 18px 14px; }
 }

@@ -37,7 +37,7 @@ export default function AdvancedSection() {
             A powerful online student attendance management software from a single dashboard.
           </p>
           <div className="adv2-ctas">
-            <a href="#get-started" className="btn btn-red btn-lg">Start Free Trial <ArrowRight size={17} /></a>
+            <a href="#contact" className="btn btn-red btn-lg">Start Free Trial <ArrowRight size={17} /></a>
             <a href="tel:+919876543210" className="btn btn-ghost-white btn-lg">Talk to Sales</a>
           </div>
         </div>

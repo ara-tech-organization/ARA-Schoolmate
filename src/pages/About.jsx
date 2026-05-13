@@ -1,12 +1,10 @@
 import { useEffect } from 'react'
 import '../components/home/home.css'
 import '../components/about/about.css'
-import Navbar       from '../components/home/Navbar'
 import AboutHero    from '../components/about/AboutHero'
 import AboutStory   from '../components/about/AboutStory'
 import AboutMission from '../components/about/AboutMission'
 import AboutVision  from '../components/about/AboutVision'
-import CTAFooter    from '../components/home/CTAFooter'
 
 const META = {
   title:       'About Us | SchoolMate',
@@ -39,14 +37,10 @@ export default function About() {
 
   return (
     <>
-      <Navbar />
-      <main>
-        <AboutHero />
-        <AboutStory />
-        <AboutMission />
-        <AboutVision />
-      </main>
-      <CTAFooter />
+      <AboutHero />
+      <AboutStory />
+      <AboutMission />
+      <AboutVision />
     </>
   )
 }

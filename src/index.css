@@ -76,6 +76,9 @@ input, textarea, select { font-family: var(--font); }
   margin: 0 auto;
   padding: 0 28px;
 }
+@media (max-width: 768px) { .wrap { padding: 0 20px; } }
+@media (max-width: 480px) { .wrap { padding: 0 16px; } }
+@media (max-width: 360px) { .wrap { padding: 0 12px; } }
 
 /* ── scroll reveal ── */
 .sr   { opacity:0; transform:translateY(40px);   transition:opacity .7s var(--ease), transform .7s var(--ease); }

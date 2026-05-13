@@ -1,7 +1,27 @@
 import './index.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home  from './pages/Home'
-import About from './pages/About'
+import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import Navbar from './components/home/Navbar'
+import CTAFooter from './components/home/CTAFooter'
+import Home      from './pages/Home'
+import About     from './pages/About'
+import MobileApp from './pages/MobileApp'
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) {
+      // let the DOM render first, then scroll to the anchor
+      setTimeout(() => {
+        const el = document.querySelector(hash)
+        if (el) el.scrollIntoView({ behavior: 'smooth' })
+      }, 80)
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
+  }, [pathname, hash])
+  return null
+}
 
 function ComingSoon({ page }) {
   return (
@@ -12,14 +32,31 @@ function ComingSoon({ page }) {
   )
 }
 
+function Layout() {
+  const location = useLocation()
+  const noForm = location.pathname === '/smart-school-management-mobile-app'
+  return (
+    <>
+      <ScrollToTop />
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+      <CTAFooter noForm={noForm} />
+    </>
+  )
+}
+
 function App() {
   return (
     <BrowserRouter basename="/ARA-Schoolmate">
       <Routes>
-        <Route path="/"           element={<Home />} />
-        <Route path="/about"      element={<About />} />
-        <Route path="/mobile-app" element={<ComingSoon page="Mobile App" />} />
-        <Route path="/faq"        element={<ComingSoon page="FAQ" />} />
+        <Route element={<Layout />}>
+          <Route path="/"                                      element={<Home />} />
+          <Route path="/about"                                 element={<About />} />
+          <Route path="/smart-school-management-mobile-app"    element={<MobileApp />} />
+          <Route path="/faq"                                   element={<ComingSoon page="FAQ" />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

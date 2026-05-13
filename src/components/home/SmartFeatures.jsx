@@ -81,7 +81,7 @@ export default function SmartFeatures() {
             <div className="s2b-wide-icon"><Zap size={30} /></div>
             <h3 className="s2b-title">Lightning Fast Delivery</h3>
             <p className="s2b-desc">Messages, circulars, and alerts reach all stakeholders within seconds of sending — no delays, no missed updates.</p>
-            <a href="#get-started" className="btn btn-red s2b-wide-btn">
+            <a href="#contact" className="btn btn-red s2b-wide-btn">
               Get Started <ArrowRight size={16} />
             </a>
           </div>

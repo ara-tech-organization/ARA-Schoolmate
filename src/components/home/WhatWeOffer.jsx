@@ -1,4 +1,4 @@
-import { MessageCircle, BookOpen, UserCheck, ChevronRight, Layers, ArrowRight } from 'lucide-react'
+import { MessageCircle, BookOpen, UserCheck, ChevronRight, Layers } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const offers = [
@@ -52,9 +52,6 @@ function OfferRow({ offer }) {
             </li>
           ))}
         </ul>
-        <a href="#get-started" className="offer2-link">
-          Learn More <ArrowRight size={14} />
-        </a>
       </div>
     </div>
   )

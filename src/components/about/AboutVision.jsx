@@ -1,5 +1,6 @@
 import { Eye, Zap, Users, Lock, TrendingUp, ArrowRight, Globe, Star } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import { NavLink } from 'react-router-dom'
 
 const qualities = [
   { icon: Zap,        num: '01', title: 'Smart & Scalable',              desc: 'Technology that grows seamlessly with your institution without disruption.' },
@@ -90,9 +91,9 @@ export default function AboutVision() {
               ))}
             </div>
 
-            <a href="#contact" className="btn btn-red abv-cta">
-              Get Started Today <ArrowRight size={14} />
-            </a>
+            <NavLink to="/#contact" className="btn btn-red abv-cta">
+              Get Started <ArrowRight size={14} />
+            </NavLink>
 
           </div>
         </div>
