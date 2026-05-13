@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { NavLink } from 'react-router-dom'
 import logo from '../../assets/Logo.png'
 
 const links = [
-  { label: 'Home',     href: '#home' },
-  { label: 'Features', href: '#features' },
-  { label: 'Modules',  href: '#modules' },
-  { label: 'About',    href: '#why' },
-  { label: 'FAQ',      href: '#faq' },
+  { label: 'Home',       to: '/' },
+  { label: 'About',      to: '/about' },
+  { label: 'Mobile App', to: '/mobile-app' },
+  { label: 'FAQ',        to: '/faq' },
 ]
 
 export default function Navbar() {
@@ -23,12 +23,21 @@ export default function Navbar() {
   return (
     <header className={`nav ${scrolled ? 'nav-solid' : 'nav-transparent'}`}>
       <div className="nav-bar">
-        <a href="#home" className="nav-logo">
+        <NavLink to="/" className="nav-logo">
           <img src={logo} alt="SchoolMate" className="nav-logo-img" />
-        </a>
+        </NavLink>
 
         <nav className="nav-links">
-          {links.map(l => <a key={l.label} href={l.href}>{l.label}</a>)}
+          {links.map(l => (
+            <NavLink
+              key={l.label}
+              to={l.to}
+              end={l.to === '/'}
+              className={({ isActive }) => isActive ? 'nav-active' : ''}
+            >
+              {l.label}
+            </NavLink>
+          ))}
         </nav>
 
         <div className="nav-actions">
@@ -46,7 +55,15 @@ export default function Navbar() {
 
       <nav className={`nav-mobile${open ? ' open' : ''}`}>
         {links.map(l => (
-          <a key={l.label} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+          <NavLink
+            key={l.label}
+            to={l.to}
+            end={l.to === '/'}
+            className={({ isActive }) => isActive ? 'nav-active' : ''}
+            onClick={() => setOpen(false)}
+          >
+            {l.label}
+          </NavLink>
         ))}
         <a href="#get-started" className="btn btn-red" onClick={() => setOpen(false)}>
           Get Free Demo
