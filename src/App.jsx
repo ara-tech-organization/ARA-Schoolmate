@@ -1,5 +1,5 @@
 import './index.css'
-import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Outlet, useLocation, matchPath } from 'react-router-dom'
 import { useEffect } from 'react'
 import Navbar from './components/home/Navbar'
 import CTAFooter from './components/home/CTAFooter'
@@ -34,6 +34,8 @@ function ComingSoon({ page }) {
 }
 
 function Layout() {
+  const { pathname } = useLocation()
+  const noForm = !!matchPath('/contact', pathname)
   return (
     <>
       <ScrollToTop />
@@ -41,7 +43,7 @@ function Layout() {
       <main>
         <Outlet />
       </main>
-      <CTAFooter />
+      <CTAFooter noForm={noForm} />
     </>
   )
 }
