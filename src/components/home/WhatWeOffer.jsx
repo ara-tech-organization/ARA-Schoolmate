@@ -67,8 +67,7 @@ export default function WhatWeOffer() {
           <div className="chip chip-red"><Layers size={12} /> Our Offerings</div>
           <h2 className="htitle">What We <em>Offer?</em></h2>
           <p className="hsub">
-            SchoolMate offers a complete school management solution — attendance,
-            communication, academics, and more — all in real time.
+            SchoolMate offers a complete online attendance system for students &amp; teachers by helping schools, colleges and institutions manage attendance, alerts, and communication in real time.
           </p>
         </div>
 

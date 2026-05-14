@@ -47,12 +47,19 @@ export default function HeroBanner() {
 
         <h1 className="hero-h1">
           <span className="hero-h1-brand">SchoolMate</span>
-          <span className="hero-h1-rest"> – Smart School Management System</span>
+          <span className="hero-h1-rest"> – Smart Digital Solution for Modern Schools</span>
         </h1>
 
         <h2 className="hero-h2">
-          The ultimate schooling software and student management system software for your education management ERP.
+          Transform Your School with Smart Digital Management
         </h2>
+
+        <div className="hero-seo-desc">
+          <p>Build a connected, efficient, future-ready institution with SchoolMate, the complete solution for communication, operations, academics, attendance, transport, and administration.</p>
+          <p>SchoolMate replaces the outdated paperwork and manual tracking used by schools with a comprehensive digital ecosystem that promotes collaboration between administrators, teachers, students, and parents.</p>
+          <p>Whether you're looking for complete schooling software or an advanced smartschool management system, SchoolMate has got you covered on one secure platform.</p>
+          <p>The update of attendance and homework, fee management, and real-time notifications, SchoolMate facilitates smooth school operations and also improves transparency and productivity.</p>
+        </div>
 
         <div className="hero-pills">
           {pills.map(({ icon: Icon, text }) => (

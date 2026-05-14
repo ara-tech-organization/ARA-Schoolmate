@@ -91,6 +91,15 @@ export default function Home() {
       }]
     };
 
+    document.title = 'Best Smart School Management System | SchoolMate';
+    const setMeta = (name, content) => {
+      let el = document.querySelector(`meta[name="${name}"]`);
+      if (!el) { el = document.createElement('meta'); el.name = name; document.head.appendChild(el); }
+      el.content = content;
+    };
+    setMeta('description', 'SchoolMate is a smart schooling software and student school management system with attendance, ERP, communication, and smartschool management system tools.');
+    setMeta('keywords', 'schooling software, student management system software, school management system, smartschool management system, student attendance management system, education management system software, online attendance system for students & teachers, online student attendance management software system, best campus management software, eschool software, student database management system software, student information management software, student monitoring software, education administration software, class attendance management system');
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.id = 'home-faq-schema';
@@ -98,10 +107,9 @@ export default function Home() {
     document.head.appendChild(script);
 
     return () => {
+      document.title = 'SchoolMate';
       const existingScript = document.getElementById('home-faq-schema');
-      if (existingScript) {
-        existingScript.remove();
-      }
+      if (existingScript) existingScript.remove();
     };
   }, []);
 

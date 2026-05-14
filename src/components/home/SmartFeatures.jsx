@@ -23,8 +23,7 @@ export default function SmartFeatures() {
           <div className="chip chip-red"><Sparkles size={12} /> Smart Features</div>
           <h2 className="htitle">Smart Features That <em>Drive Results</em></h2>
           <p className="hsub">
-            SchoolMate is one scalable platform integrating full automation and complete
-            communication — a productivity booster for modern schools.
+            SchoolMate is one scalable platform that integrates full automation and entire communication. Smartschool ERP SchoolMate is a productivity booster for schools that cuts down operational complexity. The platform also comes with advanced student information management software capabilities for better handling of records and analytics.
           </p>
         </div>
 

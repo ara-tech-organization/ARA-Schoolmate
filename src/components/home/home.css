@@ -70,6 +70,13 @@
 .center-text .hsub { margin: 0 auto; text-align: center; }
 .offer2-header .hsub { margin: 0 auto; text-align: center; }
 
+/* SEO content paragraphs */
+.hero-seo-desc { display: none; }
+.tv2-seo-para { font-size: 14px; line-height: 1.8; color: var(--text-3); margin-bottom: 20px; }
+.platform2-seo-para { font-size: 14px; line-height: 1.8; color: var(--text-3); margin-bottom: 20px; }
+.standout2-sub-h3 { font-size: 17px; font-weight: 700; color: var(--text-1); margin-bottom: 10px; }
+.standout2-header .hsub { margin: 0 auto; text-align: center; max-width: 680px; }
+
 /* â”€â”€ buttons â”€â”€ */
 .btn {
   display: inline-flex; align-items: center; gap: 7px;

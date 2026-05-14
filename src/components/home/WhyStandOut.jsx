@@ -37,9 +37,11 @@ export default function WhyStandOut() {
         <div ref={h} className={`standout2-header sr${hv ? ' in' : ''}`}>
           <div className="chip chip-red"><Award size={12} /> Why We Stand Out</div>
           <h2 className="htitle">Why Does <em>SchoolMate</em> Stand Out?</h2>
+          <h3 className="standout2-sub-h3">Designed for Modern Educational Institutions</h3>
           <p className="hsub">
-            SchoolMate is not just a school management system, but a complete digital
-            ecosystem for schools looking for operational excellence.
+            SchoolMate is not just a school management system, but a complete digital ecosystem for schools looking for operational excellence.
+            For schools that want better academic visibility and more advanced student monitoring software, SchoolMate is the software of choice.
+            Our platform is also a scalable education management system software for educational institutions of all sizes.
           </p>
         </div>
 
@@ -56,7 +58,7 @@ export default function WhyStandOut() {
         <div ref={r} className={`s2r-section sr${rv ? ' in' : ''}`}>
           <div className="s2r-head">
             <div className="s2r-head-icon"><TrendingUp size={18} /></div>
-            <h3>Why Schools Choose SchoolMate</h3>
+            <h3>Why Schools Prefer SchoolMate?</h3>
           </div>
           <div className="s2r-cards">
             {reasons.map((reason, i) => (

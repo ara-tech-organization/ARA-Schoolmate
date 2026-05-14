@@ -74,11 +74,14 @@ export default function AllInOnePlatform() {
         <div ref={cl} className={`platform2-content sr-l${clv ? ' in' : ''}`}>
           <div className="chip chip-red"><Grid3x3 size={12} /> Integrated Ecosystem</div>
           <h2 className="htitle">
-            The Ultimate <em>Smartschool Management System</em>
+            Everything Your School Needs <em>in One Platform</em>
           </h2>
-          <p className="hsub" style={{ marginBottom: 28 }}>
-            SchoolMate is an intelligent student database management system software connecting communication, administration,
-            attendance, finance, academics, and transport.
+          <p className="hsub" style={{ marginBottom: 16 }}>
+            SchoolMate is an intelligent ecosystem that connects communication, administration, attendance, finance, academics, and transport.
+          </p>
+          <p className="platform2-seo-para">
+            The integrated architecture and scalable modules of SchoolMate provide benefits for schools looking for an all-in-one student management system software.
+            Our platform is also known as the best campus management software, as it helps institutions to reduce operational gaps while improving collaboration.
           </p>
 
           <div className="platform2-modules">
