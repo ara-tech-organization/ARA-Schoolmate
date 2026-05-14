@@ -324,22 +324,6 @@
   opacity: .5;
 }
 
-/* ── responsive ──────────────────────────────────────────────── */
-@media (max-width: 900px) {
-  .mh2-body {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 48px 0 40px;
-  }
-  .mh2-deco-word { display: none; }
-}
-@media (max-width: 540px) {
-  .mh2-h1 { letter-spacing: -1px; }
-  .mh2-checks { grid-template-columns: 1fr; }
-  .mh2-stripe-inner { gap: 10px 14px; }
-  .mh2-stripe-divider { display: none; }
-}
-
 /* ================================================================
    WHY  — section 01
    ================================================================ */
@@ -924,113 +908,256 @@
    RESPONSIVE  — 320 → 1440
    ================================================================ */
 
-/* 1200px — large desktop cap */
+/* ── 1440px — large desktop ──────────────────────────────────── */
+@media (max-width: 1440px) {
+  .mh2-section { overflow-x: hidden; }
+  .mh2-deco-word { right: -10px; }
+}
+
+/* ── 1200px — standard laptop ────────────────────────────────── */
 @media (max-width: 1200px) {
-  .mob-ctrl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mob-ctrl-grid  { grid-template-columns: repeat(3, 1fr); }
+  .mh2-body       { gap: 48px; }
+  .mob-why-inner  { gap: 48px; }
+  .mob-prefer-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* 1024px — tablet landscape / small desktop */
+/* ── 1024px — small laptop / tablet landscape ─────────────────── */
 @media (max-width: 1024px) {
-  .mh2-body         { gap: 40px; }
-  .mob-why-inner    { grid-template-columns: 1fr; gap: 40px; }
+  /* Hero */
+  .mh2-body          { gap: 36px; }
+  .mh2-deco-word     { font-size: clamp(70px, 10vw, 110px); }
+
+  /* Why */
+  .mob-why-inner     { grid-template-columns: 1fr; gap: 40px; }
   .mob-why-img-frame { height: 360px; }
-  .mob-section-num  { font-size: clamp(70px, 10vw, 120px); }
-  .mob-feat-grid    { grid-template-columns: repeat(2, 1fr); }
-  .mob-feat-hero    { grid-column: span 2; grid-row: span 1; }
-  .mob-feat-hero-img-wrap { height: 220px; }
-  .mob-prefer-grid  { grid-template-columns: repeat(2, 1fr); }
-  .mob-ctrl-grid    { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* 900px — tablet portrait */
-@media (max-width: 900px) {
-  .mh2-body         { grid-template-columns: 1fr; gap: 36px; padding: 48px 0 40px; }
-  .mh2-deco-word    { display: none; }
-  .mh2-cards-grid   { grid-template-columns: repeat(4, 1fr); }
-  .mob-ctrl-grid    { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* 768px — tablet */
-@media (max-width: 768px) {
-  .mob-bc-meta      { display: none; }
-  .mob-why          { padding: 60px 0; }
   .mob-why-img-col .mob-section-num { display: none; }
+
+  /* Features */
+  .mob-section-num   { font-size: clamp(70px, 10vw, 120px); }
+  .mob-feat-grid     { grid-template-columns: repeat(2, 1fr); }
+  .mob-feat-hero     { grid-column: span 2; grid-row: span 1; }
+  .mob-feat-hero-img-wrap { height: 220px; }
+
+  /* Users */
+  .mob-users-grid    { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+  /* Control */
+  .mob-ctrl-grid     { grid-template-columns: repeat(2, 1fr); }
+
+  /* Prefer */
+  .mob-prefer-grid   { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── 900px ───────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .mh2-body          { grid-template-columns: 1fr; gap: 32px; padding: 44px 0 36px; }
+  .mh2-deco-word     { display: none; }
+  .mh2-cards-grid    { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .mh2-stat-card     { padding: 20px 16px; }
+  .mh2-stat-num      { font-size: 28px; }
+  .mob-ctrl-grid     { grid-template-columns: repeat(2, 1fr); }
+  .mob-why           { padding: 70px 0; }
+}
+
+/* ── 768px — tablet portrait ─────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Section padding */
+  .mh2-section       { padding-top: 64px; }
+  .mob-why           { padding: 60px 0; }
   .mob-features, .mob-users, .mob-control,
   .mob-prefer, .mob-faq, .mob-transform { padding: 60px 0; }
-  .mob-feat-grid    { grid-template-columns: 1fr; }
-  .mob-feat-hero    { grid-column: span 1; }
-  .mob-users-grid   { grid-template-columns: 1fr; gap: 16px; }
-  .mob-prefer-grid  { grid-template-columns: 1fr 1fr; gap: 14px; }
-  .mob-faq-q        { padding: 18px 20px; }
-  .mob-faq-answer-text { padding: 0 20px 18px; }
+
+  /* Hero */
+  .mob-bc-meta            { display: none; }
+  .mh2-body               { gap: 24px; padding: 28px 0 28px; }
+  .mh2-eyebrow            { margin-bottom: 10px; }
+  .mh2-seo-h1             { font-size: 12px; margin-bottom: 6px; }
+  .mh2-h1                 { font-size: clamp(26px, 7vw, 36px); letter-spacing: -0.8px; margin-bottom: 14px; }
+  .mh2-h1-outline         { -webkit-text-stroke: 0; color: var(--text-1); }
+  .mh2-tags               { margin-bottom: 12px; }
+  .mh2-lead               { font-size: 13.5px; line-height: 1.65; margin-bottom: 12px; }
+  .mh2-checks             { grid-template-columns: 1fr 1fr; gap: 8px 16px; margin-bottom: 18px; margin-top: 4px; }
+  .mh2-cards-grid         { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .mh2-stat-card          { padding: 18px 14px; }
+  .mh2-stat-num           { font-size: 26px; }
   .mob-section-num-center { font-size: clamp(60px, 12vw, 100px); }
-  .mh2-checks       { grid-template-columns: 1fr; }
-  /* replace outline with solid on small screens — dot bg bleeds through transparent text */
-  .mh2-h1-outline   { -webkit-text-stroke: 0; color: var(--text-1); }
-  .mh2-h1           { font-size: clamp(28px, 7vw, 40px); letter-spacing: -0.8px; margin-bottom: 20px; }
-  .mh2-tags         { margin-bottom: 18px; }
-  .mh2-lead         { margin-bottom: 18px; }
-  .mh2-checks       { margin-bottom: 24px; }
+
+  /* Features */
+  .mob-feat-grid     { grid-template-columns: 1fr; }
+  .mob-feat-hero     { grid-column: span 1; }
+
+  /* Users */
+  .mob-users-grid    { grid-template-columns: 1fr; gap: 16px; }
+
+  /* Control */
+  .mob-ctrl-grid     { grid-template-columns: 1fr 1fr; }
+
+  /* Prefer */
+  .mob-prefer-grid   { grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  /* FAQ */
+  .mob-faq-q         { padding: 18px 20px; }
+  .mob-faq-answer-text { padding: 0 20px 18px; }
 }
 
-/* 640px — large phone */
+/* ── 640px — large phone landscape ──────────────────────────── */
 @media (max-width: 640px) {
-  .mh2-cards-grid   { grid-template-columns: repeat(2, 1fr); }
-  .mob-ctrl-grid    { grid-template-columns: 1fr 1fr; }
-  .mob-ctrl-card    { padding: 22px 18px; }
-  .mob-why-inner    { gap: 28px; }
-  .mob-faq-q-text   { font-size: 13.5px; }
-  .mh2-body         { padding: 40px 0 32px; }
+  .mh2-body          { padding: 28px 0 28px; }
+  .mh2-stripe-inner  { gap: 10px 14px; }
+  .mob-why-inner     { gap: 28px; }
+  .mob-why-img-frame { height: 300px; }
+  .mob-ctrl-grid     { grid-template-columns: 1fr 1fr; }
+  .mob-ctrl-card     { padding: 22px 18px; }
+  .mob-faq-q-text    { font-size: 13.5px; }
 }
 
-/* 540px — large phone */
+/* ── 540px ───────────────────────────────────────────────────── */
 @media (max-width: 540px) {
-  .mh2-h1           { font-size: clamp(26px, 6.5vw, 34px); letter-spacing: -0.5px; }
-  .mh2-stripe-inner { gap: 10px 14px; }
+  .mh2-h1            { font-size: clamp(26px, 6.5vw, 34px); letter-spacing: -0.5px; }
+  .mh2-stripe-inner  { gap: 8px 12px; }
   .mh2-stripe-divider { display: none; }
-  .mob-ctrl-grid    { grid-template-columns: 1fr; }
+  .mob-ctrl-grid     { grid-template-columns: 1fr; }
 }
 
-/* 480px — standard phone */
+/* ── 480px — standard phone ──────────────────────────────────── */
 @media (max-width: 480px) {
-  .mh2-body         { padding: 32px 0 24px; }
-  .mh2-h1           { font-size: clamp(24px, 6.5vw, 32px); }
-  .mh2-actions      { flex-direction: column; align-items: stretch; gap: 10px; }
-  .mh2-actions .btn { width: 100%; justify-content: center; }
-  .mh2-ghost        { text-align: center; }
-  .mh2-stat-card    { padding: 18px 12px; }
-  .mh2-stat-num     { font-size: 28px; }
-  .mob-prefer-grid  { grid-template-columns: 1fr; }
-  .mob-transform-actions { flex-direction: column; gap: 10px; }
+  /* Section padding */
+  .mob-why           { padding: 44px 0; }
+  .mob-features, .mob-users, .mob-control,
+  .mob-prefer, .mob-faq, .mob-transform { padding: 44px 0; }
+
+  /* Section headers */
+  .mob-sec-head      { margin-bottom: 28px; }
+  .mob-sec-h2        { font-size: clamp(20px, 5.5vw, 26px); letter-spacing: -0.5px; }
+  .mob-sec-intro     { font-size: 13px; margin-top: 8px; }
+
+  /* Hero */
+  .mh2-section       { padding-top: 60px; }
+  .mh2-body          { padding: 24px 0 24px; }
+  .mh2-eyebrow       { margin-bottom: 8px; font-size: 9.5px; }
+  .mh2-seo-h1        { font-size: 12px; margin-bottom: 8px; }
+  .mh2-h1            { font-size: clamp(23px, 7vw, 30px); margin-bottom: 14px; }
+  .mh2-tags          { gap: 6px; margin-bottom: 14px; }
+  .mh2-tag           { font-size: 10.5px; padding: 5px 12px; }
+  .mh2-lead          { font-size: 13px; line-height: 1.65; margin-bottom: 10px; }
+  .mh2-checks        { grid-template-columns: 1fr; gap: 8px; margin-bottom: 18px; margin-top: 4px; }
+  .mh2-check         { font-size: 13px; }
+  .mh2-actions       { flex-direction: column; align-items: stretch; gap: 10px; }
+  .mh2-actions .btn  { width: 100%; justify-content: center; }
+  .mh2-ghost         { text-align: center; }
+  .mh2-cards-grid    { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .mh2-stat-card     { padding: 16px 12px; }
+  .mh2-stat-num      { font-size: 24px; letter-spacing: -1px; }
+  .mh2-stat-icon     { width: 34px; height: 34px; }
+  .mh2-stat-lbl      { font-size: 11px; }
+
+  /* Why section */
+  .mob-why-inner     { gap: 24px; }
+  .mob-why-img-frame { height: 260px; }
+  .mob-why-h2        { font-size: clamp(20px, 5.5vw, 26px); margin-bottom: 10px; }
+  .mob-why-body      { font-size: 13px; margin-bottom: 20px; }
+  .mob-why-footer    { font-size: 13px; margin-top: 16px; }
+  .mob-why-list      { gap: 10px; margin-bottom: 18px; }
+  .mob-why-item      { font-size: 13px; gap: 10px; }
+
+  /* Features section */
+  .mob-feat-card     { padding: 22px 16px; }
+  .mob-feat-hero-body { padding: 24px 18px; }
+
+  /* Users section */
+  .mob-users-grid    { grid-template-columns: 1fr; gap: 16px; }
+  .mob-user-col      { padding: 24px 18px 20px; }
+
+  /* Control */
+  .mob-ctrl-grid     { grid-template-columns: 1fr; gap: 14px; }
+  .mob-ctrl-card     { padding: 20px 16px; }
+
+  /* Prefer */
+  .mob-prefer-grid   { grid-template-columns: 1fr; gap: 14px; }
+  .mob-prefer-card   { padding: 22px 18px; }
+
+  /* FAQ */
+  .mob-faq-q         { padding: 16px 18px; }
+  .mob-faq-answer-text { padding: 0 18px 16px; }
+  .mob-faq-q-text    { font-size: 13px; }
+
+  /* Transform CTA */
+  .mob-transform-inner     { padding: 0 4px; }
+  .mob-transform-actions   { flex-direction: column; gap: 10px; }
   .mob-transform-btn-white,
   .mob-transform-btn-ghost { width: 100%; justify-content: center; }
-  .mob-ctrl-card    { padding: 20px 16px; }
 }
 
-/* 375px — standard small phone */
+/* ── 375px — small phone (iPhone SE) ────────────────────────── */
 @media (max-width: 375px) {
-  .mh2-body         { padding: 28px 0 20px; }
-  .mh2-h1           { font-size: 24px; letter-spacing: -0.3px; margin-bottom: 16px; }
-  .mh2-eyebrow      { font-size: 9px; }
-  .mh2-tags         { gap: 6px; margin-bottom: 14px; }
-  .mh2-tag          { font-size: 10px; padding: 4px 10px; }
-  .mh2-lead         { font-size: 13.5px; margin-bottom: 14px; }
-  .mh2-checks       { gap: 8px 16px; margin-bottom: 18px; }
-  .mh2-check        { font-size: 12px; }
-  .mh2-stat-num     { font-size: 26px; }
-  .mob-sec-h2       { letter-spacing: -0.4px; }
-  .mob-faq-q        { padding: 14px 16px; }
+  /* Hide breadcrumb bar to save vertical space */
+  .mh2-bar           { display: none; }
+
+  /* Hero section */
+  .mh2-section       { padding-top: 56px; }
+  .mh2-body          { padding: 18px 0 18px; gap: 20px; }
+  .mh2-eyebrow       { font-size: 8.5px; margin-bottom: 6px; letter-spacing: .1em; }
+  .mh2-seo-h1        { font-size: 11px; margin-bottom: 6px; }
+  .mh2-h1            { font-size: 21px; letter-spacing: -0.3px; margin-bottom: 10px; line-height: 1.2; }
+  .mh2-tags          { gap: 5px 6px; margin-bottom: 10px; }
+  .mh2-tag           { font-size: 10px; padding: 4px 9px; gap: 4px; }
+  .mh2-lead          { font-size: 12.5px; line-height: 1.6; margin-bottom: 9px; }
+  .mh2-checks        { gap: 7px; margin-bottom: 14px; }
+  .mh2-check         { font-size: 12.5px; }
+  .mh2-actions       { gap: 8px; }
+
+  /* Stat cards */
+  .mh2-cards-grid    { gap: 8px; }
+  .mh2-stat-card     { padding: 14px 10px; gap: 6px; }
+  .mh2-stat-icon     { width: 30px; height: 30px; margin-bottom: 2px; }
+  .mh2-stat-num      { font-size: 22px; letter-spacing: -1px; }
+  .mh2-stat-lbl      { font-size: 10px; }
+
+  /* Section headers */
+  .mob-sec-head      { margin-bottom: 24px; }
+  .mob-sec-h2        { font-size: clamp(19px, 5vw, 24px); letter-spacing: -0.4px; }
+  .mob-sec-intro     { font-size: 13px; }
+
+  /* Sections padding */
+  .mob-why           { padding: 40px 0; }
+  .mob-features, .mob-users, .mob-control,
+  .mob-prefer, .mob-faq, .mob-transform { padding: 40px 0; }
+
+  /* Why */
+  .mob-why-h2        { font-size: clamp(19px, 5vw, 24px); }
+  .mob-why-img-frame { height: 230px; }
+  .mob-why-body      { font-size: 12.5px; }
+
+  /* Users */
+  .mob-user-col      { padding: 20px 14px 18px; }
+
+  /* Control */
+  .mob-ctrl-card     { padding: 16px 12px; }
+
+  /* Prefer */
+  .mob-prefer-card   { padding: 18px 14px; }
+
+  /* FAQ */
+  .mob-faq-q         { padding: 14px 16px; }
   .mob-faq-answer-text { padding: 0 16px 14px; }
+  .mob-faq-q-text    { font-size: 12.5px; }
+
+  /* Transform */
+  .mob-transform-h2  { font-size: clamp(20px, 6vw, 28px); }
+  .mob-transform-p   { font-size: 13px; }
 }
 
-/* 320px — very small phone */
+/* ── 320px — very small phone ────────────────────────────────── */
 @media (max-width: 320px) {
-  .mh2-body         { padding: 24px 0 16px; }
-  .mh2-h1           { font-size: 22px; }
-  .mh2-lead         { font-size: 13px; }
-  .mh2-cards-grid   { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .mh2-stat-card    { padding: 14px 10px; }
-  .mh2-stat-num     { font-size: 22px; }
-  .mob-ctrl-card    { padding: 16px 14px; }
-  .mob-section-num  { display: none; }
+  .mh2-body          { padding: 16px 0 16px; }
+  .mh2-h1            { font-size: 20px; }
+  .mh2-seo-h1        { font-size: 11px; }
+  .mh2-lead          { font-size: 12.5px; }
+  .mh2-tag           { font-size: 9.5px; padding: 3px 8px; }
+  .mob-section-num   { display: none; }
+  .mob-ctrl-card     { padding: 16px 12px; }
+  .mob-ctrl-num      { font-size: 28px; }
+  .mob-prefer-card   { padding: 20px 16px; }
+  .mob-transform-h2  { font-size: 20px; }
 }
