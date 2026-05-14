@@ -37,6 +37,8 @@ export default function WhyChoose() {
           <p className="hsub">
             SchoolMate replaces scattered tools with one smart platform — built for modern
             schools that want real efficiency, not more complexity.
+            SchoolMate is a trusted smartschool management system that helps schools manage all,
+            from academics to transportation, with ease.
           </p>
         </div>
 
@@ -45,8 +47,8 @@ export default function WhyChoose() {
           {/* LEFT — problems */}
           <div ref={l} className={`wsp-card wsp-left sr-l${lv ? ' in' : ''}`}>
             <div className="wsp-card-top">
-              <div className="wsp-badge wsp-badge-bad"><X size={12} /> Without SchoolMate</div>
-              <h3 className="wsp-card-title">The Old Way</h3>
+              <div className="wsp-badge wsp-badge-bad"><X size={12} /> Before SchoolMate</div>
+              <h3 className="wsp-card-title">Before SchoolMate</h3>
             </div>
             <ul className="wsp-list">
               {problems.map(({ icon: Icon, title, text }, i) => (
@@ -72,8 +74,8 @@ export default function WhyChoose() {
           {/* RIGHT — solutions */}
           <div ref={r} className={`wsp-card wsp-right sr-r${rv ? ' in' : ''}`}>
             <div className="wsp-card-top">
-              <div className="wsp-badge wsp-badge-good"><CheckCircle2 size={12} /> With SchoolMate</div>
-              <h3 className="wsp-card-title wsp-title-white">The SchoolMate Way</h3>
+              <div className="wsp-badge wsp-badge-good"><CheckCircle2 size={12} /> After SchoolMate</div>
+              <h3 className="wsp-card-title wsp-title-white">After SchoolMate</h3>
             </div>
             <ul className="wsp-list">
               {solutions.map(({ title, text }, i) => (
@@ -89,6 +91,9 @@ export default function WhyChoose() {
           </div>
 
         </div>
+
+        <p className="wsp-seo-note">SchoolMate is an all-in-one student attendance management system for schools that integrates academic and administrative features.</p>
+
       </div>
     </section>
   )

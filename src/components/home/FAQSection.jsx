@@ -25,7 +25,7 @@ export default function FAQSection() {
       <div className="faq-inner-wide">
         <div ref={h} className={`faq-header sr${hv ? ' in' : ''}`}>
           <div className="chip chip-red"><HelpCircle size={12} /> FAQ</div>
-          <h2 className="htitle">Got <em>Questions?</em> We Have Answers</h2>
+          <h2 className="htitle">Frequently Asked <em>Questions</em></h2>
           <p className="hsub center-text" style={{ margin: '0 auto' }}>Everything you need to know about SchoolMate and how it can help your institution go digital efficiently.</p>
         </div>
 

@@ -8,6 +8,7 @@ import MobileUsers     from '../components/mobile/MobileUsers'
 import MobileControl   from '../components/mobile/MobileControl'
 import MobilePrefer    from '../components/mobile/MobilePrefer'
 import MobileFAQ       from '../components/mobile/MobileFAQ'
+import MobileTransform from '../components/mobile/MobileTransform'
 
 const META = {
   title:       'Best Smart School Management App | SchoolMate',
@@ -88,6 +89,7 @@ export default function MobileApp() {
       <MobileControl />
       <MobilePrefer />
       <MobileFAQ />
+      <MobileTransform />
     </>
   )
 }

@@ -7,12 +7,12 @@ import {
 import heroBoyImg from '../../assets/h2.png'
 
 const pills = [
-  { icon: MessageSquare, text: 'Parent Communication' },
-  { icon: BookOpen,      text: 'Student Attendance Management System' },
-  { icon: Users,         text: 'Fee Management' },
-  { icon: Clock,         text: 'Exam Scheduling' },
-  { icon: Shield,        text: 'Smartschool ERP' },
-  { icon: Smartphone,    text: 'Eschool Software' },
+  { icon: MessageSquare, text: 'Real-time parent communication' },
+  { icon: BookOpen,      text: 'Attendance and homework tracking' },
+  { icon: Users,         text: 'Online fee management' },
+  { icon: Clock,         text: 'Timetable and exam scheduling' },
+  { icon: Shield,        text: 'Cloud-based secure platform' },
+  { icon: Smartphone,    text: 'Mobile app + web application support' },
 ]
 
 const features = [

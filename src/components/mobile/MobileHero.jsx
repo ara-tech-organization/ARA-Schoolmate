@@ -52,6 +52,8 @@ export default function MobileHero() {
             School Management App
           </div>
 
+          <p className="mh2-seo-h1">Smart School Management at Your Fingertips</p>
+
           <h1 className="mh2-h1">
             One App.<br />
             <span className="mh2-h1-accent">Every School</span><br />
@@ -69,9 +71,15 @@ export default function MobileHero() {
           </div>
 
           <p className="mh2-lead">
-            SchoolMate gives administrators, teachers, students, and parents a single
-            powerful app to manage attendance, fees, communication, and academics —
-            anytime, anywhere.
+            SchoolMate Mobile App – a powerful and easy-to-use mobile solution for administrators, teachers, students, and parents. Stay connected with your school and institution anytime, anywhere.
+          </p>
+
+          <p className="mh2-lead">
+            SchoolMate: a single secure dashboard that allows easy communication, attendance, and homework tracking, fees management, and academic performance monitoring.
+          </p>
+
+          <p className="mh2-lead">
+            SchoolMate is a modern schooling software and smartschool management system that assists schools in managing daily operations effectively and keeping parents informed in real time.
           </p>
 
           <div className="mh2-checks">

@@ -31,15 +31,16 @@ export default function AboutHero() {
       <div ref={c} className={`wrap abh-center sr${cv ? ' in' : ''}`}>
         <div className="abh-pill">About SchoolMate</div>
 
-        <h1 className="abh-h1">
-          Shaping the Future of<br />
-          <span className="abh-accent">School Management</span>
-        </h1>
+        <h1 className="abh-h1">About Us</h1>
+        <h2 className="abh-h2">
+          Shaping the Future of <span className="abh-accent">School Management</span>
+        </h2>
 
         <p className="abh-lead">
-          SchoolMate is a smart cloud platform for schools and colleges —
-          simplifying administration, improving communication, and powering
-          academic excellence for every institution.
+          SchoolMate is a smart schooling software for schools and colleges to simplify administration, improve communication, and manage academics.
+        </p>
+        <p className="abh-lead">
+          SchoolMate was developed by Ara Discoveries to solve the everyday operational headaches schools face — from manual attendance tracking, paperwork, slow communication, and disconnected systems. Today, SchoolMate is a robust student school management system that connects administrators, teachers, students, and parents in a centralized cloud-based solution.
         </p>
 
         <ul className="abh-checks">

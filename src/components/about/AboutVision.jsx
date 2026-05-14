@@ -70,9 +70,10 @@ export default function AboutVision() {
 
             <p className="abv-eyeline"><Eye size={13} /> Where We Are Headed</p>
             <p className="abv-body">
-              Our vision is to redefine how schools and institutions operate by creating a
-              future-ready smart school management system that promotes academic excellence,
-              operational transparency, and better parent-school collaboration.
+              Our vision is to refine how schools and institutions operate by creating a future-ready smartschool management system that promotes academic excellence, operational transparency, and better parent-school collaboration.
+            </p>
+            <p className="abv-body">
+              At Ara Discoveries, we believe SchoolMate will become a trusted student school management system worldwide, enabling educational institutions to confidently embark on digital transformation.
             </p>
             <div className="abv-callout">
               SchoolMate is not just software — a complete digital ecosystem for modern education.

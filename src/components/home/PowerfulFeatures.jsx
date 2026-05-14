@@ -5,13 +5,14 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 const tabs = [
   { id: 'teachers', label: 'For Teachers', icon: GraduationCap },
   { id: 'parents',  label: 'For Parents',  icon: Users },
-  { id: 'admins',   label: 'For Admins',   icon: Settings },
+  { id: 'admins',   label: 'For School Administrators', icon: Settings },
 ]
 
 const content = {
   teachers: {
     icon: GraduationCap, title: 'Empower Teachers with Smart Tools',
     sub: 'A time and class attendance management system that makes classroom operations and reporting effortless.',
+    seoPara: 'Teachers like a time and class attendance management system that makes classroom operations and reporting easy.',
     img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80',
     items: [
       { icon: ClipboardCheck, title: 'Instant Attendance Marking', desc: 'Mark class attendance in seconds with auto-parent alerts' },
@@ -23,23 +24,27 @@ const content = {
   parents: {
     icon: Users, title: 'Keep Parents in the Loop',
     sub: 'SchoolMate makes parent engagement easy with a smart online attendance system and real-time updates.',
+    seoPara: 'SchoolMate makes parent engagement easy with a smart online attendance system for students & teachers with real-time updates.',
     img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80',
     items: [
       { icon: Eye,        title: 'Monitor Attendance', desc: 'Get real-time alerts every time your child enters or exits' },
       { icon: BookOpen,   title: 'Homework & Exams',   desc: 'View exam schedules, homework, and academic results' },
       { icon: Bell,       title: 'Instant Alerts',     desc: 'Receive circular, fee, and event alerts instantly' },
-      { icon: CreditCard, title: 'Pay Fees Online',    desc: 'Secure, hassle-free fee payment from your phone' },
+      { icon: CreditCard,    title: 'Pay Fees Online',           desc: 'Secure, hassle-free fee payment from your phone' },
+      { icon: MessageCircle, title: 'All Communication',         desc: 'Access all communication in one place' },
     ],
   },
   admins: {
     icon: Settings, title: 'Complete Control for Administrators',
     sub: 'A reliable student database management system for administrators handling large operational data.',
+    seoPara: 'SchoolMate is a reliable student database management system software for administrators who deal with a large amount of academic and operational data.',
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
     items: [
-      { icon: LayoutDashboard, title: 'Centralized Dashboard',  desc: 'Single view of all school operations and analytics' },
-      { icon: DollarSign,      title: 'Fee & Finance Tracking', desc: 'Monitor collections, dues, and financial reports' },
-      { icon: Calendar,        title: 'Timetable Planning',     desc: 'Drag-and-drop scheduling for classes and exams' },
-      { icon: BarChart3,       title: 'Analytics & Reports',    desc: 'Data-driven insights to improve school performance' },
+      { icon: LayoutDashboard, title: 'Centralized Dashboard',      desc: 'Single view of all school operations and analytics' },
+      { icon: DollarSign,      title: 'Fee & Finance Tracking',    desc: 'Monitor collections, dues, and financial reports' },
+      { icon: Calendar,        title: 'Timetable Planning',        desc: 'Drag-and-drop scheduling for classes and exams' },
+      { icon: Bell,            title: 'Circular & Event Mgmt',    desc: 'Create and distribute circulars and manage school events' },
+      { icon: BarChart3,       title: 'Analytics & Reports',       desc: 'Data-driven insights to improve school performance' },
     ],
   },
 }
@@ -87,6 +92,7 @@ export default function PowerfulFeatures() {
                 </div>
               ))}
             </div>
+            {data.seoPara && <p className="feat2-seo-para">{data.seoPara}</p>}
           </div>
 
           <div className="feat2-visual-side">

@@ -15,8 +15,8 @@ const benefits = [
   'Reduce manual work by up to 80%',
   'Improve parent engagement instantly',
   'Automate routine administration',
+  'Increase operational efficiency',
   'Deliver real-time updates to all stakeholders',
-  'Access everything from one cloud dashboard',
 ]
 
 export default function AboutStory() {
@@ -77,6 +77,9 @@ export default function AboutStory() {
           {/* RIGHT — text + benefit list */}
           <div ref={r} className={`abst-right sr-r${rv ? ' in' : ''}`}>
             <p className="abst-eyebrow">Why Schools Choose SchoolMate</p>
+            <p className="abst-body">
+              SchoolMate is a trusted smartschool management system that helps schools reduce manual work, improve parent engagement, automate administration, increase operational efficiency, and deliver real-time updates.
+            </p>
             <p className="abst-body">
               Our platform is an all-in-one solution that combines attendance tracking,
               communication tools, fee management, timetable scheduling, academic monitoring,

@@ -140,6 +140,13 @@
   background: var(--red);
   animation: pulseDot 2s infinite;
 }
+.mh2-seo-h1 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
 .mh2-h1 {
   font-size: clamp(30px, 4.5vw, 48px);
   font-weight: 800;

@@ -32,14 +32,21 @@ export default function AdvancedSection() {
         <div ref={h} className={`adv2-header sr${hv ? ' in' : ''}`}>
           <div className="chip chip-dark"><span className="chip-dot chip-dot-white" /><Cpu size={12} /> Advanced Operations</div>
           <h2 className="htitle htitle-white">Advanced Digital <em>School Operations</em></h2>
+          <h3 className="adv2-sub-h3">Advanced Functionalities</h3>
           <p className="adv2-sub">
             SchoolMate automates routine tasks, increases accountability and transparency.
-            A powerful online student attendance management software from a single dashboard.
+            A powerful online student attendance management software system from a single dashboard.
           </p>
           <div className="adv2-ctas">
             <a href="#contact" className="btn btn-red btn-lg">Start Free Trial <ArrowRight size={17} /></a>
             <a href="tel:+919876543210" className="btn btn-ghost-white btn-lg">Talk to Sales</a>
           </div>
+        </div>
+
+        {/* SEO paragraphs */}
+        <div className="adv2-seo">
+          <p>SchoolMate is a powerful online student attendance management software system that gives schools complete visibility over student presence, academic progress, and operational workflows — all from one central dashboard.</p>
+          <p>SchoolMate is one of the best campus management software solutions available, offering schools a unified platform that covers attendance, fee management, transport, academics, and communication in a single scalable system.</p>
         </div>
 
         {/* glass cards */}

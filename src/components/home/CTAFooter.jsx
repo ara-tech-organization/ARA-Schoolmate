@@ -129,6 +129,13 @@ export default function CTAFooter({ noForm = false }) {
                   </div>
                 ))}
               </div>
+
+              <p className="cta2-seo-para">SchoolMate has the tools your institution needs to grow, whether you need eschool software, student information management software, or a complete smartschool management system.</p>
+              <p className="cta2-seo-para">SchoolMate continues to help institutions modernize with scalable student database management system software, education administration software, and student monitoring software solutions.</p>
+              <p className="cta2-upgrade">Upgrade your school with SchoolMate now.</p>
+              <a href="tel:+919876543210" className="cta2-call-btn">
+                📞 Call Us: +91 98765 43210
+              </a>
             </div>
 
             {/* right — form card */}

@@ -2,14 +2,14 @@ import { UserCheck, Fingerprint, CreditCard, DollarSign, ClipboardCheck, MapPin,
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const modules = [
-  { icon: UserCheck,      text: 'Attendance' },
-  { icon: Fingerprint,    text: 'Biometric' },
-  { icon: CreditCard,     text: 'Fee & Finance' },
-  { icon: DollarSign,     text: 'Payroll' },
-  { icon: ClipboardCheck, text: 'Homework' },
-  { icon: MapPin,         text: 'Transport' },
-  { icon: Bell,           text: 'Notifications' },
-  { icon: BarChart3,      text: 'Analytics' },
+  { icon: UserCheck,      title: 'Attendance',           desc: 'Real-time student & staff tracking' },
+  { icon: Fingerprint,    title: 'Biometric',            desc: 'Secure biometric integration support' },
+  { icon: CreditCard,     title: 'Fee & Finance',        desc: 'Online collection & payment tracking' },
+  { icon: DollarSign,     title: 'Payroll',              desc: 'Staff payroll and leave management' },
+  { icon: ClipboardCheck, title: 'Homework & Timetable', desc: 'Assignments, schedules & submissions' },
+  { icon: MapPin,         title: 'Transport',            desc: 'GPS tracking and route management' },
+  { icon: Bell,           title: 'Notifications',        desc: 'Instant push alerts for all users' },
+  { icon: BarChart3,      title: 'Analytics',            desc: 'Reports, dashboards & insights' },
 ]
 
 const bullets = [
@@ -18,97 +18,52 @@ const bullets = [
   'Easy setup – go live in days, not months',
 ]
 
-function DashboardMockup() {
-  return (
-    <div className="dash-mockup">
-      <div className="dash-topbar">
-        <div className="dash-dots"><span /><span /><span /></div>
-        <div className="dash-title-bar">SchoolMate — Live Dashboard</div>
-        <div className="dash-live-dot"><span />Live</div>
-      </div>
-      <div className="dash-body">
-        <div className="dash-sidebar">
-          {['🏠 Overview','👥 Students','📋 Attendance','💰 Fees','🚌 Transport','📊 Reports'].map((item, i) => (
-            <div key={item} className={`dash-nav-item${i === 2 ? ' dash-nav-active' : ''}`}>{item}</div>
-          ))}
-        </div>
-        <div className="dash-main">
-          <div className="dash-stat-row">
-            {[['1,248','Total Students'],['98.2%','Today Attendance'],['₹4.2L','Fees Collected']].map(([n, l]) => (
-              <div className="dash-stat-card" key={l}>
-                <div className="dash-stat-num">{n}</div>
-                <div className="dash-stat-lbl">{l}</div>
-              </div>
-            ))}
-          </div>
-          <div className="dash-chart-area">
-            <div className="dash-chart-label">Weekly Attendance Trend</div>
-            <div className="dash-bars">
-              {[82,91,78,95,88,93,87].map((h, i) => (
-                <div key={i} className="dash-bar-col">
-                  <div className="dash-bar-fill" style={{ height: `${h}%` }} />
-                  <div className="dash-bar-day">{['M','T','W','T','F','S','S'][i]}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="dash-alerts-area">
-            <div className="dash-alert-item">🔔 3 fee reminders sent to Class 9B parents</div>
-            <div className="dash-alert-item dash-alert-green">✅ Attendance marked — Class 10A (98%)</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 export default function AllInOnePlatform() {
-  const [cl, clv] = useScrollAnimation()
-  const [vl, vlv] = useScrollAnimation()
+  const [hRef, hVis] = useScrollAnimation()
+  const [gRef, gVis] = useScrollAnimation(0.05)
 
   return (
-    <section className="platform2-section">
-      <div className="platform2-inner">
+    <section className="plat3-section">
+      <div className="plat3-inner">
 
-        {/* content */}
-        <div ref={cl} className={`platform2-content sr-l${clv ? ' in' : ''}`}>
+        {/* centered header */}
+        <div ref={hRef} className={`plat3-header sr${hVis ? ' in' : ''}`}>
           <div className="chip chip-red"><Grid3x3 size={12} /> Integrated Ecosystem</div>
-          <h2 className="htitle">
-            Everything Your School Needs <em>in One Platform</em>
-          </h2>
-          <p className="hsub" style={{ marginBottom: 16 }}>
+          <h2 className="htitle">Everything Your School Needs <em>in One Platform</em></h2>
+          <p className="hsub">
             SchoolMate is an intelligent ecosystem that connects communication, administration, attendance, finance, academics, and transport.
           </p>
-          <p className="platform2-seo-para">
+          <p className="plat3-seo">
             The integrated architecture and scalable modules of SchoolMate provide benefits for schools looking for an all-in-one student management system software.
-            Our platform is also known as the best campus management software, as it helps institutions to reduce operational gaps while improving collaboration.
+            Our platform is also known as the best campus management software, as it helps institutions reduce operational gaps while improving collaboration.
+            SchoolMate's integrated education management ERP brings academics, administration, and communication together in one scalable system.
           </p>
+        </div>
 
-          <div className="platform2-modules">
-            {modules.map(({ icon: Icon, text }, i) => (
-              <div className="p2m-item" key={text} style={{ transitionDelay: `${i * 0.06}s` }}>
-                <div className="p2m-icon"><Icon size={17} /></div>
-                <span>{text}</span>
-              </div>
-            ))}
-          </div>
+        {/* module cards grid */}
+        <div ref={gRef} className={`plat3-grid sr${gVis ? ' in' : ''}`}>
+          {modules.map(({ icon: Icon, title, desc }, i) => (
+            <div className="plat3-card" key={title} style={{ transitionDelay: `${i * 0.06}s` }}>
+              <div className="plat3-card-icon"><Icon size={22} /></div>
+              <h3 className="plat3-card-title">{title}</h3>
+              <p className="plat3-card-desc">{desc}</p>
+            </div>
+          ))}
+        </div>
 
-          <div className="platform2-bullets">
+        {/* bullets + CTA */}
+        <div className="plat3-footer">
+          <div className="plat3-bullets">
             {bullets.map(b => (
-              <div className="p2b-item" key={b}>
-                <CheckCircle2 size={17} style={{ flexShrink: 0 }} /> {b}
+              <div className="plat3-bullet" key={b}>
+                <CheckCircle2 size={16} style={{ flexShrink: 0 }} />
+                <span>{b}</span>
               </div>
             ))}
           </div>
-
           <a href="#modules" className="btn btn-red">
             Explore All Modules <ArrowRight size={16} />
           </a>
-        </div>
-
-        {/* dashboard visual */}
-        <div ref={vl} className={`platform2-visual sr-r${vlv ? ' in' : ''}`}>
-          <DashboardMockup />
         </div>
 
       </div>
