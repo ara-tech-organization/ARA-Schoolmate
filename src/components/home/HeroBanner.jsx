@@ -176,13 +176,6 @@ export default function HeroBanner() {
             <div className="hero-vis-inner">
               <img src={heroBoyImg} alt="SchoolMate app" className="hero-vis-img" />
             </div>
-            <div className="hv-card hv-card-bc fc-tr">
-              <div className="hvc-icon"><TrendingUp size={13} /></div>
-              <div>
-                <span className="hvc-num">99%</span>
-                <span className="hvc-label">Satisfaction Rate</span>
-              </div>
-            </div>
             <div className="hv-card hv-card-bc fc-bl">
               <div className="hvc-icon"><Award size={13} /></div>
               <div>

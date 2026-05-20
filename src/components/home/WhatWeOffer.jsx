@@ -1,5 +1,8 @@
 import { MessageCircle, BookOpen, UserCheck, ChevronRight, Layers } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import communicationImg from '../../assets/Communication.png'
+import academicImg from '../../assets/Academic.png'
+import attendanceImg from '../../assets/Attendance.png'
 
 const offers = [
   {
@@ -7,14 +10,14 @@ const offers = [
     title: 'Communication & Engagement',
     desc: 'Keep every stakeholder connected with real-time circulars, instant notifications, and secure messaging that bridges the gap between school and home.',
     items: ['Circulars and announcements', 'Instant push notifications', 'Secure parent messaging', 'Digital consent forms', 'School news and updates'],
-    img: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=80',
+    img: communicationImg,
   },
   {
     num: '02', icon: BookOpen,
     title: 'Academic Management',
     desc: 'Streamline the entire academic cycle — from homework assignments to exam schedules — in one powerful, teacher-friendly interface that saves hours every week.',
     items: ['Homework tracking & submission', 'Study material sharing', 'Exam timetables & marks', 'Result management', 'Academic calendars'],
-    img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80',
+    img: academicImg,
     flip: true,
   },
   {
@@ -22,7 +25,7 @@ const offers = [
     title: 'Attendance & Monitoring',
     desc: 'Never miss a moment. Track student and staff attendance in real time with instant parent alerts and comprehensive analytics dashboards for full visibility.',
     items: ['Live attendance updates', 'Staff attendance tracking', 'Parent instant notifications', 'Performance analytics', 'Daily activity reports'],
-    img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80',
+    img: attendanceImg,
   },
 ]
 

@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { GraduationCap, Users, Settings, ClipboardCheck, Upload, MessageCircle, BookOpen, Eye, CreditCard, Bell, Calendar, BarChart3, LayoutDashboard, DollarSign, Zap } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import teachersImg from '../../assets/Teachers.png'
+import parentImg from '../../assets/Parent.png'
+import administrationImg from '../../assets/Administration.png'
 
 const tabs = [
   { id: 'teachers', label: 'For Teachers', icon: GraduationCap },
@@ -13,7 +16,7 @@ const content = {
     icon: GraduationCap, title: 'Empower Teachers with Smart Tools',
     sub: 'A time and class attendance management system that makes classroom operations and reporting effortless.',
     seoPara: 'Teachers like a time and class attendance management system that makes classroom operations and reporting easy.',
-    img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80',
+    img: teachersImg,
     items: [
       { icon: ClipboardCheck, title: 'Instant Attendance Marking', desc: 'Mark class attendance in seconds with auto-parent alerts' },
       { icon: Upload,         title: 'Upload Homework & Marks',    desc: 'Share assignments and results directly from the app' },
@@ -25,7 +28,7 @@ const content = {
     icon: Users, title: 'Keep Parents in the Loop',
     sub: 'SchoolMate makes parent engagement easy with a smart online attendance system and real-time updates.',
     seoPara: 'SchoolMate makes parent engagement easy with a smart online attendance system for students & teachers with real-time updates.',
-    img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80',
+    img: parentImg,
     items: [
       { icon: Eye,        title: 'Monitor Attendance', desc: 'Get real-time alerts every time your child enters or exits' },
       { icon: BookOpen,   title: 'Homework & Exams',   desc: 'View exam schedules, homework, and academic results' },
@@ -38,7 +41,7 @@ const content = {
     icon: Settings, title: 'Complete Control for Administrators',
     sub: 'A reliable student database management system for administrators handling large operational data.',
     seoPara: 'SchoolMate is a reliable student database management system software for administrators who deal with a large amount of academic and operational data.',
-    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
+    img: administrationImg,
     items: [
       { icon: LayoutDashboard, title: 'Centralized Dashboard',      desc: 'Single view of all school operations and analytics' },
       { icon: DollarSign,      title: 'Fee & Finance Tracking',    desc: 'Monitor collections, dues, and financial reports' },

@@ -1,6 +1,7 @@
 import { CheckCircle2, TrendingUp, Award, LayoutDashboard, Star } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { useCountUp } from '../../hooks/useCountUp'
+import titleImg from '../../assets/Title.png'
 
 const impactItems = [
   'Faster communication between schools and parents',
@@ -72,7 +73,7 @@ export default function TrustSection() {
           <div ref={leftRef} className={`tv2-left-box sr-l${leftVis ? ' in' : ''}`}>
             <div className="tv2-img-frame">
               <img
-                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80"
+                src={titleImg}
                 alt="School classroom"
                 className="tv2-img"
               />
