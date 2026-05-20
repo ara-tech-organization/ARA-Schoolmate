@@ -48,7 +48,7 @@ export default function MobileHero() {
           {/* B — schools stat */}
           <div className="mph-cell mph-cell-stat mph-cell-red">
             <Building2 size={28} />
-            <span className="mph-bstat-num">500+</span>
+            <span className="mph-bstat-num">100+</span>
             <span className="mph-bstat-lbl">Schools Trust Us</span>
           </div>
 
@@ -83,7 +83,7 @@ export default function MobileHero() {
                 <div className="mph-feat"><Shield size={15} /><span>Secure &amp; Private</span></div>
                 <div className="mph-feat"><Smartphone size={15} /><span>iOS &amp; Android App</span></div>
                 <div className="mph-feat"><Star size={15} /><span>10+ Years Experience</span></div>
-                <div className="mph-feat"><Users size={15} /><span>500+ Schools Trust Us</span></div>
+                <div className="mph-feat"><Users size={15} /><span>100+ Schools Trust Us</span></div>
                 {/* duplicate for seamless loop */}
                 <div className="mph-feat"><Bell size={15} /><span>Real-time Notifications</span></div>
                 <div className="mph-feat"><Lock size={15} /><span>Role-based Access</span></div>
@@ -92,7 +92,7 @@ export default function MobileHero() {
                 <div className="mph-feat"><Shield size={15} /><span>Secure &amp; Private</span></div>
                 <div className="mph-feat"><Smartphone size={15} /><span>iOS &amp; Android App</span></div>
                 <div className="mph-feat"><Star size={15} /><span>10+ Years Experience</span></div>
-                <div className="mph-feat"><Users size={15} /><span>500+ Schools Trust Us</span></div>
+                <div className="mph-feat"><Users size={15} /><span>100+ Schools Trust Us</span></div>
               </div>
             </div>
           </div>

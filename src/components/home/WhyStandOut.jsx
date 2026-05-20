@@ -2,8 +2,8 @@ import { Award, CheckCircle2, TrendingUp, Zap, Shield, Users, Star, Globe } from
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const metrics = [
-  { icon: Users,      num: '500+',  label: 'Schools Trust Us'  },
-  { icon: TrendingUp, num: '80%',   label: 'Less Manual Work'  },
+  { icon: Users,      num: '100+',  label: 'Schools Trust Us'  },
+  { icon: TrendingUp, num: '90%',   label: 'Less Manual Work'  },
   { icon: Star,       num: '99%',   label: 'Satisfaction Rate' },
   { icon: Globe,      num: '24/7',  label: 'Cloud Access'      },
   { icon: Shield,     num: '99.9%', label: 'Platform Uptime'   },
@@ -49,8 +49,10 @@ export default function WhyStandOut() {
           {metrics.map(({ icon: Icon, num, label }, i) => (
             <div className="s2m" key={label} style={{ transitionDelay: `${i * 0.07}s` }}>
               <div className="s2m-icon"><Icon size={22} /></div>
-              <div className="s2m-num">{num}</div>
-              <div className="s2m-label">{label}</div>
+              <div className="s2m-body">
+                <div className="s2m-num">{num}</div>
+                <div className="s2m-label">{label}</div>
+              </div>
             </div>
           ))}
         </div>

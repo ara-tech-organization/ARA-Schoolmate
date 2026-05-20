@@ -7,7 +7,6 @@ import WhatWeOffer     from '../components/home/WhatWeOffer'
 import AllInOnePlatform from '../components/home/AllInOnePlatform'
 import ModulesSection  from '../components/home/ModulesSection'
 import PowerfulFeatures from '../components/home/PowerfulFeatures'
-import SmartFeatures   from '../components/home/SmartFeatures'
 import Testimonials    from '../components/home/Testimonials'
 import WhyStandOut     from '../components/home/WhyStandOut'
 import AdvancedSection from '../components/home/AdvancedSection'
@@ -122,7 +121,6 @@ export default function Home() {
       <AllInOnePlatform />
       <ModulesSection />
       <PowerfulFeatures />
-      <SmartFeatures />
       <Testimonials />
       <WhyStandOut />
       <AdvancedSection />

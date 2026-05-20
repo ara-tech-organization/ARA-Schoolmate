@@ -20,12 +20,12 @@ const preferItems = [
 ]
 
 const stats = [
-  { raw: 10,  suffix: '+',  label: 'Years of Industry Experience' },
-  { raw: 50,  suffix: '+',  label: 'Smart Modules Integrated'     },
+  { raw: 3,   suffix: '+',  label: 'Years of Industry Experience' },
+  { raw: 25,  suffix: '+',  label: 'Smart Modules Integrated'     },
   { raw: 99,  suffix: '%',  label: 'Client Satisfaction Rate'     },
   { raw: 24,  suffix: '/7', label: 'Cloud-Based Accessibility'    },
-  { raw: 80,  suffix: '%',  label: 'Reduction in Manual Work'     },
-  { raw: 500, suffix: '+',  label: 'Schools Served'               },
+  { raw: 90,  suffix: '%',  label: 'Reduction in Manual Work'     },
+  { raw: 100, suffix: '+',  label: 'Schools Served'               },
 ]
 
 function CountStat({ raw, suffix, label, start }) {
@@ -82,7 +82,7 @@ export default function TrustSection() {
             <div className="tv2-float tv2-float-tl">
               <div className="tv2-fi"><Award size={16} /></div>
               <div>
-                <div className="tv2-fn">500+</div>
+                <div className="tv2-fn">100+</div>
                 <div className="tv2-fl">Schools Trust Us</div>
               </div>
             </div>

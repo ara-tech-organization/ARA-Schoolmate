@@ -1,10 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   CheckCircle2, ArrowRight, Star,
   MessageSquare, BookOpen, Users, Clock, Shield, Smartphone,
-  Award, TrendingUp, GraduationCap, Zap
+  Zap, TrendingUp, Award
 } from 'lucide-react'
+import heroImg1 from '../../assets/Hero.png'
+import heroImg2 from '../../assets/Hero1.png'
 import heroBoyImg from '../../assets/h2.png'
+import HeroIllustration from './HeroIllustration'
+
+const heroSlides = [
+  { src: heroImg1, label: 'Dashboard Overview',  tag: 'Admin Panel'     },
+  { src: heroImg2, label: 'Student Management',  tag: 'Academics'       },
+]
 
 const pills = [
   { icon: MessageSquare, text: 'Real-time parent communication' },
@@ -16,75 +24,139 @@ const pills = [
 ]
 
 const features = [
-  { icon: Zap,        title: 'Best Campus Management Software',      desc: 'Communication, academics, fees & transport in one place' },
-  { icon: BookOpen,   title: 'Online Attendance System for Students & Teachers',      desc: 'Replace manual tracking with automated digital processes' },
-  { icon: Users,      title: 'Student Database Management System Software', desc: 'Admins, teachers, students & parents connected seamlessly' },
-  { icon: Shield,     title: 'Education Management System Software',      desc: 'Real-time updates on any device, 24/7 with enterprise security' },
+  { icon: Zap,        title: 'Best Campus Management Software',                desc: 'Communication, academics, fees & transport in one place' },
+  { icon: BookOpen,   title: 'Online Attendance System for Students & Teachers', desc: 'Replace manual tracking with automated digital processes' },
+  { icon: Users,      title: 'Student Database Management System Software',     desc: 'Admins, teachers, students & parents connected seamlessly' },
+  { icon: Shield,     title: 'Education Management System Software',            desc: 'Real-time updates on any device, 24/7 with enterprise security' },
 ]
 
 export default function HeroBanner() {
   const [form, setForm]           = useState({ name: '', school: '', phone: '', email: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [slide, setSlide]         = useState(0)
+  const [progress, setProgress]   = useState(0)
+  const SLIDE_MS = 3500
   const submit = (e) => { e.preventDefault(); setSubmitted(true) }
+
+  useEffect(() => {
+    setProgress(0)
+    const start = Date.now()
+    const raf = () => {
+      const p = Math.min((Date.now() - start) / SLIDE_MS * 100, 100)
+      setProgress(p)
+      if (p < 100) requestAnimationFrame(raf)
+    }
+    const id = requestAnimationFrame(raf)
+    const t = setTimeout(() => {
+      setSlide(s => (s + 1) % heroSlides.length)
+    }, SLIDE_MS)
+    return () => { clearTimeout(t); cancelAnimationFrame(id) }
+  }, [slide])
 
   return (
     <section className="hero" id="home">
 
-      <span className="hero-deco-star">✳</span>
-      <div className="hero-deco-ring" />
-      <div className="hero-deco-dot hdd-1" />
-      <div className="hero-deco-dot hdd-2" />
+      {/* ── SECTION 1 wrapper: pink bg + deco ── */}
+      <div className="hero-s1">
+        {/* deco isolated in its own clipping layer */}
+        <div className="hero-deco-wrap">
+          <span className="hero-deco-star">✳</span>
+          <div className="hero-deco-ring" />
+          <div className="hero-deco-dot hdd-1" />
+          <div className="hero-deco-dot hdd-2" />
+        </div>
 
-      {/* ── CENTERED HEADING BLOCK ── */}
+      {/* ── SECTION 1: left content | right image ── */}
       <div className="hero-head">
 
-        <div className="hero-eyebrow">
-          <div className="hero-chip hero-chip-light">
-            <span className="hero-chip-dot" />
-            Smart School Management System
+        {/* LEFT — content */}
+        <div className="hero-head-left">
+          <div className="hero-eyebrow">
+            <div className="hero-chip hero-chip-light">
+              <span className="hero-chip-dot" />
+              Smart School Management System
+            </div>
+          </div>
+          <h1 className="hero-h1">
+            <span className="hero-h1-brand">SchoolMate</span>
+            <span className="hero-h1-rest"> – Smart Digital Solution for Modern Schools</span>
+          </h1>
+          <h2 className="hero-h2">
+            Transform Your School with Smart Digital Management
+          </h2>
+          <div className="hero-seo-desc">
+            <p>Build a connected, efficient, future-ready institution with SchoolMate, the complete solution for communication, academics, attendance, transport, and administration. SchoolMate replaces the outdated paperwork and manual tracking used by schools with a comprehensive ecosystem that promotes collaboration between administrators, teachers, students, and parents. Whether you're looking for complete schooling software or smartschool management system, SchoolMate has got you covered on one secure platform.</p>
+          </div>
+          <div className="hero-pills">
+            {pills.map(({ icon: Icon, text }) => (
+              <div className="hero-pill" key={text}>
+                <span className="hero-pill-icon"><Icon size={11} /></span>
+                {text}
+              </div>
+            ))}
+          </div>
+          <div className="hero-cta">
+            <a href="#contact" className="btn btn-red hero-btn-primary">
+              Get Started Today <ArrowRight size={15} />
+            </a>
+            <a href="#features" className="btn btn-ghost-red">
+              Explore Features
+            </a>
           </div>
         </div>
 
-        <h1 className="hero-h1">
-          <span className="hero-h1-brand">SchoolMate</span>
-          <span className="hero-h1-rest"> – Smart Digital Solution for Modern Schools</span>
-        </h1>
+        {/* RIGHT — premium slider */}
+        <div className="hero-head-right">
+          <div className="hhs-frame">
+            {/* decorative corner accents */}
+            <span className="hhs-corner hhs-corner-tl" />
+            <span className="hhs-corner hhs-corner-tr" />
+            <span className="hhs-corner hhs-corner-br" />
 
-        <h2 className="hero-h2">
-          Transform Your School with Smart Digital Management
-        </h2>
-
-        <div className="hero-seo-desc">
-          <p>Build a connected, efficient, future-ready institution with SchoolMate, the complete solution for communication, operations, academics, attendance, transport, and administration. SchoolMate replaces the outdated paperwork and manual tracking used by schools with a comprehensive digital ecosystem that promotes collaboration between administrators, teachers, students, and parents.</p>
-          <p>Whether you're looking for complete schooling software or an advanced smartschool management system, SchoolMate has got you covered on one secure platform. The update of attendance and homework, fee management, and real-time notifications, SchoolMate facilitates smooth school operations and also improves transparency and productivity.</p>
-        </div>
-
-        <div className="hero-pills">
-          {pills.map(({ icon: Icon, text }) => (
-            <div className="hero-pill" key={text}>
-              <span className="hero-pill-icon"><Icon size={11} /></span>
-              {text}
+            {/* progress bar */}
+            <div className="hhs-progress">
+              <div className="hhs-progress-fill" style={{ width: `${progress}%` }} />
             </div>
-          ))}
-        </div>
 
-        <div className="hero-cta">
-          <a href="#contact" className="btn btn-red hero-btn-primary">
-            Get Started Today <ArrowRight size={15} />
-          </a>
-          <a href="#features" className="btn btn-ghost-red">
-            Explore Features
-          </a>
+            {/* slide tag badge top-right */}
+            <div className="hhs-tag">{heroSlides[slide].tag}</div>
+
+            {/* images */}
+            <div className="hhs-track">
+              {heroSlides.map(({ src, label }, i) => (
+                <div key={i} className={`hhs-slide${slide === i ? ' active' : ''}`}>
+                  <img src={src} alt={label} className="hhs-img" />
+                </div>
+              ))}
+            </div>
+
+            {/* bottom bar: label + dots + counter */}
+            <div className="hhs-footer">
+              <span className="hhs-label">{heroSlides[slide].label}</span>
+              <div className="hhs-dots">
+                {heroSlides.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`hhs-dot${slide === i ? ' active' : ''}`}
+                    onClick={() => setSlide(i)}
+                    aria-label={`Slide ${i + 1}`}
+                  />
+                ))}
+              </div>
+              <span className="hhs-counter">{slide + 1} / {heroSlides.length}</span>
+            </div>
+          </div>
         </div>
 
       </div>
+      </div>{/* end hero-s1 */}
 
-      {/* ── BODY: left | center image | right form ── */}
+      {/* ── SECTION 2: left cards | right form ── */}
       <div className="hero-body">
+      <div className="hero-body-inner">
 
         {/* LEFT — feature cards */}
         <div className="hero-bl">
-
           <div className="hbl-features">
             {features.map(({ icon: Icon, title, desc }) => (
               <div className="hbl-feat" key={title}>
@@ -96,49 +168,32 @@ export default function HeroBanner() {
               </div>
             ))}
           </div>
-
-          <div className="hbl-trust">
-            <div className="hbl-trust-nums">
-              <div className="hbl-tnum"><span className="hbl-tnum-n">500+</span><span className="hbl-tnum-l">Schools</span></div>
-              <div className="hbl-tnum-div" />
-              <div className="hbl-tnum"><span className="hbl-tnum-n">80%</span><span className="hbl-tnum-l">Less Work</span></div>
-              <div className="hbl-tnum-div" />
-              <div className="hbl-tnum"><span className="hbl-tnum-n">10+</span><span className="hbl-tnum-l">Years</span></div>
-            </div>
-          </div>
-
         </div>
 
-        {/* CENTER — boy character focal point */}
+        {/* CENTER — h2.png character image */}
         <div className="hero-bc">
           <div className="hero-vis">
             <div className="hero-vis-inner">
-              <img
-                src={heroBoyImg}
-                alt="SchoolMate"
-                className="hero-vis-img"
-              />
+              <img src={heroBoyImg} alt="SchoolMate app" className="hero-vis-img" />
             </div>
-
-            <div className="hv-card fc-tr">
+            <div className="hv-card hv-card-bc fc-tr">
               <div className="hvc-icon"><TrendingUp size={13} /></div>
               <div>
                 <span className="hvc-num">99%</span>
                 <span className="hvc-label">Satisfaction Rate</span>
               </div>
             </div>
-
-            <div className="hv-card fc-bl">
-              <div className="hvc-icon"><GraduationCap size={13} /></div>
+            <div className="hv-card hv-card-bc fc-bl">
+              <div className="hvc-icon"><Award size={13} /></div>
               <div>
-                <span className="hvc-num">10+</span>
+                <span className="hvc-num">3+</span>
                 <span className="hvc-label">Years Experience</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* RIGHT — lead-gen form */}
+        {/* RIGHT — form */}
         <div className="hero-br">
           <div className="hero-form-wrap">
             <div className="hero-form" id="get-started">
@@ -161,7 +216,7 @@ export default function HeroBanner() {
                   </div>
                   <div className="hf-stars-row">
                     {[...Array(5)].map((_, i) => <Star key={i} size={11} fill="#F59E0B" color="#F59E0B" />)}
-                    <span>Trusted by 500+ schools</span>
+                    <span>Trusted by 100+ schools</span>
                   </div>
                   <form onSubmit={submit}>
                     <div className="fg-row">
@@ -199,8 +254,9 @@ export default function HeroBanner() {
             </div>
           </div>
         </div>
-
       </div>
+      </div>
+
     </section>
   )
 }

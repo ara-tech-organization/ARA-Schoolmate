@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle2, Users, Star, Zap } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
-import logo from '../../assets/Logo.png'
+import footerImg from '../../assets/Footer.png'
 
 const footerLinks = [
   {
@@ -65,7 +65,7 @@ const socials = [
 ]
 
 const trust = [
-  { icon: Users, num: '500+', label: 'Schools' },
+  { icon: Users, num: '100+', label: 'Schools' },
   { icon: Star,  num: '99%',  label: 'Satisfaction' },
   { icon: Zap,   num: '24/7', label: 'Support' },
 ]
@@ -107,7 +107,7 @@ export default function CTAFooter({ noForm = false }) {
               </h2>
 
               <p className="cta2-sub">
-                Join 500+ institutions already transforming their school operations
+                Join 100+ institutions already transforming their school operations
                 with SchoolMate — the all-in-one school management platform.
               </p>
 
@@ -187,7 +187,7 @@ export default function CTAFooter({ noForm = false }) {
           <div className="footer-top">
             <div>
               <div className="f-brand-logo">
-                <img src={logo} alt="SchoolMate" className="footer-logo-img" />
+                <img src={footerImg} alt="SchoolMate" className="footer-logo-img" />
               </div>
               <p className="f-brand-desc">
                 SchoolMate helps institutions modernize with scalable student database management,
