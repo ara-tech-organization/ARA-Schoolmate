@@ -23,8 +23,22 @@ export default function SmartFeatures() {
           <div className="chip chip-red"><Sparkles size={12} /> Smart Features</div>
           <h2 className="htitle">Smart Features That <em>Drive Results</em></h2>
           <p className="hsub">
-            SchoolMate is one scalable platform that integrates full automation and entire communication. Smartschool ERP SchoolMate is a productivity booster for schools that cuts down operational complexity. The platform also comes with advanced student information management software capabilities for better handling of records and analytics.
+            SchoolMate is one scalable platform that integrates full automation and entire communication.
           </p>
+          <div className="smart2-seo-block">
+            <p className="smart2-seo-kh-label">Key Highlights</p>
+            <ul className="smart2-seo-list">
+              <li><CheckCircle2 size={13} /><span>Real-time notifications</span></li>
+              <li><CheckCircle2 size={13} /><span>Mobile app integration</span></li>
+              <li><CheckCircle2 size={13} /><span>Cloud-based security</span></li>
+              <li><CheckCircle2 size={13} /><span>Role-based access control</span></li>
+              <li><CheckCircle2 size={13} /><span>Paperless workflows</span></li>
+              <li><CheckCircle2 size={13} /><span>Fast communication delivery</span></li>
+            </ul>
+            <blockquote className="smart2-seo-quote">
+              Smartschool ERP SchoolMate is a productivity booster for schools that cuts down operational complexity. The platform also comes with advanced student information management software capabilities for better handling of records and analytics.
+            </blockquote>
+          </div>
         </div>
 
         <div ref={b} className={`smart2-bento sr${bv ? ' in' : ''}`}>

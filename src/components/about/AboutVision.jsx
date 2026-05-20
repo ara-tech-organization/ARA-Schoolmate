@@ -32,6 +32,9 @@ export default function AboutVision() {
           <h2 className="htitle abv-title">
             Transforming Education Through <em>Smart Digital Innovation</em>
           </h2>
+          <div className="ab-seo-block">
+            <p className="ab-seo-para">Our vision is to refine how schools and institutions operate by creating a future-ready smartschool management system that promotes academic excellence, operational transparency, and better parent-school collaboration. At Ara Discoveries, we believe SchoolMate will become a trusted student school management system worldwide, enabling educational institutions to confidently embark on digital transformation.</p>
+          </div>
         </div>
 
         {/* main layout */}

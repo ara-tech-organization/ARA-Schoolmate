@@ -1,4 +1,4 @@
-import { Target, GraduationCap, Building2, Wifi, Shield, Users } from 'lucide-react'
+import { Target, GraduationCap, Building2, Wifi, Shield, Users, CheckCircle2 } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const missionPoints = [
@@ -42,6 +42,16 @@ export default function AboutMission() {
                 that make running schools easier and improve communication between schools and families.
                 SchoolMate is the schooling software of choice for institutions looking for excellence.
               </p>
+              <div className="ab-seo-block ab-seo-block-left">
+                <p className="ab-seo-para">SchoolMate is the schooling software of choice for institutions looking for:</p>
+                <ul className="ab-seo-list">
+                  <li><CheckCircle2 size={13} /><span>Better academic management</span></li>
+                  <li><CheckCircle2 size={13} /><span>Efficient administration</span></li>
+                  <li><CheckCircle2 size={13} /><span>Real-time communication</span></li>
+                  <li><CheckCircle2 size={13} /><span>Secure cloud-based access</span></li>
+                  <li><CheckCircle2 size={13} /><span>Smarter student engagement</span></li>
+                </ul>
+              </div>
             </div>
             <div className="ab-mission-img-wrap">
               <img

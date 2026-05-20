@@ -40,6 +40,10 @@ export default function AboutStory() {
           </p>
         </div>
 
+        <div className="ab-seo-block ab-seo-full">
+          <p className="ab-seo-para">SchoolMate is a smart schooling software for schools and colleges to simplify administration, improve communication, and manage academics. SchoolMate was developed by Ara Discoveries to solve the everyday operational headaches schools face from manual attendance tracking, paperwork, slow communication, and disconnected systems. Today, SchoolMate is a robust student school management system that connects administrators, teachers, students, and parents in a centralized cloud-based solution.</p>
+        </div>
+
         {/* two-col layout */}
         <div className="abst-layout">
 

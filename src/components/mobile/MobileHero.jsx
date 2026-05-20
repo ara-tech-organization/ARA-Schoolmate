@@ -1,34 +1,11 @@
-import { ArrowRight, Smartphone, Shield, Zap, Globe, CheckCircle2, Building2, Star, Users, TrendingUp } from 'lucide-react'
+import { ArrowRight, Play, Smartphone, Shield, Zap, Globe, CheckCircle2, Building2, Star, Users, TrendingUp, Bell, Lock } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
-const stats = [
-  { icon: Building2,  num: '500+', label: 'Schools'      },
-  { icon: Star,       num: '10+',  label: 'Years'        },
-  { icon: Users,      num: '99%',  label: 'Satisfaction' },
-  { icon: TrendingUp, num: '80%',  label: 'Less Work'    },
-]
-
-const tags = [
-  { icon: Smartphone, text: 'iOS & Android' },
-  { icon: Shield,     text: 'Secure & Private' },
-  { icon: Zap,        text: 'Real-Time Sync' },
-  { icon: Globe,      text: 'Cloud-Based' },
-]
-
-const checks = [
-  'Free onboarding & setup',
-  'No technical expertise needed',
-  'Works on all devices',
-  'Dedicated support team',
-]
-
 export default function MobileHero() {
-  const [topRef, topVis]   = useScrollAnimation(0.03)
-  const [bodyRef, bodyVis] = useScrollAnimation(0.04)
-  const [statRef, statVis] = useScrollAnimation(0.05)
+  const [ref, vis] = useScrollAnimation(0.03)
 
   return (
-    <section className="mh2-section" id="hero">
+    <section className="mph-section" id="hero">
 
       {/* breadcrumb bar */}
       <div className="mh2-bar">
@@ -42,87 +19,89 @@ export default function MobileHero() {
         </div>
       </div>
 
-      {/* main grid */}
-      <div className="wrap mh2-body">
+      {/* bento grid */}
+      <div className="wrap mph-bento-wrap">
+        <div ref={ref} className={`mph-bento sr${vis ? ' in' : ''}`}>
 
-        {/* left — big label column */}
-        <div ref={topRef} className={`mh2-left sr-l${topVis ? ' in' : ''}`}>
-          <div className="mh2-eyebrow">
-            <span className="mh2-eyebrow-dot" />
-            School Management App
-          </div>
-
-          <p className="mh2-seo-h1">Smart School Management at Your Fingertips</p>
-
-          <h1 className="mh2-h1">
-            One App.<br />
-            <span className="mh2-h1-accent">Every School</span><br />
-            <span className="mh2-h1-outline">Operation.</span>
-          </h1>
-
-          {/* feature tags row */}
-          <div className="mh2-tags">
-            {tags.map(({ icon: Icon, text }) => (
-              <span key={text} className="mh2-tag">
-                <Icon size={12} />
-                {text}
-              </span>
-            ))}
-          </div>
-
-          <p className="mh2-lead">
-            SchoolMate Mobile App – a powerful and easy-to-use mobile solution for administrators, teachers, students, and parents. Stay connected with your school and institution anytime, anywhere.
-          </p>
-
-          <p className="mh2-lead">
-            SchoolMate: a single secure dashboard that allows easy communication, attendance, and homework tracking, fees management, and academic performance monitoring.
-          </p>
-
-          <p className="mh2-lead">
-            SchoolMate is a modern schooling software and smartschool management system that assists schools in managing daily operations effectively and keeping parents informed in real time.
-          </p>
-
-          <div className="mh2-checks">
-            {checks.map(c => (
-              <div key={c} className="mh2-check">
-                <CheckCircle2 size={14} />
-                <span>{c}</span>
+          {/* A — headline card (left red strip + right content) */}
+          <div className="mph-cell mph-cell-headline">
+            <div className="mph-head-strip">
+              <span className="mph-strip-dot" />
+              <span className="mph-strip-label">School Management App</span>
+            </div>
+            <div className="mph-head-content">
+              <p className="mph-seo-h1">Smart School Management at Your Fingertips</p>
+              <h1 className="mph-h1">
+                <span className="mph-h1-outline">One App.</span><br />
+                <span className="mph-h1-red">Every School</span><br />
+                <span className="mph-h1-outline">Operation.</span>
+              </h1>
+              <div className="mph-actions">
+                <a href="#features" className="mph-btn-primary">
+                  Explore Features <ArrowRight size={14} />
+                </a>
+                <a href="#why" className="mph-btn-ghost"><Play size={11} />Why Schools Love It</a>
               </div>
-            ))}
+            </div>
           </div>
 
-          <div className="mh2-actions">
-            <a href="#features" className="btn btn-red">
-              Explore Features <ArrowRight size={14} />
-            </a>
-            <a href="#why" className="mh2-ghost">See Why Schools Love It</a>
+          {/* B — schools stat */}
+          <div className="mph-cell mph-cell-stat mph-cell-red">
+            <Building2 size={28} />
+            <span className="mph-bstat-num">500+</span>
+            <span className="mph-bstat-lbl">Schools Trust Us</span>
           </div>
-        </div>
 
-        {/* right — stat cards */}
-        <div ref={bodyRef} className={`mh2-right sr-r${bodyVis ? ' in' : ''}`}>
-          <div className="mh2-cards-grid">
-            {stats.map(({ icon: Icon, num, label }, i) => (
-              <div
-                key={label}
-                className="mh2-stat-card"
-                style={{ transitionDelay: `${i * 0.1}s` }}
-              >
-                <div className="mh2-stat-icon"><Icon size={20} /></div>
-                <span className="mh2-stat-num">{num}</span>
-                <span className="mh2-stat-lbl">{label}</span>
+          {/* C — satisfaction stat */}
+          <div className="mph-cell mph-cell-stat mph-cell-dark">
+            <Users size={28} />
+            <span className="mph-bstat-num">99%</span>
+            <span className="mph-bstat-lbl">Satisfaction Rate</span>
+          </div>
+
+          {/* D — lead text card */}
+          <div className="mph-cell mph-cell-lead">
+            <p>SchoolMate Mobile App – a powerful, easy-to-use solution for administrators, teachers, students, and parents. Stay connected with your institution anytime, anywhere.</p>
+            <p>SchoolMate helps schools streamline administration, improve communication, and deliver smarter educational experiences on one secure platform.</p>
+            <p>SchoolMate is a modern schooling software and smartschool management system that assists schools in managing daily operations and keeping parents informed in real time.</p>
+            <div className="mph-checks">
+              <div className="mph-check"><CheckCircle2 size={13} /><span>Free onboarding & setup</span></div>
+              <div className="mph-check"><CheckCircle2 size={13} /><span>No technical expertise needed</span></div>
+              <div className="mph-check"><CheckCircle2 size={13} /><span>Works on all devices</span></div>
+              <div className="mph-check"><CheckCircle2 size={13} /><span>Dedicated support team</span></div>
+            </div>
+          </div>
+
+          {/* H — feature ticker */}
+          <div className="mph-cell mph-cell-features">
+            <div className="mph-ticker">
+              <div className="mph-ticker-track">
+                <div className="mph-feat"><Bell size={15} /><span>Real-time Notifications</span></div>
+                <div className="mph-feat"><Lock size={15} /><span>Role-based Access</span></div>
+                <div className="mph-feat"><Globe size={15} /><span>Cloud-Based Platform</span></div>
+                <div className="mph-feat"><Zap size={15} /><span>Fast Communication</span></div>
+                <div className="mph-feat"><Shield size={15} /><span>Secure &amp; Private</span></div>
+                <div className="mph-feat"><Smartphone size={15} /><span>iOS &amp; Android App</span></div>
+                <div className="mph-feat"><Star size={15} /><span>10+ Years Experience</span></div>
+                <div className="mph-feat"><Users size={15} /><span>500+ Schools Trust Us</span></div>
+                {/* duplicate for seamless loop */}
+                <div className="mph-feat"><Bell size={15} /><span>Real-time Notifications</span></div>
+                <div className="mph-feat"><Lock size={15} /><span>Role-based Access</span></div>
+                <div className="mph-feat"><Globe size={15} /><span>Cloud-Based Platform</span></div>
+                <div className="mph-feat"><Zap size={15} /><span>Fast Communication</span></div>
+                <div className="mph-feat"><Shield size={15} /><span>Secure &amp; Private</span></div>
+                <div className="mph-feat"><Smartphone size={15} /><span>iOS &amp; Android App</span></div>
+                <div className="mph-feat"><Star size={15} /><span>10+ Years Experience</span></div>
+                <div className="mph-feat"><Users size={15} /><span>500+ Schools Trust Us</span></div>
               </div>
-            ))}
+            </div>
           </div>
 
-          {/* decorative big word */}
-          <div className="mh2-deco-word" aria-hidden="true">APP</div>
         </div>
-
       </div>
 
       {/* bottom stripe */}
-      <div ref={statRef} className={`mh2-stripe sr${statVis ? ' in' : ''}`}>
+      <div className="mh2-stripe">
         <div className="wrap mh2-stripe-inner">
           <span className="mh2-stripe-label">Trusted by schools across India</span>
           <div className="mh2-stripe-divider" />
