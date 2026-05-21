@@ -99,6 +99,20 @@ export default function Home() {
     setMeta('description', 'SchoolMate is a smart schooling software and student school management system with attendance, ERP, communication, and smartschool management system tools.');
     setMeta('keywords', 'schooling software, student management system software, school management system, smartschool management system, student attendance management system, education management system software, online attendance system for students & teachers, online student attendance management software system, best campus management software, eschool software, student online attendance management software system, student database management system software, student information management software, student monitoring software, education administration software, class attendance management system, education management erp, smartschool erp');
 
+    const setOg = (prop, content) => {
+      let el = document.querySelector(`meta[property="${prop}"]`);
+      if (!el) { el = document.createElement('meta'); el.setAttribute('property', prop); document.head.appendChild(el); }
+      el.content = content;
+    };
+    setOg('og:title',       'Best Smart School Management System | SchoolMate');
+    setOg('og:description', 'SchoolMate is a smart schooling software and student school management system with attendance, ERP, communication, and smartschool management system tools.');
+    setOg('og:url',         'https://www.araschoolmate.com/');
+    setOg('og:type',        'website');
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+    canonical.href = 'https://www.araschoolmate.com/';
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.id = 'home-faq-schema';
@@ -109,6 +123,7 @@ export default function Home() {
       document.title = 'SchoolMate';
       const existingScript = document.getElementById('home-faq-schema');
       if (existingScript) existingScript.remove();
+      canonical.remove();
     };
   }, []);
 

@@ -12,10 +12,10 @@ import heroBoyImg from '../../assets/h2.png'
 import HeroIllustration from './HeroIllustration'
 
 const heroSlides = [
-  { src: heroImg1, tag: 'Admin Panel'     },
-  { src: heroImg2, tag: 'Academics'       },
-  { src: heroImg3, tag: 'Academic'        },
-  { src: heroImg4, tag: 'Communication'   },
+  { src: heroImg1, alt: 'schooling software – Smart school management system'              },
+  { src: heroImg2, alt: 'student management system software'                               },
+  { src: heroImg3, alt: 'education management system software'                             },
+  { src: heroImg4, alt: 'online student attendance management software system'             },
 ]
 
 const pills = [
@@ -124,9 +124,9 @@ export default function HeroBanner() {
 
             {/* images */}
             <div className="hhs-track">
-              {heroSlides.map(({ src, label }, i) => (
+              {heroSlides.map(({ src, alt }, i) => (
                 <div key={i} className={`hhs-slide${slide === i ? ' active' : ''}`}>
-                  <img src={src} alt={label} className="hhs-img" />
+                  <img src={src} alt={alt} className="hhs-img" />
                 </div>
               ))}
             </div>
@@ -174,7 +174,7 @@ export default function HeroBanner() {
         <div className="hero-bc">
           <div className="hero-vis">
             <div className="hero-vis-inner">
-              <img src={heroBoyImg} alt="SchoolMate app" className="hero-vis-img" />
+              <img src={heroBoyImg} alt="Smart school management system – SchoolMate app" className="hero-vis-img" />
             </div>
             <div className="hv-card hv-card-bc fc-bl">
               <div className="hvc-icon"><Award size={13} /></div>

@@ -24,7 +24,7 @@ export default function MobileWhy() {
           <div className="mob-why-img-frame">
             <img
               src="https://images.unsplash.com/photo-1659202313730-9deb2f808217?auto=format&fit=crop&w=700&q=80"
-              alt="Indian school building surrounded by trees"
+              alt="online attendance system for students & teachers – schooling software"
               className="mob-why-img"
             />
             <div className="mob-why-img-overlay" />

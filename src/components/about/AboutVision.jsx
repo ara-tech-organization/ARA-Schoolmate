@@ -47,7 +47,7 @@ export default function AboutVision() {
               <div className="abv-corner abv-corner-br" />
               <img
                 src="https://images.unsplash.com/photo-1719159381916-062fa9f435a6?auto=format&fit=crop&w=700&q=80"
-                alt="Tamil Nadu school classroom Chennai"
+                alt="student attendance management system – education management erp"
                 className="abv-img"
               />
               <div className="abv-img-overlay" />

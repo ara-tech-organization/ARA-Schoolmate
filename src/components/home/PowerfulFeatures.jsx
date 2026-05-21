@@ -14,6 +14,7 @@ const tabs = [
 const content = {
   teachers: {
     icon: GraduationCap, title: 'Empower Teachers with Smart Tools',
+    imgAlt: 'class attendance management system – schooling software for teachers',
     sub: 'A time and class attendance management system that makes classroom operations and reporting effortless.',
     seoPara: 'Teachers like a time and class attendance management system that makes classroom operations and reporting easy.',
     img: teachersImg,
@@ -26,6 +27,7 @@ const content = {
   },
   parents: {
     icon: Users, title: 'Keep Parents in the Loop',
+    imgAlt: 'student monitoring software – Smart school management system for parents',
     sub: 'SchoolMate makes parent engagement easy with a smart online attendance system and real-time updates.',
     seoPara: 'SchoolMate makes parent engagement easy with a smart online attendance system for students & teachers with real-time updates.',
     img: parentImg,
@@ -39,6 +41,7 @@ const content = {
   },
   admins: {
     icon: Settings, title: 'Complete Control for Administrators',
+    imgAlt: 'student database management system software – education management erp',
     sub: 'A reliable student database management system for administrators handling large operational data.',
     seoPara: 'SchoolMate is a reliable student database management system software for administrators who deal with a large amount of academic and operational data.',
     img: administrationImg,
@@ -122,7 +125,7 @@ export default function PowerfulFeatures() {
                 </div>
                 {/* Screen content */}
                 <div className="feat2-phone-screen">
-                  <img src={data.img} alt={data.title} className="feat2-phone-img" />
+                  <img src={data.img} alt={data.imgAlt || data.title} className="feat2-phone-img" />
                 </div>
                 {/* Home indicator */}
                 <div className="feat2-phone-home" />

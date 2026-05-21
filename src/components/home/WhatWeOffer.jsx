@@ -11,6 +11,7 @@ const offers = [
     desc: 'Keep every stakeholder connected with real-time circulars, instant notifications, and secure messaging that bridges the gap between school and home.',
     items: ['Circulars and announcements', 'Instant push notifications', 'Secure parent messaging', 'Digital consent forms', 'School news and updates'],
     img: communicationImg,
+    imgAlt: 'online attendance system for students & teachers – SchoolMate schooling software',
   },
   {
     num: '02', icon: BookOpen,
@@ -18,6 +19,7 @@ const offers = [
     desc: 'Streamline the entire academic cycle — from homework assignments to exam schedules — in one powerful, teacher-friendly interface that saves hours every week.',
     items: ['Homework tracking & submission', 'Study material sharing', 'Exam timetables & marks', 'Result management', 'Academic calendars'],
     img: academicImg,
+    imgAlt: 'education management system software – student management system software',
     flip: true,
   },
   {
@@ -26,6 +28,7 @@ const offers = [
     desc: 'Never miss a moment. Track student and staff attendance in real time with instant parent alerts and comprehensive analytics dashboards for full visibility.',
     items: ['Live attendance updates', 'Staff attendance tracking', 'Parent instant notifications', 'Performance analytics', 'Daily activity reports'],
     img: attendanceImg,
+    imgAlt: 'student attendance management system – online student attendance management software system',
   },
 ]
 
@@ -35,7 +38,7 @@ function OfferRow({ offer }) {
     <div ref={ref} className={`offer2-row${offer.flip ? ' offer2-flip' : ''} sr${vis ? ' in' : ''}`}>
       <div className="offer2-img-side">
         <div className="offer2-img-frame">
-          <img src={offer.img} alt={offer.title} className="offer2-img" />
+          <img src={offer.img} alt={offer.imgAlt || offer.title} className="offer2-img" />
           <div className="offer2-img-gradient" />
         </div>
       </div>

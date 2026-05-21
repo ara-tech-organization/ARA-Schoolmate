@@ -61,7 +61,7 @@ export default function AboutHero() {
         <div className="abh-img-frame">
           <img
             src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=85"
-            alt="Smart School Management"
+            alt="schooling software – Smart school management system"
             className="abh-img"
           />
           <div className="abh-img-overlay" />

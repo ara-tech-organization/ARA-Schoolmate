@@ -29,6 +29,16 @@ export default function MobileApp() {
     setMeta('description', META.description)
     setMeta('keywords',    META.keywords)
 
+    const setOg = (prop, content) => {
+      let el = document.querySelector(`meta[property="${prop}"]`)
+      if (!el) { el = document.createElement('meta'); el.setAttribute('property', prop); document.head.appendChild(el) }
+      el.content = content
+    }
+    setOg('og:title',       META.title)
+    setOg('og:description', META.description)
+    setOg('og:url',         'https://ara-tech-organization.github.io/ARA-Schoolmate/smart-school-management-mobile-app')
+    setOg('og:type',        'website')
+
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
     canonical.href = META.canonical

@@ -56,7 +56,7 @@ export default function AboutMission() {
             <div className="ab-mission-img-wrap">
               <img
                 src="https://images.unsplash.com/photo-1684914669059-6c9a35e15cda?auto=format&fit=crop&w=700&q=80"
-                alt="Indian school colorful hallway"
+                alt="education management system software – school management system"
                 className="ab-mission-img"
               />
               <div className="ab-mission-img-tag">Our Mission</div>

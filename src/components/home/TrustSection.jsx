@@ -74,7 +74,7 @@ export default function TrustSection() {
             <div className="tv2-img-frame">
               <img
                 src={titleImg}
-                alt="School classroom"
+                alt="schooling software – Smart school erp by SchoolMate"
                 className="tv2-img"
               />
               <div className="tv2-overlay" />
