@@ -23,8 +23,8 @@ export default function MobileWhy() {
           <div className="mob-section-num">01</div>
           <div className="mob-why-img-frame">
             <img
-              src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=700&q=80"
-              alt="Why Choose SchoolMate Mobile App"
+              src="https://images.unsplash.com/photo-1659202313730-9deb2f808217?auto=format&fit=crop&w=700&q=80"
+              alt="Indian school building surrounded by trees"
               className="mob-why-img"
             />
             <div className="mob-why-img-overlay" />

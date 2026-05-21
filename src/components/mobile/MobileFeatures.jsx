@@ -58,8 +58,8 @@ export default function MobileFeatures() {
           <div className="mob-feat-card mob-feat-hero">
             <div className="mob-feat-hero-img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80"
-                alt="Attendance Management"
+                src="https://images.unsplash.com/photo-1757194455329-541f39364057?auto=format&fit=crop&w=800&q=80"
+                alt="Empty school classroom with desks"
                 className="mob-feat-hero-img"
               />
               <div className="mob-feat-hero-overlay" />

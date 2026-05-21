@@ -60,7 +60,7 @@ export default function AboutHero() {
       <div ref={v} className={`abh-visual sr${vv ? ' in' : ''}`}>
         <div className="abh-img-frame">
           <img
-            src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=85"
+            src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=85"
             alt="Smart School Management"
             className="abh-img"
           />

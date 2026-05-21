@@ -55,8 +55,8 @@ export default function AboutMission() {
             </div>
             <div className="ab-mission-img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=80"
-                alt="Teacher with students"
+                src="https://images.unsplash.com/photo-1684914669059-6c9a35e15cda?auto=format&fit=crop&w=700&q=80"
+                alt="Indian school colorful hallway"
                 className="ab-mission-img"
               />
               <div className="ab-mission-img-tag">Our Mission</div>

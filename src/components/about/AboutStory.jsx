@@ -51,8 +51,8 @@ export default function AboutStory() {
           <div ref={l} className={`abst-left sr-l${lv ? ' in' : ''}`}>
             <div className="abst-img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
-                alt="Students with technology"
+                src="https://images.unsplash.com/photo-1777259759623-b39589cfff9b?auto=format&fit=crop&w=800&q=80"
+                alt="School classroom with wooden desks and blackboard"
                 className="abst-img"
               />
               <div className="abst-img-overlay" />
