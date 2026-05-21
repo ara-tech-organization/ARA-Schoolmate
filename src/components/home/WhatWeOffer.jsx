@@ -37,7 +37,6 @@ function OfferRow({ offer }) {
         <div className="offer2-img-frame">
           <img src={offer.img} alt={offer.title} className="offer2-img" />
           <div className="offer2-img-gradient" />
-          <div className="offer2-num-badge">{offer.num}</div>
         </div>
       </div>
 

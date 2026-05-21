@@ -99,15 +99,33 @@ export default function PowerfulFeatures() {
           </div>
 
           <div className="feat2-visual-side">
-            <div className="feat2-img-frame">
-              <img src={data.img} alt={data.title} className="feat2-img" />
-              <div className="feat2-img-overlay" />
-              <div className="feat2-role-badge">
-                <div className="feat2-role-icon"><data.icon size={22} color="#fff" /></div>
-                <span>{data.title}</span>
-              </div>
-              <div className="feat2-access-badge">
-                Accessible on web & mobile — anytime, anywhere
+            <div className="feat2-phone-wrap">
+              <div className="feat2-phone">
+                {/* Dynamic Island */}
+                <div className="feat2-phone-di" />
+                {/* Status bar */}
+                <div className="feat2-phone-status">
+                  <span className="feat2-phone-time">9:41</span>
+                  <div className="feat2-phone-icons">
+                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none">
+                      <rect x="0" y="3.5" width="3" height="7.5" rx="1" fill="#1c1c1e"/>
+                      <rect x="4.5" y="2" width="3" height="9" rx="1" fill="#1c1c1e"/>
+                      <rect x="9" y="0.5" width="3" height="10.5" rx="1" fill="#1c1c1e"/>
+                      <rect x="13.5" y="0" width="2.5" height="11" rx="1" fill="#1c1c1e" opacity="0.3"/>
+                    </svg>
+                    <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+                      <rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="#1c1c1e" strokeOpacity="0.35"/>
+                      <rect x="22" y="3.5" width="2" height="5" rx="1" fill="#1c1c1e" fillOpacity="0.4"/>
+                      <rect x="2" y="2" width="16" height="8" rx="2" fill="#1c1c1e"/>
+                    </svg>
+                  </div>
+                </div>
+                {/* Screen content */}
+                <div className="feat2-phone-screen">
+                  <img src={data.img} alt={data.title} className="feat2-phone-img" />
+                </div>
+                {/* Home indicator */}
+                <div className="feat2-phone-home" />
               </div>
             </div>
           </div>

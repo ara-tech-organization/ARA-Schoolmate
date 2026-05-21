@@ -6,12 +6,16 @@ import {
 } from 'lucide-react'
 import heroImg1 from '../../assets/Hero.png'
 import heroImg2 from '../../assets/Hero1.png'
+import heroImg3 from '../../assets/Academic.png'
+import heroImg4 from '../../assets/Communication.png'
 import heroBoyImg from '../../assets/h2.png'
 import HeroIllustration from './HeroIllustration'
 
 const heroSlides = [
-  { src: heroImg1, label: 'Dashboard Overview',  tag: 'Admin Panel'     },
-  { src: heroImg2, label: 'Student Management',  tag: 'Academics'       },
+  { src: heroImg1, tag: 'Admin Panel'     },
+  { src: heroImg2, tag: 'Academics'       },
+  { src: heroImg3, tag: 'Academic'        },
+  { src: heroImg4, tag: 'Communication'   },
 ]
 
 const pills = [
@@ -118,9 +122,6 @@ export default function HeroBanner() {
               <div className="hhs-progress-fill" style={{ width: `${progress}%` }} />
             </div>
 
-            {/* slide tag badge top-right */}
-            <div className="hhs-tag">{heroSlides[slide].tag}</div>
-
             {/* images */}
             <div className="hhs-track">
               {heroSlides.map(({ src, label }, i) => (
@@ -130,9 +131,8 @@ export default function HeroBanner() {
               ))}
             </div>
 
-            {/* bottom bar: label + dots + counter */}
+            {/* bottom bar: dots + counter */}
             <div className="hhs-footer">
-              <span className="hhs-label">{heroSlides[slide].label}</span>
               <div className="hhs-dots">
                 {heroSlides.map((_, i) => (
                   <button
