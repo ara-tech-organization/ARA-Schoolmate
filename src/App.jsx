@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Outlet, useLocation, matchPath } from 're
 import { useEffect } from 'react'
 import Navbar from './components/home/Navbar'
 import CTAFooter from './components/home/CTAFooter'
+import PageLoader from './components/home/PageLoader'
 import Home      from './pages/Home'
 import About     from './pages/About'
 import MobileApp from './pages/MobileApp'
@@ -51,6 +52,8 @@ function Layout() {
 
 function App() {
   return (
+    <>
+    <PageLoader />
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route element={<Layout />}>
@@ -62,6 +65,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </>
   )
 }
 

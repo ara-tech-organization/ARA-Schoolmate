@@ -223,6 +223,10 @@ export default function CTAFooter({ noForm = false }) {
               <a href="#">Terms of Service</a>
               <a href="#">Cookie Policy</a>
             </div>
+            <p className="f-crafted">
+              <span className="f-heart">❤️</span> Crafted with Excellence by{' '}
+              <a href="https://discovertechnologies.co/" target="_blank" rel="noopener noreferrer">Ara Technology</a>
+            </p>
           </div>
         </div>
       </footer>
