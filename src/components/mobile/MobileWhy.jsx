@@ -1,5 +1,6 @@
 import { Bell, BookOpen, Megaphone, Calendar, CreditCard, Shield } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import m1Img from '../../assets/M1.png'
 
 const benefits = [
   { icon: Bell,        text: 'Instant attendance alerts'              },
@@ -23,7 +24,7 @@ export default function MobileWhy() {
           <div className="mob-section-num">01</div>
           <div className="mob-why-img-frame">
             <img
-              src="https://images.unsplash.com/photo-1659202313730-9deb2f808217?auto=format&fit=crop&w=700&q=80"
+              src={m1Img}
               alt="online attendance system for students & teachers – schooling software"
               className="mob-why-img"
             />

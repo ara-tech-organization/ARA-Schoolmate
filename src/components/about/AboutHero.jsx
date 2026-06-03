@@ -1,5 +1,6 @@
 import { ArrowRight, ChevronRight, CheckCircle2, Building2, Star, Users, TrendingUp, GraduationCap } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import heroImg from '../../assets/A1.png'
 
 const stats = [
   { icon: Building2,   num: '500+', label: 'Schools Empowered'  },
@@ -23,7 +24,7 @@ export default function AboutHero() {
             <ChevronRight size={10} />
             <span>About Us</span>
           </nav>
-          <span className="abh-bc-meta">Est. 2014 · Ara Discoveries</span>
+          <span className="abh-bc-meta">Est. 2014 · ARA Discoveries</span>
         </div>
       </div>
 
@@ -40,7 +41,7 @@ export default function AboutHero() {
           SchoolMate is a smart schooling software for schools and colleges to simplify administration, improve communication, and manage academics.
         </p>
         <p className="abh-lead">
-          SchoolMate was developed by Ara Discoveries to solve the everyday operational headaches schools face — from manual attendance tracking, paperwork, slow communication, and disconnected systems. Today, SchoolMate is a robust student school management system that connects administrators, teachers, students, and parents in a centralized cloud-based solution.
+          SchoolMate was developed by ARA Discoveries to solve the everyday operational headaches schools face — from manual attendance tracking, paperwork, slow communication, and disconnected systems. Today, SchoolMate is a robust student school management system that connects administrators, teachers, students, and parents in a centralized cloud-based solution.
         </p>
 
         <ul className="abh-checks">
@@ -60,7 +61,7 @@ export default function AboutHero() {
       <div ref={v} className={`abh-visual sr${vv ? ' in' : ''}`}>
         <div className="abh-img-frame">
           <img
-            src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=85"
+            src={heroImg}
             alt="schooling software – Smart school management system"
             className="abh-img"
           />

@@ -1,5 +1,6 @@
 import { Target, GraduationCap, Building2, Wifi, Shield, Users, CheckCircle2 } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import missionImg from '../../assets/A3.png'
 
 const missionPoints = [
   { icon: GraduationCap, label: 'Better academic management',   desc: 'Streamlined academic tools for every institution' },
@@ -26,7 +27,7 @@ export default function AboutMission() {
           <p className="ab-pq-text">
             We believe schools should focus less on paperwork and more on building student success.
           </p>
-          <span className="ab-pq-source">— Ara Discoveries</span>
+          <span className="ab-pq-source">— ARA Discoveries</span>
         </div>
 
         {/* Mission header */}
@@ -55,7 +56,7 @@ export default function AboutMission() {
             </div>
             <div className="ab-mission-img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1684914669059-6c9a35e15cda?auto=format&fit=crop&w=700&q=80"
+                src={missionImg}
                 alt="education management system software – school management system"
                 className="ab-mission-img"
               />

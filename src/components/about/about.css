@@ -94,18 +94,17 @@
 /* cinematic image */
 .abh-visual { padding: 0 100px; }
 .abh-img-frame {
-  position: relative; overflow: hidden;
-  border-radius: 20px; height: 480px;
+  position: relative;
+  border-radius: 20px;
+  background: #fff;
 }
 .abh-img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  width: 100%; height: auto; display: block;
+  border-radius: 20px;
   transition: transform 10s ease;
 }
 .abh-img-frame:hover .abh-img { transform: scale(1.04); }
-.abh-img-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.04) 0%, rgba(0,0,0,.65) 100%);
-}
+.abh-img-overlay { display: none; }
 
 /* award badge — glass card top-right */
 .abh-award {

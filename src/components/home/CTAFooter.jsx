@@ -225,7 +225,7 @@ export default function CTAFooter({ noForm = false }) {
             </div>
             <p className="f-crafted">
               <span className="f-heart">❤️</span> Crafted with Excellence by{' '}
-              <a href="https://discovertechnologies.co/" target="_blank" rel="noopener noreferrer">Ara Technology</a>
+              <a href="https://discovertechnologies.co/" target="_blank" rel="noopener noreferrer">ARA Discover Technology</a>
             </p>
           </div>
         </div>

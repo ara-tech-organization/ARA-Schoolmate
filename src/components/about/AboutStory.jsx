@@ -1,5 +1,6 @@
 import { Monitor, MessageSquare, CreditCard, Calendar, BookOpen, Bus, BarChart3, CheckCircle2, ArrowRight } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import storyImg from '../../assets/A2.png'
 
 const modules = [
   { icon: Monitor,       label: 'Attendance',     desc: 'Digital tracking with instant alerts'  },
@@ -41,7 +42,7 @@ export default function AboutStory() {
         </div>
 
         <div className="ab-seo-block ab-seo-full">
-          <p className="ab-seo-para">SchoolMate is a smart schooling software for schools and colleges to simplify administration, improve communication, and manage academics. SchoolMate was developed by Ara Discoveries to solve the everyday operational headaches schools face from manual attendance tracking, paperwork, slow communication, and disconnected systems. Today, SchoolMate is a robust student school management system that connects administrators, teachers, students, and parents in a centralized cloud-based solution.</p>
+          <p className="ab-seo-para">SchoolMate is a smart schooling software for schools and colleges to simplify administration, improve communication, and manage academics. SchoolMate was developed by ARA Discoveries to solve the everyday operational headaches schools face from manual attendance tracking, paperwork, slow communication, and disconnected systems. Today, SchoolMate is a robust student school management system that connects administrators, teachers, students, and parents in a centralized cloud-based solution.</p>
         </div>
 
         {/* two-col layout */}
@@ -51,7 +52,7 @@ export default function AboutStory() {
           <div ref={l} className={`abst-left sr-l${lv ? ' in' : ''}`}>
             <div className="abst-img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1777259759623-b39589cfff9b?auto=format&fit=crop&w=800&q=80"
+                src={storyImg}
                 alt="student management system software – smartschool management system"
                 className="abst-img"
               />

@@ -2,7 +2,7 @@ import { MessageCircle, BookOpen, UserCheck, ChevronRight, Layers } from 'lucide
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import communicationImg from '../../assets/Communication.png'
 import academicImg from '../../assets/Academic.png'
-import attendanceImg from '../../assets/Attendance.png'
+import attendanceImg from '../../assets/Administration.png'
 
 const offers = [
   {

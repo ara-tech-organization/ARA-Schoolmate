@@ -8,7 +8,7 @@ import AboutVision  from '../components/about/AboutVision'
 
 const META = {
   title:       'About Us | SchoolMate',
-  description: 'SchoolMate developed by Ara Discoveries is a smart schooling software and smartschool management system for modern school administration.',
+  description: 'SchoolMate developed by ARA Discoveries is a smart schooling software and smartschool management system for modern school administration.',
   keywords:    'schooling software, student management system software, school management system, smartschool management system, student attendance management system, education management system software, online attendance system for students & teachers, online student attendance management software system, best campus management software, eschool software, student online attendance management software system, student database management system software, student information management software, student monitoring software, education administration software, class attendance management system',
   canonical:   'https://www.araschoolmate.com/about.html',
 }

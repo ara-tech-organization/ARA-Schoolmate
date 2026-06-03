@@ -1,6 +1,7 @@
 import { Eye, Zap, Users, Lock, TrendingUp, ArrowRight, Globe, Star } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { NavLink } from 'react-router-dom'
+import visionImg from '../../assets/A4.png'
 
 const qualities = [
   { icon: Zap,        num: '01', title: 'Smart & Scalable',              desc: 'Technology that grows seamlessly with your institution without disruption.' },
@@ -33,7 +34,7 @@ export default function AboutVision() {
             Transforming Education Through <em>Smart Digital Innovation</em>
           </h2>
           <div className="ab-seo-block">
-            <p className="ab-seo-para">Our vision is to refine how schools and institutions operate by creating a future-ready smartschool management system that promotes academic excellence, operational transparency, and better parent-school collaboration. At Ara Discoveries, we believe SchoolMate will become a trusted student school management system worldwide, enabling educational institutions to confidently embark on digital transformation.</p>
+            <p className="ab-seo-para">Our vision is to refine how schools and institutions operate by creating a future-ready smartschool management system that promotes academic excellence, operational transparency, and better parent-school collaboration. At ARA Discoveries, we believe SchoolMate will become a trusted student school management system worldwide, enabling educational institutions to confidently embark on digital transformation.</p>
           </div>
         </div>
 
@@ -46,7 +47,7 @@ export default function AboutVision() {
               <div className="abv-corner abv-corner-tl" />
               <div className="abv-corner abv-corner-br" />
               <img
-                src="https://images.unsplash.com/photo-1719159381916-062fa9f435a6?auto=format&fit=crop&w=700&q=80"
+                src={visionImg}
                 alt="student attendance management system – education management erp"
                 className="abv-img"
               />
@@ -76,7 +77,7 @@ export default function AboutVision() {
               Our vision is to refine how schools and institutions operate by creating a future-ready smartschool management system that promotes academic excellence, operational transparency, and better parent-school collaboration.
             </p>
             <p className="abv-body">
-              At Ara Discoveries, we believe SchoolMate will become a trusted student school management system worldwide, enabling educational institutions to confidently embark on digital transformation.
+              At ARA Discoveries, we believe SchoolMate will become a trusted student school management system worldwide, enabling educational institutions to confidently embark on digital transformation.
             </p>
             <div className="abv-callout">
               SchoolMate is not just software — a complete digital ecosystem for modern education.

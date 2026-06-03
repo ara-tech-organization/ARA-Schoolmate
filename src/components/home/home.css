@@ -2236,6 +2236,11 @@
   width: 100%; height: 100%;
   object-fit: cover; display: block;
 }
+.feat2-phone-img-contain {
+  object-fit: contain;
+  object-position: center center;
+  background: #f8f8f8;
+}
 /* Home indicator */
 .feat2-phone-home {
   width: 80px; height: 4px;

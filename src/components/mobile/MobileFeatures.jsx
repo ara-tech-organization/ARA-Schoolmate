@@ -1,5 +1,6 @@
 import { Monitor, BookOpen, CreditCard, Calendar, Bell } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import m2Img from '../../assets/M2.png'
 
 const features = [
   {
@@ -58,7 +59,7 @@ export default function MobileFeatures() {
           <div className="mob-feat-card mob-feat-hero">
             <div className="mob-feat-hero-img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1757194455329-541f39364057?auto=format&fit=crop&w=800&q=80"
+                src={m2Img}
                 alt="online student attendance management software system – Smart school erp"
                 className="mob-feat-hero-img"
               />

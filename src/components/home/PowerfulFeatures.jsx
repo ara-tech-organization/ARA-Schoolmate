@@ -3,7 +3,7 @@ import { GraduationCap, Users, Settings, ClipboardCheck, Upload, MessageCircle, 
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import teachersImg from '../../assets/Teachers.png'
 import parentImg from '../../assets/Parent.png'
-import administrationImg from '../../assets/Administration.png'
+import administrationImg from '../../assets/School Aministration.png'
 
 const tabs = [
   { id: 'teachers', label: 'For Teachers', icon: GraduationCap },
@@ -42,6 +42,7 @@ const content = {
   admins: {
     icon: Settings, title: 'Complete Control for Administrators',
     imgAlt: 'student database management system software – education management erp',
+    imgContain: true,
     sub: 'A reliable student database management system for administrators handling large operational data.',
     seoPara: 'SchoolMate is a reliable student database management system software for administrators who deal with a large amount of academic and operational data.',
     img: administrationImg,
@@ -125,7 +126,7 @@ export default function PowerfulFeatures() {
                 </div>
                 {/* Screen content */}
                 <div className="feat2-phone-screen">
-                  <img src={data.img} alt={data.imgAlt || data.title} className="feat2-phone-img" />
+                  <img src={data.img} alt={data.imgAlt || data.title} className={`feat2-phone-img${data.imgContain ? ' feat2-phone-img-contain' : ''}`} />
                 </div>
                 {/* Home indicator */}
                 <div className="feat2-phone-home" />
