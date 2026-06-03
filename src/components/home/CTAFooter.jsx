@@ -218,11 +218,6 @@ export default function CTAFooter({ noForm = false }) {
 
           <div className="footer-bottom">
             <p className="f-copy">© {new Date().getFullYear()} SchoolMate. All rights reserved.</p>
-            <div className="f-bot-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Cookie Policy</a>
-            </div>
             <p className="f-crafted">
               <span className="f-heart">❤️</span> Crafted with Excellence by{' '}
               <a href="https://discovertechnologies.co/" target="_blank" rel="noopener noreferrer">ARA Discover Technology</a>
