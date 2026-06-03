@@ -561,13 +561,14 @@
 }
 .hero-body-inner {
   max-width: 1200px; width: 100%;
-  padding: 0 5px 0 28px;
+  padding: 0 24px;
+  margin: 0 auto;
   display: grid; grid-template-columns: 1fr 340px 300px;
-  column-gap: 36px; row-gap: 0; align-items: stretch;
+  column-gap: 48px; row-gap: 0; align-items: start;
 }
 
 /* LEFT */
-.hero-bl { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.hero-bl { display: flex; flex-direction: column; justify-content: flex-start; align-items: center; }
 
 /* feature list */
 .hbl-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
@@ -628,7 +629,6 @@
   flex: 1;
   position: relative;
   overflow: hidden;
-  min-height: 420px;
 }
 
 /* no extra glow — white/plain hero background shows behind character */
