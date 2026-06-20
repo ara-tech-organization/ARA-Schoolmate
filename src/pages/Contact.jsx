@@ -8,13 +8,13 @@ import '../components/contact/contact.css'
 
 const META = {
   title:       'Contact Us | SchoolMate',
-  description: 'Get in touch with SchoolMate by ARA Discover Technologies. Call +91 81100 15152, email support@schoolmate.in, or visit us in Thanjavur, Tamil Nadu.',
+  description: 'Get in touch with SchoolMate by ARA Discover Technologies. Call +91 81100 15152, email schoolmate2025@zohomail.in, or visit us in Thanjavur, Tamil Nadu.',
   canonical:   'https://www.araschoolmate.com/contact.html',
 }
 
 const infoItems = [
   { num: '01', icon: Phone,  lbl: 'Call Us',       val: '+91 81100 15152',       href: 'tel:+918110015152'            },
-  { num: '02', icon: Mail,   lbl: 'Email Us',      val: 'support@schoolmate.in', href: 'mailto:support@schoolmate.in' },
+  { num: '02', icon: Mail,   lbl: 'Email Us',      val: 'schoolmate2025@zohomail.in', href: 'mailto:schoolmate2025@zohomail.in' },
   { num: '03', icon: MapPin, lbl: 'Our Office',    val: '67A, Giri Rd, Thanjavur, TN 613009'                         },
   { num: '04', icon: Clock,  lbl: 'Working Hours', val: 'Mon – Sat · 9 AM – 7 PM'                                    },
 ]
@@ -71,8 +71,8 @@ export default function Contact() {
             <a href="tel:+918110015152" className="ct-pill">
               <Phone size={14} /> +91 81100 15152
             </a>
-            <a href="mailto:support@schoolmate.in" className="ct-pill">
-              <Mail size={14} /> support@schoolmate.in
+            <a href="mailto:schoolmate2025@zohomail.in" className="ct-pill">
+              <Mail size={14} /> schoolmate2025@zohomail.in
             </a>
             <a href="https://wa.me/918110015152" target="_blank" rel="noopener noreferrer" className="ct-pill">
               <MessageCircle size={14} /> WhatsApp

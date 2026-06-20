@@ -14,7 +14,7 @@ export default function AboutHero() {
   const [v, vv] = useScrollAnimation(0.05)
 
   return (
-    <section className="abh-section">
+    <section className="abh-section" style={{ backgroundImage: `url(${heroImg})` }}>
 
       {/* top bar */}
       <div className="abh-bar">
@@ -57,36 +57,15 @@ export default function AboutHero() {
         </div>
       </div>
 
-      {/* cinematic image */}
-      <div ref={v} className={`abh-visual sr${vv ? ' in' : ''}`}>
-        <div className="abh-img-frame">
-          <img
-            src={heroImg}
-            alt="schooling software – Smart school management system"
-            className="abh-img"
-          />
-          <div className="abh-img-overlay" />
-
-          {/* award badge — top right */}
-          <div className="abh-award">
-            <GraduationCap size={16} />
-            <div>
-              <span className="abh-award-num">10+</span>
-              <span className="abh-award-lbl">Years of Excellence</span>
-            </div>
+      {/* stats bar — below content */}
+      <div className="abh-stats-bar">
+        {stats.map(({ icon: Icon, num, label }) => (
+          <div key={label} className="abh-stat">
+            <Icon size={15} className="abh-stat-icon" />
+            <span className="abh-stat-num">{num}</span>
+            <span className="abh-stat-lbl">{label}</span>
           </div>
-
-          {/* frosted stats bar — bottom */}
-          <div className="abh-stats-bar">
-            {stats.map(({ icon: Icon, num, label }) => (
-              <div key={label} className="abh-stat">
-                <Icon size={15} className="abh-stat-icon" />
-                <span className="abh-stat-num">{num}</span>
-                <span className="abh-stat-lbl">{label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
 
     </section>
