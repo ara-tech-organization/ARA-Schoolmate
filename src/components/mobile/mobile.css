@@ -545,6 +545,12 @@
   /* bottom stripe */
   .mh2-stripe-inner { gap: 12px 16px; }
   .mh2-stripe-label { font-size: 11px; }
+
+  /* reduce side padding for content sections */
+  .mob-features > .wrap,
+  .mob-control  > .wrap,
+  .mob-prefer   > .wrap,
+  .mob-faq      > .wrap { padding-left: 12px; padding-right: 12px; }
 }
 
 /* ── xs  ≤ 480px  ──────────────────────────────────────────────── */
@@ -603,6 +609,12 @@
   .mh2-stripe-inner { gap: 8px 12px; }
   .mh2-stripe-label { font-size: 10.5px; }
   .mh2-stripe-divider { display: none; }
+
+  /* reduce side padding for content sections */
+  .mob-features > .wrap,
+  .mob-control  > .wrap,
+  .mob-prefer   > .wrap,
+  .mob-faq      > .wrap { padding-left: 10px; padding-right: 10px; }
 }
 
 /* ================================================================

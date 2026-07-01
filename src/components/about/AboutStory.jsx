@@ -1,15 +1,16 @@
-import { Monitor, MessageSquare, CreditCard, Calendar, BookOpen, Bus, BarChart3, CheckCircle2, ArrowRight } from 'lucide-react'
+import { Monitor, MessageSquare, CreditCard, Calendar, BookOpen, Bus, BarChart3, CheckCircle2, ArrowRight, Award, Zap } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
-import storyImg from '../../assets/A2.png'
+
+const storyImg = 'https://images.unsplash.com/photo-1588072432836-e10032774350?w=900&auto=format&fit=crop&q=80'
 
 const modules = [
-  { icon: Monitor,       label: 'Attendance',     desc: 'Digital tracking with instant alerts'  },
-  { icon: MessageSquare, label: 'Communication',  desc: 'Real-time circulars & notifications'   },
-  { icon: CreditCard,    label: 'Fee Management', desc: 'Online payments & smart reminders'     },
-  { icon: Calendar,      label: 'Timetable',      desc: 'Smart scheduling & class planning'     },
-  { icon: BookOpen,      label: 'Academics',      desc: 'Progress monitoring & report cards'    },
-  { icon: Bus,           label: 'Transport',      desc: 'Live GPS tracking for school buses'    },
-  { icon: BarChart3,     label: 'ERP & Reports',  desc: 'Unified data across your institution'  },
+  { icon: Monitor,       label: 'Attendance'     },
+  { icon: MessageSquare, label: 'Communication'  },
+  { icon: CreditCard,    label: 'Fee Management' },
+  { icon: Calendar,      label: 'Timetable'      },
+  { icon: BookOpen,      label: 'Academics'      },
+  { icon: Bus,           label: 'Transport'      },
+  { icon: BarChart3,     label: 'ERP & Reports'  },
 ]
 
 const benefits = [
@@ -20,6 +21,11 @@ const benefits = [
   'Deliver real-time updates to all stakeholders',
 ]
 
+const achievements = [
+  { icon: Award, num: '500+', label: 'Schools' },
+  { icon: Zap,   num: '80%',  label: 'Less Work' },
+]
+
 export default function AboutStory() {
   const [h, hv] = useScrollAnimation(0.05)
   const [l, lv] = useScrollAnimation(0.05)
@@ -27,38 +33,36 @@ export default function AboutStory() {
 
   return (
     <section className="abst-section" id="platform">
-      <div className="ab-section-num">01</div>
 
       <div className="wrap">
 
-        {/* header */}
+        {/* section header */}
         <div ref={h} className={`abst-header sr${hv ? ' in' : ''}`}>
           <div className="chip chip-red"><span className="chip-dot chip-dot-red" /> All-In-One Platform</div>
-          <h2 className="htitle abst-title">A Complete Digital Ecosystem<br />for <em>Modern Education</em></h2>
+          <h2 className="htitle abst-title">
+            A Complete Digital Ecosystem<br />for <em>Modern Education</em>
+          </h2>
           <p className="hsub abst-sub">
             SchoolMate combines every tool a school needs into one seamless,
             cloud-based platform — from attendance to analytics, all in one place.
           </p>
         </div>
 
-        <div className="ab-seo-block ab-seo-full">
-          <p className="ab-seo-para">SchoolMate is a smart schooling software for schools and colleges to simplify administration, improve communication, and manage academics. SchoolMate was developed by ARA Discoveries to solve the everyday operational headaches schools face from manual attendance tracking, paperwork, slow communication, and disconnected systems. Today, SchoolMate is a robust student school management system that connects administrators, teachers, students, and parents in a centralized cloud-based solution.</p>
-        </div>
-
         {/* two-col layout */}
         <div className="abst-layout">
 
-          {/* LEFT — image with floating module tags */}
+          {/* LEFT — image */}
           <div ref={l} className={`abst-left sr-l${lv ? ' in' : ''}`}>
             <div className="abst-img-wrap">
               <img
                 src={storyImg}
                 alt="student management system software – smartschool management system"
                 className="abst-img"
+                loading="lazy"
               />
               <div className="abst-img-overlay" />
 
-              {/* floating stat */}
+              {/* floating stat cards */}
               <div className="abst-float abst-float-tl">
                 <div className="abst-float-num">500+</div>
                 <div className="abst-float-lbl">Schools Trust Us</div>
@@ -69,7 +73,7 @@ export default function AboutStory() {
               </div>
             </div>
 
-            {/* module pill grid */}
+            {/* module pills */}
             <div className="abst-pills">
               {modules.map(({ icon: Icon, label }) => (
                 <div key={label} className="abst-pill">
@@ -79,20 +83,15 @@ export default function AboutStory() {
             </div>
           </div>
 
-          {/* RIGHT — text + benefit list */}
+          {/* RIGHT — content */}
           <div ref={r} className={`abst-right sr-r${rv ? ' in' : ''}`}>
             <p className="abst-eyebrow">Why Schools Choose SchoolMate</p>
+
             <p className="abst-body">
-              SchoolMate is a trusted smartschool management system that helps schools reduce manual work, improve parent engagement, automate administration, increase operational efficiency, and deliver real-time updates.
+              SchoolMate was developed by ARA Discoveries to solve the everyday operational challenges schools face — from manual attendance tracking and slow communication to disconnected administrative systems.
             </p>
             <p className="abst-body">
-              Our platform is an all-in-one solution that combines attendance tracking,
-              communication tools, fee management, timetable scheduling, academic monitoring,
-              transport management, and ERP features into one seamless dashboard.
-            </p>
-            <p className="abst-body">
-              SchoolMate has everything modern schools need to grow digitally — from attendance
-              alerts and homework notifications to online fee management and academic analytics.
+              Today, SchoolMate is a robust student school management system that connects administrators, teachers, students, and parents in a centralized cloud-based solution — giving every stakeholder the tools they need, when they need them.
             </p>
 
             <div className="abst-divider" />

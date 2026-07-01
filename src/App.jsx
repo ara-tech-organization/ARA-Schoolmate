@@ -1,9 +1,11 @@
 import './index.css'
 import { BrowserRouter, Routes, Route, Outlet, useLocation, matchPath } from 'react-router-dom'
 import { useEffect } from 'react'
-import Navbar from './components/home/Navbar'
-import CTAFooter from './components/home/CTAFooter'
-import PageLoader from './components/home/PageLoader'
+import Navbar          from './components/home/Navbar'
+import CTAFooter       from './components/home/CTAFooter'
+import PageLoader      from './components/home/PageLoader'
+import FloatingSocial  from './components/home/FloatingSocial'
+import EngagementPopup from './components/home/EngagementPopup'
 import Home      from './pages/Home'
 import About     from './pages/About'
 import MobileApp from './pages/MobileApp'
@@ -46,6 +48,8 @@ function Layout() {
         <Outlet />
       </main>
       <CTAFooter noForm={noForm} />
+      <FloatingSocial />
+      <EngagementPopup />
     </>
   )
 }

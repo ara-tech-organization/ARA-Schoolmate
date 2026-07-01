@@ -5,6 +5,7 @@ const modules = [
   {
     name: 'Lite', badge: 'Starter', featured: false,
     icon: MessageSquare, tag: 'Communication First',
+    price: '₹10,000', priceNote: 'per year',
     desc: 'Smart Communication for Schools Beginning Their Digital Journey',
     features: ['Real-time parent communication', 'Circulars and announcements', 'Attendance notifications', 'Homework alerts', 'Academic calendar setup', 'Limited role-based permissions'],
     seoText: 'SchoolMate Lite is perfect for schools looking for a budget e-school software package that includes the basic communication and attendance features.',
@@ -12,6 +13,7 @@ const modules = [
   {
     name: 'PRO', badge: 'Popular', featured: false,
     icon: Settings, tag: 'Administration Ready',
+    price: null, priceNote: 'Contact for pricing',
     desc: 'Advanced Administration & ERP Management',
     features: ['Everything in Lite, plus:', 'Student & staff profile management', 'Online fee collection', 'Payroll and leave tracking', 'Inventory management', 'Document management', 'Approval workflows'],
     seoText: 'SchoolMate PRO is a full featured education management ERP that aims at simplifying operations and automating administrative tasks.',
@@ -19,6 +21,7 @@ const modules = [
   {
     name: 'PLUS', badge: 'Recommended', featured: true,
     icon: MapPin, tag: 'Transport Included',
+    price: null, priceNote: 'Contact for pricing',
     desc: 'Smart Transport & Student Safety Management',
     features: ['Everything in PRO, plus:', 'GPS live bus tracking', 'Pickup and drop alerts', 'Route management', 'Emergency notifications', 'Transport-linked attendance'],
     seoText: 'The module enhances the profile of SchoolMate as a strong online student attendance management software system for institutions that manage transportation and student safety.',
@@ -26,6 +29,7 @@ const modules = [
   {
     name: '360', badge: 'Ultimate', featured: false,
     icon: GraduationCap, tag: 'Full Academic Suite',
+    price: null, priceNote: 'Contact for pricing',
     desc: 'Complete Academic & Operational Excellence',
     features: ['All Lite, PRO & PLUS, plus:', 'Auto-generated report cards', 'Syllabus tracking', 'Lesson progress monitoring', 'Staff task management', 'Performance dashboards', 'Academic analytics'],
     seoText: 'SchoolMate 360 is designed for schools that demand advanced educational administration software and centralized operational intelligence.',
@@ -70,6 +74,18 @@ export default function ModulesSection() {
               <div className="m2c-body">
                 <div className="m2c-badge">SchoolMate · {m.badge}</div>
                 <h3 className="m2c-name">{m.name}</h3>
+                {(m.price || m.priceNote) && (
+                  <div className="m2c-price-block">
+                    {m.price ? (
+                      <>
+                        <span className="m2c-price">{m.price}</span>
+                        <span className="m2c-price-note">{m.priceNote}</span>
+                      </>
+                    ) : (
+                      <span className="m2c-price-enquire">{m.priceNote}</span>
+                    )}
+                  </div>
+                )}
                 <p className="m2c-desc">{m.desc}</p>
                 <ul className="m2c-feats">
                   {m.features.map(f => (
