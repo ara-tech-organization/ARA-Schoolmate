@@ -1,4 +1,4 @@
-import { Eye, Zap, Users, Lock, TrendingUp, ArrowRight, Globe, Star } from 'lucide-react'
+import { Eye, Zap, Users, Lock, TrendingUp, ArrowRight, Globe, Star, CheckCircle2 } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { NavLink } from 'react-router-dom'
 import visionImg from '../../assets/A4.png'
@@ -16,6 +16,13 @@ const visionStats = [
   { icon: Users, num: '500+', label: 'Schools Empowered'   },
 ]
 
+const visionPoints = [
+  'Future-ready smartschool management system',
+  'Promotes academic excellence & transparency',
+  'Better parent-school collaboration tools',
+  'Trusted by schools across the country',
+]
+
 export default function AboutVision() {
   const [h, hv] = useScrollAnimation(0.05)
   const [l, lv] = useScrollAnimation(0.06)
@@ -28,33 +35,43 @@ export default function AboutVision() {
 
       <div className="wrap">
 
-        {/* ── TOP INTRO: split heading + stats row ── */}
-        <div ref={h} className={`abv3-intro sr${hv ? ' in' : ''}`}>
+        {/* ── TOP: split-panel banner ── */}
+        <div ref={h} className={`abv-banner sr${hv ? ' in' : ''}`}>
 
-          <div className="abv3-intro-top">
-            <div className="abv3-intro-text">
-              <div className="chip chip-red"><Eye size={12} /> Our Vision</div>
-              <h2 className="htitle abv3-heading">
-                Transforming Education Through <em>Smart Digital Innovation</em>
+          {/* LEFT — red gradient panel */}
+          <div className="abv-bn-left">
+            <div className="abv-bn-deco" aria-hidden="true" />
+            <div>
+              <div className="chip" style={{ background: 'rgba(255,255,255,.18)', color: '#fff', border: '1px solid rgba(255,255,255,.28)' }}>
+                <Eye size={12} /> Our Vision
+              </div>
+              <h2 className="abv-bn-h2">
+                Transforming Education Through{' '}
+                <em>Smart Digital Innovation</em>
               </h2>
             </div>
-            <p className="abv3-lead">
-              Our vision is to refine how schools and institutions operate by creating a future-ready
-              smartschool management system that promotes academic excellence, operational transparency,
-              and better parent-school collaboration.
-            </p>
+            <div className="abv-bn-stats">
+              {visionStats.map(({ num, label }) => (
+                <div key={label} className="abv-bn-stat">
+                  <span className="abv-bn-stat-num">{num}</span>
+                  <span className="abv-bn-stat-lbl">{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="abv3-stats-row">
-            {visionStats.map(({ icon: Icon, num, label }) => (
-              <div key={label} className="abv3-stat-card">
-                <div className="abv3-stat-icon"><Icon size={20} /></div>
-                <div className="abv3-stat-info">
-                  <div className="abv3-stat-num">{num}</div>
-                  <div className="abv3-stat-label">{label}</div>
-                </div>
-              </div>
-            ))}
+          {/* RIGHT — white content panel */}
+          <div className="abv-bn-right">
+            <p className="abv-bn-lead">
+              Our vision is to refine how schools and institutions operate by creating a
+              future-ready smartschool management system that promotes academic excellence,
+              operational transparency, and better parent-school collaboration.
+            </p>
+            <ul className="abv-bn-checks">
+              {visionPoints.map(p => (
+                <li key={p}><CheckCircle2 size={14} />{p}</li>
+              ))}
+            </ul>
           </div>
 
         </div>
@@ -62,7 +79,6 @@ export default function AboutVision() {
         {/* ── MAIN: text left · image right ── */}
         <div className="abv3-main">
 
-          {/* LEFT — text content */}
           <div ref={r} className={`abv3-text sr-l${rv ? ' in' : ''}`}>
             <p className="abv-eyeline"><Eye size={13} /> Where We Are Headed</p>
             <p className="abv-body">
@@ -83,7 +99,6 @@ export default function AboutVision() {
             </NavLink>
           </div>
 
-          {/* RIGHT — image (larger, more prominent) */}
           <div ref={l} className={`abv3-visual sr-r${lv ? ' in' : ''}`}>
             <div className="abv3-img-wrap">
               <img
@@ -101,7 +116,7 @@ export default function AboutVision() {
 
         </div>
 
-        {/* ── QUALITY CARDS: 4 horizontal ── */}
+        {/* ── QUALITY CARDS ── */}
         <div ref={q} className={`abv3-qualities sr${qv ? ' in' : ''}`}>
           {qualities.map(({ icon: Icon, num, title, desc }) => (
             <div key={title} className="abv3-q-card">

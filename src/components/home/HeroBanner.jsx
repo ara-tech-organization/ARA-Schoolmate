@@ -170,7 +170,7 @@ export default function HeroBanner() {
           </div>
         </div>
 
-        {/* CENTER — h2.png character image */}
+        {/* CENTER — h2.png character */}
         <div className="hero-bc">
           <div className="hero-vis">
             <div className="hero-vis-inner">

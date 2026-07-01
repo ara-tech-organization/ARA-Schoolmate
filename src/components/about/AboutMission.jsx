@@ -3,11 +3,11 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import missionImg from '../../assets/A3.png'
 
 const missionPoints = [
-  { icon: GraduationCap, label: 'Better academic management',   desc: 'Streamlined academic tools for every institution' },
-  { icon: Building2,     label: 'Efficient administration',     desc: 'Automate daily admin tasks effortlessly' },
-  { icon: Wifi,          label: 'Real-time communication',      desc: 'Instant updates for parents, teachers, and staff' },
-  { icon: Shield,        label: 'Secure cloud-based access',    desc: 'Enterprise-grade security, available 24/7' },
-  { icon: Users,         label: 'Smarter student engagement',   desc: 'Connect every student with their learning journey' },
+  { icon: GraduationCap, num: '01', label: 'Better Academic Management',   desc: 'Streamlined academic tools for every institution — exams, homework, timetables, and grading in one place.' },
+  { icon: Building2,     num: '02', label: 'Efficient Administration',      desc: 'Automate daily admin tasks effortlessly so staff can focus on what matters most: students.' },
+  { icon: Wifi,          num: '03', label: 'Real-Time Communication',       desc: 'Instant updates for parents, teachers, and staff. No delays, no missed messages.' },
+  { icon: Shield,        num: '04', label: 'Secure Cloud-Based Access',     desc: 'Enterprise-grade security with 24/7 cloud availability — accessible from anywhere.' },
+  { icon: Users,         num: '05', label: 'Smarter Student Engagement',    desc: 'Connect every student with their learning journey through digital tools built for growth.' },
 ]
 
 export default function AboutMission() {
@@ -21,7 +21,7 @@ export default function AboutMission() {
 
       <div className="wrap">
 
-        {/* Pull-quote block */}
+        {/* pull-quote */}
         <div ref={q} className={`ab-pull-quote sr${qv ? ' in' : ''}`}>
           <div className="ab-pq-mark">"</div>
           <p className="ab-pq-text">
@@ -30,7 +30,7 @@ export default function AboutMission() {
           <span className="ab-pq-source">— ARA Discoveries</span>
         </div>
 
-        {/* Mission header */}
+        {/* Mission header: text + image */}
         <div ref={h} className={`ab-mission-intro sr${hv ? ' in' : ''}`}>
           <div className="ab-mission-intro-inner">
             <div>
@@ -65,14 +65,15 @@ export default function AboutMission() {
           </div>
         </div>
 
-        {/* Feature strip — horizontal, no boxes */}
-        <div ref={s} className={`ab-mission-strip sr${sv ? ' in' : ''}`}>
-          {missionPoints.map(({ icon: Icon, label, desc }, i) => (
-            <div key={label} className="ab-mission-feature" style={{ transitionDelay: `${i * 0.07}s` }}>
-              <div className="ab-mf-icon"><Icon size={22} /></div>
-              <span className="ab-mf-label">{label}</span>
-              <span className="ab-mf-desc">{desc}</span>
-              <div className="ab-mf-underline" />
+        {/* Feature bento cards */}
+        <div ref={s} className={`ab-mf-bento sr${sv ? ' in' : ''}`}>
+          {missionPoints.map(({ icon: Icon, num, label, desc }, i) => (
+            <div key={label} className="ab-mf-card" style={{ transitionDelay: `${i * 0.07}s` }}>
+              <span className="ab-mf-card-num">{num}</span>
+              <div className="ab-mf-card-icon"><Icon size={24} /></div>
+              <h4 className="ab-mf-card-title">{label}</h4>
+              <p className="ab-mf-card-desc">{desc}</p>
+              <div className="ab-mf-card-bar" />
             </div>
           ))}
         </div>

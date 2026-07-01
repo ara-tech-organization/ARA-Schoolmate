@@ -1,72 +1,101 @@
-import { ArrowRight, ChevronRight, CheckCircle2, Building2, Star, Users, TrendingUp, GraduationCap, Shield } from 'lucide-react'
+import { ArrowRight, Building2, Star, Users, TrendingUp, GraduationCap, Shield, CheckCircle2 } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
-
-const heroImg = 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&auto=format&fit=crop&q=80'
+import heroVisual from '../../assets/A5.png'
 
 const stats = [
-  { icon: Building2,   num: '500+', label: 'Schools Empowered'  },
-  { icon: Star,        num: '10+',  label: 'Years of Excellence' },
-  { icon: Users,       num: '99%',  label: 'Satisfaction Rate'   },
-  { icon: TrendingUp,  num: '80%',  label: 'Less Manual Work'    },
+  { icon: Building2,  num: '500+', label: 'Schools Empowered'  },
+  { icon: Star,       num: '10+',  label: 'Years of Excellence' },
+  { icon: Users,      num: '99%',  label: 'Satisfaction Rate'   },
+  { icon: TrendingUp, num: '80%',  label: 'Less Manual Work'    },
 ]
 
 const highlights = [
-  { icon: GraduationCap, text: 'Cloud-Based ERP'     },
-  { icon: Shield,        text: 'Real-Time Alerts'    },
-  { icon: CheckCircle2,  text: 'Smart Attendance'    },
-  { icon: CheckCircle2,  text: 'Fee Management'      },
+  { icon: GraduationCap, text: 'Cloud-Based ERP'  },
+  { icon: Shield,        text: 'Real-Time Alerts' },
+  { icon: CheckCircle2,  text: 'Smart Attendance' },
+  { icon: CheckCircle2,  text: 'Fee Management'   },
 ]
 
 export default function AboutHero() {
   const [c, cv] = useScrollAnimation(0.03)
 
   return (
-    <section className="abh-section" style={{ backgroundImage: `url(${heroImg})` }}>
+    <section className="abh2-section">
 
-      {/* breadcrumb bar */}
-      <div className="abh-bar">
-        <div className="wrap abh-bar-inner">
-          <nav className="abh-bc" aria-label="Breadcrumb">
-            <a href="/">Home</a>
-            <ChevronRight size={10} />
-            <span>About Us</span>
-          </nav>
-          <span className="abh-bc-meta">Est. 2014 · ARA Discoveries</span>
-        </div>
+      {/* scattered dot decorations */}
+      <div className="abh2-dots-layer" aria-hidden="true">
+        {[...Array(18)].map((_, i) => (
+          <span key={i} className={`abh2-dot-star abh2-dot-s${i % 4}`} style={{
+            left: `${(i * 47 + 11) % 95}%`,
+            top:  `${(i * 37 + 7)  % 88}%`,
+            animationDelay: `${(i * 0.3) % 2.4}s`,
+          }} />
+        ))}
       </div>
 
-      {/* centered hero content */}
-      <div ref={c} className={`wrap abh-center sr${cv ? ' in' : ''}`}>
-        <div className="abh-pill">About SchoolMate</div>
+      <div className="abh2-glow" aria-hidden="true" />
 
-        <h1 className="abh-h1">About Us</h1>
-        <h2 className="abh-h2">
-          Shaping the Future of{' '}
-          <span className="abh-accent">School Management</span>
-        </h2>
+      <div ref={c} className={`wrap abh2-inner sr${cv ? ' in' : ''}`}>
 
-        <p className="abh-lead">
-          SchoolMate is a complete cloud-based school management system built to simplify administration, improve parent-teacher communication, and manage academics — all from a single, powerful platform.
-        </p>
+        {/* LEFT — text */}
+        <div className="abh2-left">
+          <div className="abh2-kicker">
+            <span className="abh2-kicker-dot" />
+            Shaping Up The Future Generations!
+          </div>
 
-        {/* highlight chips */}
-        <ul className="abh-checks">
-          {highlights.map(({ icon: Icon, text }) => (
-            <li key={text}>
-              <Icon size={12} /> {text}
-            </li>
-          ))}
-        </ul>
+          <h1 className="abh2-h1">
+            Smarter Schools,<br />
+            <span className="abh2-h1-accent">Stronger Futures!</span>
+          </h1>
 
-        <div className="abh-actions">
-          <a href="#mission" className="btn btn-red">
-            Our Mission <ArrowRight size={13} />
-          </a>
-          <a href="#vision" className="abh-ghost">Our Vision</a>
+          <p className="abh2-lead">
+            SchoolMate is a complete cloud-based school management platform — simplifying
+            administration, parent communication, and academics all in one place.
+          </p>
+
+          <ul className="abh2-checks">
+            {highlights.map(({ icon: Icon, text }) => (
+              <li key={text}><Icon size={13} /> {text}</li>
+            ))}
+          </ul>
+
+          <div className="abh2-actions">
+            <a href="#platform" className="abh2-btn-dark">
+              Explore Platform <ArrowRight size={14} />
+            </a>
+            <a href="#mission" className="abh2-btn-ghost">Our Mission</a>
+          </div>
         </div>
+
+        {/* RIGHT — A5.png with clip-path + rotating rings */}
+        <div className="abh2-right">
+          <div className="abh2-img-scene">
+            {/* outer slow-spin orbit */}
+            <div className="abh2-orbit" aria-hidden="true" />
+            {/* inner counter-spin orbit */}
+            <div className="abh2-orbit-inner" aria-hidden="true" />
+            {/* pulsing glow behind image */}
+            <div className="abh2-img-glow" aria-hidden="true" />
+
+            {/* clip-path image with bob + spin animation */}
+            <div className="abh2-img-clip">
+              <img
+                src={heroVisual}
+                alt="SchoolMate school management platform"
+                className="abh2-hero-img"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      {/* stats strip */}
+      {/* curved white bottom */}
+      <div className="abh2-curve" aria-hidden="true" />
+
+      {/* stats bar */}
       <div className="abh-stats-bar">
         {stats.map(({ icon: Icon, num, label }) => (
           <div key={label} className="abh-stat">
