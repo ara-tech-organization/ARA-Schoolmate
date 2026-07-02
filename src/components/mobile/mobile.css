@@ -91,7 +91,7 @@
 }
 .mph-bento {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "head  head  statb  statc"
@@ -107,6 +107,7 @@
   border-radius: var(--r-xl);
   padding: 26px 24px;
   min-height: 0;
+  min-width: 0;
   transition: transform .28s var(--ease), box-shadow .28s var(--ease);
 }
 
@@ -502,7 +503,7 @@
   .mph-section      { padding-top: 64px; }
   .mph-bento-wrap   { padding-top: 28px; padding-left: 24px; padding-right: 24px; }
   .mph-bento {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-areas:
       "head  head "
       "statb statc"

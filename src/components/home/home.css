@@ -2582,7 +2582,7 @@
 
 @media (max-width: 1024px) { .plat3-grid { grid-template-columns: repeat(4, 1fr); } }
 @media (max-width: 768px)  { .plat3-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px)  { .plat3-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+@media (max-width: 480px)  { .plat3-grid { grid-template-columns: 1fr; gap: 12px; } }
 
 /* ================================================================
    MODULES V2  — premium tier cards
@@ -3464,6 +3464,7 @@
    ══════════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
   .feat2-form-bar { grid-template-columns: 1fr; gap: 24px; }
+  .feat2-body { grid-template-columns: 1fr; gap: 32px; }
   .hero-body { grid-template-columns: 1fr 300px; gap: 20px; }
   .feat2-phone { width: 240px; }
   .feat2-phone-screen { height: 390px; }
@@ -3708,7 +3709,7 @@
   .offer2-list li   { font-size: 13px; padding: 7px 0; }
 
   /* AllInOnePlatform */
-  .plat3-grid      { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .plat3-grid      { grid-template-columns: 1fr; gap: 10px; }
   .plat3-card      { padding: 18px 14px; }
   .plat3-card-icon { width: 36px; height: 36px; }
   .plat3-seo       { font-size: 12.5px; }
@@ -3822,7 +3823,7 @@
   .offer2-list li { font-size: 13px; }
 
   /* AllInOnePlatform */
-  .plat3-grid   { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .plat3-grid   { grid-template-columns: 1fr; gap: 10px; }
 
   /* PowerfulFeatures */
   .feat2-tabs   { flex-direction: column; gap: 4px; padding: 4px; border-radius: 18px; margin: 24px auto 32px; }
@@ -3887,7 +3888,7 @@
   .tv2-stats-bar  { grid-template-columns: repeat(2, 1fr); }
 
   /* AllInOnePlatform */
-  .plat3-grid   { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .plat3-grid   { grid-template-columns: 1fr; gap: 8px; }
 
   /* PowerfulFeatures */
   .feat2-tabs   { flex-direction: column; gap: 3px; padding: 4px; margin: 20px auto 28px; }

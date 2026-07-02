@@ -1138,6 +1138,11 @@
 /* ── abh2 responsive ─────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .abh2-inner { grid-template-columns: 1fr 1fr; gap: 32px; padding: 44px 0 70px; }
+  .abh2-right { min-height: 400px; }
+  .abh2-img-scene { width: 340px; height: 340px; margin-top: 80px; }
+  .abh2-orbit { width: 322px; height: 322px; }
+  .abh2-orbit-inner { width: 219px; height: 219px; }
+  .abh2-img-clip { width: 552px; height: 552px; }
   .abh2-ring-1 { width: 220px; height: 220px; }
   .abh2-ring-2 { width: 160px; height: 160px; }
   .abh2-ring-3 { width: 270px; height: 270px; }
@@ -1146,10 +1151,11 @@
   .abh2-section { padding-top: 68px; }
   .abh2-inner { grid-template-columns: 1fr; gap: 28px; padding: 48px 0 60px; }
   .abh2-left { padding-left: 10px; margin-top: 10px; }
-  .abh2-right { min-height: 260px; }
-  .abh2-img-scene { width: 280px; height: 280px; }
-  .abh2-orbit { width: 280px; height: 280px; }
-  .abh2-img-clip { width: 170px; height: 170px; }
+  .abh2-right { min-height: 300px; justify-content: center; }
+  .abh2-img-scene { width: 260px; height: 260px; margin-top: 20px; }
+  .abh2-orbit { width: 247px; height: 247px; }
+  .abh2-orbit-inner { width: 168px; height: 168px; }
+  .abh2-img-clip { width: 423px; height: 423px; }
   .abh2-rocket-frame { width: 220px; height: 268px; }
   .abh2-rk-svg { width: 92px; }
 }
@@ -1162,6 +1168,21 @@
   .abh-stats-bar { grid-template-columns: repeat(2, 1fr); }
   .abh-stat:nth-child(2) { border-right: none; }
   .abh-stat:nth-child(3) { border-top: 1px solid rgba(0,0,0,.07); }
+
+  /* rocket + ring scene — shrink further so it never overflows a
+     360px-wide phone (hero has ~8px left padding via .abh2-left,
+     plus .wrap side gutters) */
+  .abh2-right { min-height: 230px; }
+  .abh2-img-scene { width: 200px; height: 200px; margin-top: 12px; }
+  .abh2-orbit { width: 190px; height: 190px; }
+  .abh2-orbit-inner { width: 129px; height: 129px; }
+  .abh2-img-clip { width: 325px; height: 325px; }
+}
+@media (max-width: 400px) {
+  .abh2-img-scene { width: 170px; height: 170px; }
+  .abh2-orbit { width: 162px; height: 162px; }
+  .abh2-orbit-inner { width: 110px; height: 110px; }
+  .abh2-img-clip { width: 276px; height: 276px; }
 }
 
 /* ── 1440px — large desktop ─────────────────────────────────── */
