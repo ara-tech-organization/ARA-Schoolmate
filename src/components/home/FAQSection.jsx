@@ -16,7 +16,7 @@ const faqs = [
 ]
 
 export default function FAQSection() {
-  const [open, setOpen] = useState(null)
+  const [open, setOpen] = useState(0)
   const [h, hv] = useScrollAnimation()
   const [l, lv] = useScrollAnimation(0.04)
 

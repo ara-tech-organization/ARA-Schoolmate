@@ -347,6 +347,8 @@
   .ct-hero { padding: 68px 0 28px; }
   .ct-main { padding-bottom: 48px; }
   .ct-form-inner { padding: 32px 28px; }
+  .ct-form-hd { align-items: center; text-align: center; }
+  .ct-form-kicker { justify-content: center; }
 }
 @media (max-width: 640px) {
   .ct-h1 { letter-spacing: -1.2px; }
@@ -355,6 +357,8 @@
 }
 @media (max-width: 480px) {
   .ct-hero { padding: 60px 0 24px; }
+  .ct-hero-inner { gap: 18px; }
+  .ct-pills { gap: 12px; margin-top: 8px; }
   .ct-strip-wrap { grid-template-columns: 1fr; }
   .ct-strip-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.07); padding: 22px 20px; }
   .ct-strip-item:last-child { border-bottom: none; }

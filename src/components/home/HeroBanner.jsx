@@ -10,6 +10,7 @@ import heroImg3 from '../../assets/Academic.png'
 import heroImg4 from '../../assets/Communication.png'
 import heroBoyImg from '../../assets/h2.png'
 import HeroIllustration from './HeroIllustration'
+import { submitLead } from '../../utils/submitLead'
 
 const heroSlides = [
   { src: heroImg1, alt: 'schooling software – Smart school management system'              },
@@ -37,10 +38,24 @@ const features = [
 export default function HeroBanner() {
   const [form, setForm]           = useState({ name: '', school: '', phone: '', email: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError]         = useState('')
   const [slide, setSlide]         = useState(0)
   const [progress, setProgress]   = useState(0)
   const SLIDE_MS = 3500
-  const submit = (e) => { e.preventDefault(); setSubmitted(true) }
+  const submit = async (e) => {
+    e.preventDefault()
+    setError('')
+    setSubmitting(true)
+    try {
+      await submitLead({ source: 'home_hero', ...form })
+      setSubmitted(true)
+    } catch (err) {
+      setError('Something went wrong. Please try again or contact us on WhatsApp.')
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   useEffect(() => {
     setProgress(0)
@@ -234,8 +249,9 @@ export default function HeroBanner() {
                       <input type="email" placeholder="you@school.com"
                         value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} />
                     </div>
-                    <button type="submit" className="form-btn">
-                      Get Free Demo <ArrowRight size={14} />
+                    {error && <p style={{ fontSize: 12.5, color: 'var(--red)', margin: '-4px 0 4px' }}>{error}</p>}
+                    <button type="submit" className="form-btn" disabled={submitting}>
+                      {submitting ? 'Submitting…' : <>Get Free Demo <ArrowRight size={14} /></>}
                     </button>
                   </form>
                   <p className="form-note">

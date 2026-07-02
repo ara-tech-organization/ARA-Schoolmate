@@ -1,5 +1,6 @@
 import { ArrowRight, Play, Smartphone, Shield, Zap, Globe, CheckCircle2, Building2, Star, Users, TrendingUp, Bell, Lock } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import m3Img from '../../assets/M3.png'
 
 export default function MobileHero() {
   const [ref, vis] = useScrollAnimation(0.03)
@@ -30,12 +31,14 @@ export default function MobileHero() {
               <span className="mph-strip-label">School Management App</span>
             </div>
             <div className="mph-head-content">
-              <p className="mph-seo-h1">Smart School Management at Your Fingertips</p>
-              <h1 className="mph-h1">
-                <span className="mph-h1-outline">One App.</span><br />
-                <span className="mph-h1-red">Every School</span><br />
-                <span className="mph-h1-outline">Operation.</span>
-              </h1>
+              <div className="mph-head-top">
+                <h1 className="mph-h1">
+                  <span className="mph-h1-outline">One App.</span>
+                  <span className="mph-h1-red">  Every School</span><br /> <span className="mph-h1-outline">Operation.</span>
+                </h1>
+                <p className="mph-seo-h1">Smart School Management at Your Fingertips</p>
+                <img src={m3Img} alt="SchoolMate mobile app preview" className="mph-head-img" />
+              </div>
               <div className="mph-actions">
                 <a href="#features" className="mph-btn-primary">
                   Explore Features <ArrowRight size={14} />

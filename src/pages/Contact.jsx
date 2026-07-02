@@ -4,6 +4,7 @@ import {
   ArrowRight, CheckCircle2, MessageCircle,
 } from 'lucide-react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { submitLead } from '../utils/submitLead'
 import '../components/contact/contact.css'
 
 const META = {
@@ -23,7 +24,9 @@ export default function Contact() {
   const [headRef, headVis] = useScrollAnimation(0.05)
   const [stripRef, stripVis] = useScrollAnimation(0.08)
   const [formRef, formVis]  = useScrollAnimation(0.06)
-  const [sent, setSent]     = useState(false)
+  const [sent, setSent]         = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError]       = useState('')
 
   useEffect(() => {
     document.title = META.title
@@ -39,9 +42,25 @@ export default function Contact() {
     return () => { document.title = 'SchoolMate'; canonical.remove() }
   }, [])
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSent(true)
+    const data = new FormData(e.target)
+    setError('')
+    setSubmitting(true)
+    try {
+      await submitLead({
+        source: 'contact_page',
+        name:   data.get('name'),
+        phone:  data.get('phone'),
+        school: data.get('school'),
+        city:   data.get('city'),
+      })
+      setSent(true)
+    } catch (err) {
+      setError('Something went wrong. Please try again or reach us on WhatsApp.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -140,23 +159,24 @@ export default function Contact() {
                 ) : (
                   <form className="ct-form" onSubmit={handleSubmit}>
                     <div className="ct-field">
-                      <input type="text" id="ct-name" placeholder=" " required />
+                      <input type="text" id="ct-name" name="name" placeholder=" " required />
                       <label htmlFor="ct-name">Your Name</label>
                     </div>
                     <div className="ct-field">
-                      <input type="tel" id="ct-phone" placeholder=" " required />
+                      <input type="tel" id="ct-phone" name="phone" placeholder=" " required />
                       <label htmlFor="ct-phone">Phone Number</label>
                     </div>
                     <div className="ct-field">
-                      <input type="text" id="ct-school" placeholder=" " required />
+                      <input type="text" id="ct-school" name="school" placeholder=" " required />
                       <label htmlFor="ct-school">School Name</label>
                     </div>
                     <div className="ct-field">
-                      <input type="text" id="ct-city" placeholder=" " required />
+                      <input type="text" id="ct-city" name="city" placeholder=" " required />
                       <label htmlFor="ct-city">City</label>
                     </div>
-                    <button type="submit" className="ct-submit">
-                      Get Free Demo <ArrowRight size={15} />
+                    {error && <p style={{ fontSize: 12.5, color: 'var(--red)', margin: '-4px 0 4px' }}>{error}</p>}
+                    <button type="submit" className="ct-submit" disabled={submitting}>
+                      {submitting ? 'Submitting…' : <>Get Free Demo <ArrowRight size={15} /></>}
                     </button>
                     <p className="ct-form-note">No credit card required · Setup in minutes</p>
                   </form>

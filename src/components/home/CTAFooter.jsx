@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import footerImg from '../../assets/Footer.png'
+import { submitLead } from '../../utils/submitLead'
 
 const footerLinks = [
   {
@@ -80,11 +81,29 @@ const perks = [
 export default function CTAFooter({ noForm = false }) {
   const [left, lv]  = useScrollAnimation()
   const [right, rv] = useScrollAnimation()
-  const [sent, setSent] = useState(false)
+  const [sent, setSent]         = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError]       = useState('')
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSent(true)
+    const data = new FormData(e.target)
+    setError('')
+    setSubmitting(true)
+    try {
+      await submitLead({
+        source: 'cta_footer',
+        name:   data.get('name'),
+        phone:  data.get('phone'),
+        school: data.get('school'),
+        city:   data.get('city'),
+      })
+      setSent(true)
+    } catch (err) {
+      setError('Something went wrong. Please try again or call us directly.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -156,22 +175,23 @@ export default function CTAFooter({ noForm = false }) {
                   <form className="cta2-form" onSubmit={handleSubmit}>
                     <div className="cta2-fg">
                       <label>Your Name</label>
-                      <input type="text" placeholder="e.g. Rajesh Kumar" required />
+                      <input type="text" name="name" placeholder="e.g. Rajesh Kumar" required />
                     </div>
                     <div className="cta2-fg">
                       <label>Phone Number</label>
-                      <input type="tel" placeholder="+91 98765 43210" required />
+                      <input type="tel" name="phone" placeholder="+91 98765 43210" required />
                     </div>
                     <div className="cta2-fg">
                       <label>School Name</label>
-                      <input type="text" placeholder="e.g. Delhi Public School" required />
+                      <input type="text" name="school" placeholder="e.g. Delhi Public School" required />
                     </div>
                     <div className="cta2-fg">
                       <label>City</label>
-                      <input type="text" placeholder="e.g. Mumbai" required />
+                      <input type="text" name="city" placeholder="e.g. Mumbai" required />
                     </div>
-                    <button type="submit" className="cta2-submit">
-                      Get Free Demo <ArrowRight size={16} />
+                    {error && <p style={{ fontSize: 12.5, color: 'var(--red)', margin: '-4px 0 4px' }}>{error}</p>}
+                    <button type="submit" className="cta2-submit" disabled={submitting}>
+                      {submitting ? 'Submitting…' : <>Get Free Demo <ArrowRight size={16} /></>}
                     </button>
                     <p className="cta2-note">No credit card required · Setup in minutes</p>
                   </form>

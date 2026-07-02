@@ -323,6 +323,7 @@
 
 .abst-left {
   display: flex; flex-direction: column;
+  min-width: 0;
 }
 .abst-left .abst-img-wrap {
   flex: 1;
@@ -378,7 +379,12 @@
 
 @media (max-width: 900px) {
   .abst-layout { grid-template-columns: 1fr; gap: 48px; }
-  .abst-img-wrap { aspect-ratio: 16/9; }
+  .abst-img-wrap { aspect-ratio: 3/4; }
+  .abst-left, .abst-right { align-items: center; text-align: center; }
+  .abst-pills { justify-content: center; }
+  .abst-divider { margin-left: auto; margin-right: auto; }
+  .abst-timeline { text-align: left; }
+  .abst-cta { align-self: center; }
 }
 @media (max-width: 560px) { .abst-section { padding: 72px 0; } }
 
@@ -690,6 +696,10 @@
 @media (max-width: 768px) {
   .abv3-intro-top { grid-template-columns: 1fr; gap: 20px; padding-bottom: 28px; }
   .abv3-main { grid-template-columns: 1fr; gap: 36px; }
+  .abv3-text { align-items: center; text-align: center; }
+  .abv-eyeline { justify-content: center; }
+  .abv-callout { border-left: none; border-top: 3px solid var(--red); border-radius: var(--r-md); text-align: center; }
+  .abv-cta { align-self: center; }
 }
 @media (max-width: 640px) {
   .abv3-stats-row { grid-template-columns: 1fr; gap: 12px; }
@@ -1150,7 +1160,9 @@
 @media (max-width: 768px) {
   .abh2-section { padding-top: 68px; }
   .abh2-inner { grid-template-columns: 1fr; gap: 28px; padding: 48px 0 60px; }
-  .abh2-left { padding-left: 10px; margin-top: 10px; }
+  .abh2-left { padding-left: 10px; margin-top: 10px; align-items: center; text-align: center; }
+  .abh2-kicker, .abh2-checks, .abh2-actions { justify-content: center; }
+  .abh2-lead { max-width: 480px; }
   .abh2-right { min-height: 300px; justify-content: center; }
   .abh2-img-scene { width: 260px; height: 260px; margin-top: 20px; }
   .abh2-orbit { width: 247px; height: 247px; }
@@ -1164,7 +1176,7 @@
   .abh2-inner { padding: 36px 0 52px; }
   .abh2-left { padding-left: 8px; margin-top: 8px; }
   .abh2-h1 { font-size: clamp(26px, 7vw, 36px); }
-  .abh2-actions { flex-direction: column; align-items: flex-start; }
+  .abh2-actions { flex-direction: column; align-items: center; }
   .abh-stats-bar { grid-template-columns: repeat(2, 1fr); }
   .abh-stat:nth-child(2) { border-right: none; }
   .abh-stat:nth-child(3) { border-top: 1px solid rgba(0,0,0,.07); }
@@ -1206,9 +1218,11 @@
   .ab-mission-feature:nth-child(4) { border-top: 1px solid rgba(217,28,39,.1); }
   .ab-mission-feature:nth-child(5) { border-top: 1px solid rgba(217,28,39,.1); border-right: none; }
   .abst-layout { grid-template-columns: 1fr; gap: 40px; }
-  .abst-img-wrap { aspect-ratio: 16/9; }
+  .abst-img-wrap { aspect-ratio: 3/4; }
   .abv-layout  { grid-template-columns: 1fr; gap: 40px; }
-  .ab-mission-intro-inner { grid-template-columns: 1fr; gap: 28px; }
+  .ab-mission-intro-inner { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+  .ab-seo-block-left { text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .ab-seo-list li { justify-content: center; }
 }
 
 /* ── 900px ───────────────────────────────────────────────────── */
@@ -1238,7 +1252,7 @@
 
   /* Story */
   .abst-layout { gap: 32px; }
-  .abst-img-wrap { aspect-ratio: 16/9; }
+  .abst-img-wrap { aspect-ratio: 3/4; }
 
   /* Mission */
   .ab-mission-strip { grid-template-columns: 1fr 1fr; }
@@ -1250,6 +1264,7 @@
   /* Vision */
   .abv-layout  { grid-template-columns: 1fr; gap: 36px; }
   .abv-img     { height: 280px; }
+  .abv-cta     { align-self: center; }
 }
 
 /* ── 640px — large phone landscape ──────────────────────────── */
@@ -1261,6 +1276,10 @@
   .abh-checks li { font-size: 11px; padding: 4px 12px; }
   .abst-layout   { gap: 28px; }
   .abv-qualities { grid-template-columns: 1fr 1fr; }
+
+  /* Mission — keep the "institutions looking for" checklist left-aligned on phone */
+  .ab-seo-block-left { text-align: left; align-items: flex-start; }
+  .ab-seo-list li     { justify-content: flex-start; }
 }
 
 /* ── 480px — standard phone ──────────────────────────────────── */
@@ -1287,6 +1306,14 @@
   .ab-mission-feature  { border-right: none; }
   .ab-mission-feature:nth-child(even) { border-right: none; }
   .ab-pq-text { font-size: 16px; }
+
+  /* Story — more breathing room around the floating badges on the image */
+  .abst-float      { padding: 10px 14px; }
+  .abst-float-tl   { top: 14px; left: 14px; }
+  .abst-float-br   { bottom: 14px; right: 14px; }
+  .abst-float-num  { font-size: 18px; }
+  .abst-float-lbl  { font-size: 10px; }
+  .abst-pills      { margin-top: 20px; gap: 10px; }
 
   /* Vision */
   .abv-qualities { grid-template-columns: 1fr; }

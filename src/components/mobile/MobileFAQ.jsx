@@ -26,7 +26,7 @@ const faqs = [
 ]
 
 export default function MobileFAQ() {
-  const [open, setOpen] = useState(null)
+  const [open, setOpen] = useState(0)
   const [hRef, hVis] = useScrollAnimation(0.05)
   const [lRef, lVis] = useScrollAnimation(0.07)
 

@@ -925,6 +925,12 @@
   .hero-bc   { display: none; }
   .hero-br   { max-width: 520px; width: 100%; }
   .hero-cta  { justify-content: center; }
+
+  /* center the hero copy on mobile */
+  .hero-head-left { align-items: center; text-align: center; }
+  .hero-eyebrow, .hero-pills { justify-content: center; }
+  .hero-seo-desc { text-align: center; }
+  .hero-pill { text-align: left; }
 }
 @media (max-width: 480px) {
   .hero-head { padding-top: 68px; }
@@ -1651,7 +1657,15 @@
 .cta2-success-title { font-size: 18px; font-weight: 700; color: var(--text-1); }
 .cta2-success-sub   { font-size: 13.5px; color: var(--text-4); }
 
-@media (max-width: 1024px) { .cta2-inner { grid-template-columns: 1fr; gap: 48px; } .cta2-card { max-width: 520px; } }
+@media (max-width: 1024px) {
+  .cta2-inner { grid-template-columns: 1fr; gap: 48px; }
+  .cta2-card  { max-width: 520px; }
+
+  /* center the left column copy on mobile, but keep the perks list left-aligned */
+  .cta2-left      { align-items: center; text-align: center; }
+  .cta2-perks     { align-items: flex-start; }
+  .cta2-seo-para  { text-align: center; }
+}
 @media (max-width: 640px)  { .cta2-section { padding: 64px 20px; } .cta2-form { padding: 22px 20px 24px; } .cta2-card-top { padding: 22px 20px; } }
 
 /* ================================================================
@@ -1700,7 +1714,11 @@
 .f-heart { margin-right: 4px; font-size: 14px; }
 
 @media (max-width: 1200px) { .footer-top { grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; } }
-@media (max-width: 1024px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; } }
+@media (max-width: 1024px) {
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+  /* brand block spans both columns so the link groups form a clean 2x2 below it */
+  .footer-top > div:first-child { grid-column: 1 / -1; }
+}
 @media (max-width: 640px)  { .footer-top { grid-template-columns: 1fr; gap: 32px; } .footer-bottom { flex-direction: column; text-align: center; } }
 
 /* ================================================================
@@ -2583,6 +2601,9 @@
 @media (max-width: 1024px) { .plat3-grid { grid-template-columns: repeat(4, 1fr); } }
 @media (max-width: 768px)  { .plat3-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px)  { .plat3-grid { grid-template-columns: 1fr; gap: 12px; } }
+@media (max-width: 640px)  {
+  .plat3-bullets { flex-direction: column; align-items: flex-start; align-self: flex-start; width: 100%; gap: 14px; }
+}
 
 /* ================================================================
    MODULES V2  — premium tier cards
@@ -3140,7 +3161,13 @@
 .t2c-footer { display: none; }
 
 @media (max-width: 768px)  { .testi2-hero-center { padding: 48px 32px; } .testi2-hero-heading { font-size: clamp(22px, 5vw, 32px); } }
-@media (max-width: 480px)  { .testi2-hero-center { padding: 36px 20px; } .testi2-hero-heading { font-size: 22px; } .testi2-hero-sub { font-size: 14px; } .t2c { min-width: 220px; max-width: 220px; padding: 16px; } }
+@media (max-width: 480px)  {
+  .testi2-hero-center { padding: 36px 20px; }
+  .testi2-hero-heading { font-size: 22px; }
+  .testi2-hero-sub { font-size: 14px; }
+  .testi2-carousel { justify-content: center; }
+  .t2c { min-width: 100%; max-width: 100%; width: 100%; padding: 16px; }
+}
 
 /* ================================================================
    WHY STAND OUT V2  — metrics + reasons
@@ -3725,7 +3752,7 @@
   .ft2              { padding: 11px 16px; font-size: 13px; gap: 6px; border-radius: 16px; justify-content: center; }
   .feat2-list-title { font-size: 17px; }
   .feat2-list-sub   { font-size: 12px; }
-  .f2-item          { gap: 10px; padding: 9px 0; }
+  .f2-item          { gap: 10px; padding: 12px 14px; }
   .f2-title         { font-size: 12px; }
   .f2-desc          { font-size: 11px; }
   .feat2-phone      { width: 200px; border-radius: 36px; }
@@ -3784,7 +3811,7 @@
 
   /* Footer */
   .footer          { padding: 44px 16px 28px; }
-  .footer-top      { grid-template-columns: 1fr; gap: 24px; }
+  .footer-top      { grid-template-columns: 1fr 1fr; gap: 20px 18px; }
   .footer-bottom   { flex-direction: column; text-align: center; gap: 10px; }
   .f-bot-links     { gap: 10px; flex-wrap: wrap; justify-content: center; }
   .f-copy          { font-size: 11px; text-align: center; }

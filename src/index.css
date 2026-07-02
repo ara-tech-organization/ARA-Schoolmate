@@ -114,6 +114,7 @@ input, textarea, select { font-family: var(--font); }
 
 /* ═══════════════════════════════════════════════════════════════
    FLOATING SOCIAL RAIL — RIGHT SIDE, VERTICALLY CENTERED
+   Unified dark pill: "Enquire Now" bar + WhatsApp + Call
    ═══════════════════════════════════════════════════════════════ */
 
 .fsb-rail {
@@ -124,28 +125,51 @@ input, textarea, select { font-family: var(--font); }
   z-index: 9000;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  align-items: stretch;
+  width: 46px;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+  box-shadow: -4px 4px 24px rgba(0,0,0,.22), -1px 1px 6px rgba(0,0,0,.15);
 }
 
-/* each button */
+/* "Enquire Now" label bar — vertical text + arrow */
+.fsb-rail-enquire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 14px 0 12px;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+.fsb-rail-enquire:hover { background: var(--red-dark); }
+.fsb-rail-enquire-arrow { flex-shrink: 0; }
+.fsb-rail-enquire-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+/* icon buttons — WhatsApp / Call, connected below the enquire bar */
 .fsb-rail-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: #fff;
-  background: var(--bc);
-  border-radius: 8px 0 0 8px;
-  width: 46px;
-  height: 46px;
-  box-shadow: -2px 2px 14px var(--bg), -1px 1px 4px rgba(0,0,0,.12);
-  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  height: 52px;
+  transition: filter .2s ease, background .2s ease;
 }
-.fsb-rail-btn:hover {
-  transform: translateX(-4px) scale(1.08);
-  box-shadow: -4px 4px 20px var(--bg), -2px 2px 8px rgba(0,0,0,.2);
-  filter: brightness(1.12);
-}
+.fsb-rail-btn:hover { filter: brightness(1.12); }
+.fsb-rail-btn-whatsapp  { background: #25D366; }
+.fsb-rail-btn-call      { background: #fff; color: var(--red); }
+.fsb-rail-btn-call:hover { background: var(--red-light); }
 
 /* icon */
 .fsb-rail-icon {
@@ -154,11 +178,10 @@ input, textarea, select { font-family: var(--font); }
   justify-content: center;
 }
 
-/* hide text — no expand behaviour */
-.fsb-rail-text { display: none; }
-
+/* hide the whole rail on phones — it has no room to sit beside content
+   without overlapping hero images / floating badges at this width */
 @media (max-width: 640px) {
-  .fsb-rail-btn { width: 40px; height: 40px; }
+  .fsb-rail { display: none; }
 }
 
 

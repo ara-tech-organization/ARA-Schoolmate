@@ -316,20 +316,21 @@
   background: var(--red);
   animation: pulseDot 2s infinite;
 }
+.mph-head-top { display: flex; flex-direction: column; }
 .mph-seo-h1 {
   font-size: 13px;
   font-weight: 600;
   color: var(--red);
-  margin-bottom: 14px;
+  margin-bottom: 14;
   letter-spacing: .01em;
 }
 .mph-h1 {
-  font-size: clamp(30px, 4.2vw, 52px);
+  font-size: clamp(22px, 3vw, 34px);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -1.5px;
   color: var(--text-1);
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 .mph-h1-outline {
   -webkit-text-stroke: 1.8px var(--text-1);
@@ -338,6 +339,12 @@
 .mph-h1-red {
   color: var(--red);
   -webkit-text-stroke: 0;
+}
+.mph-head-img {
+  display: block;
+  margin: 20px auto 0;
+  max-width: 450px;
+  height: auto;
 }
 
 .mph-leads { margin-bottom: 6px; }
@@ -483,7 +490,7 @@
 @media (max-width: 1280px) {
   .mph-bento        { gap: 12px; }
   .mph-head-content { padding: 26px 22px 24px; }
-  .mph-h1           { font-size: clamp(28px, 3.8vw, 48px); }
+  .mph-h1           { font-size: clamp(20px, 2.6vw, 30px); }
 }
 
 /* ── md  ≤ 1024px  ─────────────────────────────────────────────── */
@@ -492,7 +499,7 @@
   .mph-bento        { gap: 12px; }
   .mph-head-strip   { width: 48px; }
   .mph-head-content { padding: 24px 20px 22px; }
-  .mph-h1           { font-size: clamp(24px, 4vw, 40px); letter-spacing: -1.2px; }
+  .mph-h1           { font-size: clamp(18px, 3vw, 26px); letter-spacing: -1.2px; }
   .mph-seo-h1       { font-size: 12.5px; }
   .mph-bstat-num    { font-size: 34px; }
   .mph-cell-lead p  { font-size: 12.5px; }
@@ -520,8 +527,9 @@
   .mph-strip-label  { font-size: 9px; letter-spacing: .13em; }
   .mph-head-content { padding: 20px 16px 18px; }
   .mph-seo-h1       { font-size: 12px; margin-bottom: 10px; }
-  .mph-h1           { font-size: clamp(20px, 5vw, 30px); letter-spacing: -.8px; margin-bottom: 16px; }
+  .mph-h1           { font-size: clamp(17px, 3.6vw, 22px); letter-spacing: -.8px; margin-bottom: 8px; }
   .mph-h1-outline   { -webkit-text-stroke: 1.4px var(--text-1); }
+  .mph-head-img     { max-width: 210px; margin: 10px auto 0; }
 
   /* action buttons */
   .mph-head-content .mph-actions { gap: 8px; }
@@ -534,7 +542,7 @@
   .mph-bstat-lbl    { font-size: 10px; }
 
   /* lead card */
-  .mph-cell-lead    { padding: 20px 18px; }
+  .mph-cell-lead    { padding: 20px 18px; text-align: center; }
   .mph-cell-lead p  { font-size: 12.5px; line-height: 1.7; }
   .mph-checks       { grid-template-columns: 1fr 1fr; gap: 8px 12px; margin-bottom: 0; }
   .mph-check        { font-size: 12px; }
@@ -582,8 +590,9 @@
   .mph-strip-dot    { width: 6px; height: 6px; }
   .mph-head-content { padding: 16px 14px 14px; }
   .mph-seo-h1       { font-size: 11px; margin-bottom: 10px; }
-  .mph-h1           { font-size: clamp(19px, 6.5vw, 26px); letter-spacing: -.5px; margin-bottom: 14px; }
+  .mph-h1           { font-size: clamp(16px, 5vw, 20px); letter-spacing: -.5px; margin-bottom: 8px; }
   .mph-h1-outline   { -webkit-text-stroke: 1.2px var(--text-1); }
+  .mph-head-img     { max-width: 170px; margin: 8px auto 0; }
 
   /* action buttons stack */
   .mph-actions      { flex-direction: column; align-items: stretch; gap: 8px; }
@@ -1698,6 +1707,8 @@
   .mob-why-inner     { grid-template-columns: 1fr; gap: 40px; }
   .mob-why-img-frame { height: 360px; }
   .mob-why-img-col .mob-section-num { display: none; }
+  .mob-why-content   { text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .mob-why-list      { align-items: flex-start; }
 
   /* Features */
   .mob-section-num   { font-size: clamp(70px, 10vw, 120px); }
@@ -1787,6 +1798,8 @@
   .mh2-stripe-inner  { gap: 8px 12px; }
   .mh2-stripe-divider { display: none; }
   .mob-ctrl-grid     { grid-template-columns: 1fr; }
+  .mob-ctrl-card-red { text-align: center; align-items: center; }
+  .mob-ctrl-cta      { align-self: center; }
 }
 
 /* ── 480px — standard phone ──────────────────────────────────── */
@@ -1855,7 +1868,7 @@
   .mob-transform-inner     { padding: 0 4px; }
   .mob-transform-actions   { flex-direction: column; gap: 10px; }
   .mob-transform-btn-white,
-  .mob-transform-btn-ghost { width: 100%; justify-content: center; }
+  .mob-transform-btn-ghost { width: auto; max-width: 220px; justify-content: center; }
 }
 
 /* ── 375px — small phone (iPhone SE) ────────────────────────── */
