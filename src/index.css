@@ -178,10 +178,11 @@ input, textarea, select { font-family: var(--font); }
   justify-content: center;
 }
 
-/* hide the whole rail on phones — it has no room to sit beside content
-   without overlapping hero images / floating badges at this width */
+/* phones — keep the same rail design, just sized down */
 @media (max-width: 640px) {
-  .fsb-rail { display: none; }
+  .fsb-rail { width: 40px; }
+  .fsb-rail-btn { height: 44px; }
+  .fsb-rail-enquire { padding: 10px 0; }
 }
 
 
