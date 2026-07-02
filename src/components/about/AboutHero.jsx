@@ -75,8 +75,6 @@ export default function AboutHero() {
             <div className="abh2-orbit" aria-hidden="true" />
             {/* inner counter-spin orbit */}
             <div className="abh2-orbit-inner" aria-hidden="true" />
-            {/* pulsing glow behind image */}
-            <div className="abh2-img-glow" aria-hidden="true" />
 
             {/* clip-path image with bob + spin animation */}
             <div className="abh2-img-clip">
