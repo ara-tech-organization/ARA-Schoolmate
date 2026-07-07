@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, Users, Star, Zap } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Users, Star, Zap, Phone, Mail, MapPin } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
@@ -38,12 +38,16 @@ const footerLinks = [
   {
     title: 'Support',
     links: [
-      { label: 'Help Center',      to: '/contact'  },
-      { label: 'Privacy Policy',   href: '#'       },
-      { label: 'Terms of Service', href: '#'       },
-      { label: 'Cookie Policy',    href: '#'       },
+      { label: 'Privacy Policy',   href: '#' },
+      { label: 'Terms of Service', href: '#' },
     ],
   },
+]
+
+const contactInfo = [
+  { icon: Phone,  label: '+91 81100 15152',                       href: 'tel:+918110015152'            },
+  { icon: Mail,   label: 'schoolmate2025@zohomail.in',            href: 'mailto:schoolmate2025@zohomail.in' },
+  { icon: MapPin, label: '67A, Giri Rd, Thanjavur, TN 613009',                                            },
 ]
 
 const socials = [
@@ -232,6 +236,18 @@ export default function CTAFooter({ noForm = false }) {
                       : <a key={label} href={href}>{label}</a>
                   )}
                 </div>
+
+                {title === 'Support' && (
+                  <div className="f-contact">
+                    <h4 className="f-col-title f-contact-title">Contact</h4>
+                    {contactInfo.map(({ icon: Icon, label, href }) => (
+                      <div className="f-contact-item" key={label}>
+                        <Icon size={13} className="f-contact-icon" />
+                        {href ? <a href={href}>{label}</a> : <span>{label}</span>}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>

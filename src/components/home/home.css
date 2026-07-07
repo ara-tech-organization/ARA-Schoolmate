@@ -1703,6 +1703,12 @@
 .f-links { display: flex; flex-direction: column; gap: 10px; }
 .f-links a { font-size: 13.5px; color: rgba(255,255,255,.68); transition: all .2s var(--ease); }
 .f-links a:hover { color: #fff; transform: translateX(4px); display: inline-block; }
+.f-contact { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
+.f-contact-title { margin-bottom: 12px; }
+.f-contact-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: rgba(255,255,255,.68); line-height: 1.5; }
+.f-contact-icon { flex-shrink: 0; margin-top: 2px; color: rgba(255,255,255,.5); }
+.f-contact-item a { color: rgba(255,255,255,.68); transition: color .2s var(--ease); }
+.f-contact-item a:hover { color: #fff; }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .f-copy { font-size: 13px; color: rgba(255,255,255,.6); flex: 1; }
 .f-bot-links { display: flex; gap: 24px; justify-content: center; flex: 1; }
